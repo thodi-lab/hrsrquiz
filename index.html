@@ -74,9 +74,38 @@ kbd{background:#eef1f6;border:1px solid #d7dce5;border-bottom-width:2px;border-r
   .face{padding:22px}
   .keyword{font-size:42px}
 }
+
+.lock-screen{
+  position:fixed; inset:0; z-index:9999;
+  display:flex; align-items:center; justify-content:center;
+  background:linear-gradient(180deg,#f5f7fb,#eef2f8);
+  padding:20px;
+}
+.lock-box{
+  width:min(420px,100%); background:#fff; border:1px solid var(--line);
+  border-radius:22px; box-shadow:var(--shadow); padding:28px;
+}
+.lock-box h2{margin:0 0 8px;font-size:28px;letter-spacing:-.03em}
+.lock-box p{margin:0 0 18px;color:var(--muted);line-height:1.55}
+.lock-box input{width:100%;margin-bottom:10px}
+.lock-box button{width:100%}
+.lock-error{min-height:22px;color:var(--bad);font-size:13px;margin-top:10px}
+body.locked{overflow:hidden}
+
 </style>
 </head>
-<body>
+<body class="locked">
+
+<div class="lock-screen" id="lockScreen">
+  <div class="lock-box">
+    <h2>정보보안기사 암기카드</h2>
+    <p>사이트에 접속하려면 암호를 입력하세요.</p>
+    <input id="sitePassword" type="password" placeholder="암호" autocomplete="current-password">
+    <button class="primary" id="unlockBtn">입장</button>
+    <div class="lock-error" id="lockError"></div>
+  </div>
+</div>
+
 <div class="app">
   <div class="header">
     <div>
@@ -3575,6 +3604,31 @@ document.addEventListener('keydown',e=>{
   if(e.key==='2') grade('hard');
   if(e.key==='3') grade('good');
 });
+
+
+const SITE_PASSWORD = 'chichi';
+function unlockSite(){
+  const value = document.getElementById('sitePassword').value;
+  if(value === SITE_PASSWORD){
+    sessionStorage.setItem('isec-unlocked','1');
+    document.getElementById('lockScreen').classList.add('hidden');
+    document.body.classList.remove('locked');
+    document.getElementById('lockError').textContent='';
+  }else{
+    document.getElementById('lockError').textContent='암호가 올바르지 않습니다.';
+    document.getElementById('sitePassword').select();
+  }
+}
+document.getElementById('unlockBtn').addEventListener('click', unlockSite);
+document.getElementById('sitePassword').addEventListener('keydown', e=>{
+  if(e.key==='Enter') unlockSite();
+});
+if(sessionStorage.getItem('isec-unlocked')==='1'){
+  document.getElementById('lockScreen').classList.add('hidden');
+  document.body.classList.remove('locked');
+}else{
+  setTimeout(()=>document.getElementById('sitePassword').focus(),0);
+}
 
 render();
 </script>
