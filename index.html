@@ -1,0 +1,3582 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>정보보안기사 키워드 암기카드 1~230</title>
+<style>
+:root {
+  --bg:#f5f7fb; --card:#ffffff; --ink:#172033; --muted:#687386;
+  --line:#dde3ec; --accent:#3157d5; --accent2:#eef2ff;
+  --good:#16784a; --warn:#a65b00; --bad:#b42318; --shadow:0 16px 42px rgba(28,40,72,.10);
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,"Pretendard","Noto Sans KR","Apple SD Gothic Neo",system-ui,sans-serif;background:var(--bg);color:var(--ink)}
+button,input,select{font:inherit}
+.app{max-width:1180px;margin:0 auto;padding:24px}
+.header{display:flex;gap:16px;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;margin-bottom:18px}
+h1{margin:0;font-size:clamp(24px,4vw,38px);letter-spacing:-.04em}
+.sub{color:var(--muted);margin-top:7px;font-size:14px}
+.stats{display:flex;gap:8px;flex-wrap:wrap}
+.badge{background:#fff;border:1px solid var(--line);padding:8px 11px;border-radius:999px;font-size:13px}
+.panel{background:#fff;border:1px solid var(--line);border-radius:18px;padding:14px;box-shadow:var(--shadow);margin-bottom:16px}
+.controls{display:grid;grid-template-columns:1.2fr .8fr .7fr auto auto auto;gap:10px}
+input,select,button{border:1px solid var(--line);border-radius:11px;padding:11px 12px;background:#fff;color:var(--ink)}
+button{cursor:pointer;font-weight:700}
+button.primary{background:var(--accent);color:#fff;border-color:var(--accent)}
+button.soft{background:var(--accent2);color:var(--accent);border-color:transparent}
+button:disabled{opacity:.45;cursor:not-allowed}
+.workspace{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:16px}
+.card-wrap{min-height:540px;display:flex;align-items:stretch}
+.flashcard{width:100%;perspective:1400px;cursor:pointer}
+.inner{position:relative;width:100%;height:100%;min-height:540px;transition:transform .5s;transform-style:preserve-3d}
+.flashcard.flipped .inner{transform:rotateY(180deg)}
+.face{position:absolute;inset:0;backface-visibility:hidden;background:var(--card);border:1px solid var(--line);border-radius:24px;box-shadow:var(--shadow);padding:34px;display:flex;flex-direction:column}
+.back{transform:rotateY(180deg)}
+.topline{display:flex;justify-content:space-between;gap:10px;align-items:center;color:var(--muted);font-size:14px}
+.keyword{font-size:clamp(36px,7vw,68px);font-weight:900;letter-spacing:-.05em;text-align:center;margin:auto 0 10px}
+.prompt{text-align:center;color:var(--muted);font-size:16px}
+.stars{letter-spacing:2px;color:#e09b00;font-size:18px}
+.back h2{margin:18px 0 8px;font-size:28px;letter-spacing:-.03em}
+.block{padding:14px 16px;border-radius:14px;background:#f8fafc;margin-top:10px;line-height:1.6}
+.block strong{display:block;font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:4px}
+.trap{background:#fff5f2}
+.memory{background:#f3f8ff}
+.side{display:flex;flex-direction:column;gap:12px}
+.progress-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px}
+.progress-bar{height:9px;background:#edf0f5;border-radius:10px;overflow:hidden;margin:10px 0}
+.progress-bar > div{height:100%;background:var(--accent);width:0}
+.grade-buttons{display:grid;grid-template-columns:1fr;gap:8px}
+.grade-buttons button[data-grade="again"]{border-color:#ffd1cc;color:var(--bad)}
+.grade-buttons button[data-grade="hard"]{border-color:#ffe1b3;color:var(--warn)}
+.grade-buttons button[data-grade="good"]{border-color:#bfe6d2;color:var(--good)}
+.navrow{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+kbd{background:#eef1f6;border:1px solid #d7dce5;border-bottom-width:2px;border-radius:6px;padding:1px 5px;font-size:11px}
+.small{font-size:12px;color:var(--muted);line-height:1.55}
+.hidden{display:none!important}
+.quiz-box{background:#fff;border:1px solid var(--line);border-radius:24px;padding:28px;box-shadow:var(--shadow)}
+.quiz-q{font-size:25px;font-weight:800;margin-bottom:20px}
+.options{display:grid;gap:10px}
+.option{text-align:left;padding:14px 16px}
+.option.correct{border-color:#43a773;background:#eefaf3}
+.option.wrong{border-color:#e4776c;background:#fff2f0}
+.feedback{margin-top:18px;padding:16px;border-radius:14px;background:#f8fafc;line-height:1.6}
+.footer-note{margin-top:16px;color:var(--muted);font-size:12px;line-height:1.6}
+@media(max-width:850px){
+  .controls{grid-template-columns:1fr 1fr}
+  .workspace{grid-template-columns:1fr}
+  .card-wrap,.inner{min-height:500px}
+  .side{order:2}
+}
+@media(max-width:520px){
+  .app{padding:12px}
+  .controls{grid-template-columns:1fr}
+  .face{padding:22px}
+  .keyword{font-size:42px}
+}
+</style>
+</head>
+<body>
+<div class="app">
+  <div class="header">
+    <div>
+      <h1>정보보안기사 키워드 암기카드</h1>
+      <div class="sub">1~230 · 기출 키워드 반복도 기반 · 카드 + 4지선다 + 오답복습</div>
+    </div>
+    <div class="stats">
+      <span class="badge" id="totalBadge">전체 230</span>
+      <span class="badge" id="filteredBadge">필터 230</span>
+      <span class="badge" id="learnedBadge">학습 0</span>
+    </div>
+  </div>
+
+  <div class="panel controls">
+    <input id="search" placeholder="키워드 검색">
+    <select id="subject"></select>
+    <select id="priority">
+      <option value="">전체 중요도</option>
+      <option value="5">★★★★★ 최우선</option>
+      <option value="4">★★★★ 중요</option>
+      <option value="3">★★★ 자주 출제</option>
+      <option value="2">★★ 보통</option>
+      <option value="1">★ 보충</option>
+    </select>
+    <button class="soft" id="shuffleBtn">랜덤 섞기</button>
+    <button class="soft" id="quizBtn">4지선다</button>
+    <button id="exportBtn">JSON 내보내기</button>
+  </div>
+
+  <div id="cardMode" class="workspace">
+    <div class="card-wrap">
+      <div class="flashcard" id="flashcard" title="클릭하면 뒤집기">
+        <div class="inner">
+          <section class="face front">
+            <div class="topline">
+              <span id="cardMeta"></span>
+              <span class="stars" id="stars"></span>
+            </div>
+            <div class="keyword" id="keyword"></div>
+            <div class="prompt">정의를 떠올린 뒤 카드를 클릭하세요 · <kbd>Space</kbd></div>
+          </section>
+          <section class="face back">
+            <div class="topline">
+              <span id="backMeta"></span>
+              <span id="frequency"></span>
+            </div>
+            <h2 id="backKeyword"></h2>
+            <div class="block"><strong>핵심 정의</strong><span id="definition"></span></div>
+            <div class="block memory"><strong>시험 암기</strong><span id="memory"></span></div>
+            <div class="block trap"><strong>함정</strong><span id="trap"></span></div>
+            <div class="block"><strong>비교</strong><span id="compare"></span></div>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <aside class="side">
+      <div class="progress-card">
+        <b id="position">1 / 230</b>
+        <div class="progress-bar"><div id="bar"></div></div>
+        <div class="navrow">
+          <button id="prevBtn">← 이전</button>
+          <button id="nextBtn">다음 →</button>
+        </div>
+      </div>
+
+      <div class="progress-card">
+        <b>이 카드 평가</b>
+        <div class="small" style="margin:7px 0 12px">평가는 브라우저에 저장됩니다.</div>
+        <div class="grade-buttons">
+          <button data-grade="again">몰랐음 <kbd>1</kbd></button>
+          <button data-grade="hard">헷갈림 <kbd>2</kbd></button>
+          <button data-grade="good">알았음 <kbd>3</kbd></button>
+        </div>
+      </div>
+
+      <div class="progress-card">
+        <b>복습</b>
+        <div class="grade-buttons" style="margin-top:10px">
+          <button id="mistakeBtn">몰랐음/헷갈림만</button>
+          <button id="allBtn">전체 다시 보기</button>
+          <button id="resetBtn">학습기록 초기화</button>
+        </div>
+      </div>
+
+      <div class="progress-card small">
+        <b>단축키</b><br><br>
+        <kbd>Space</kbd> 뒤집기<br>
+        <kbd>←</kbd> / <kbd>→</kbd> 이동<br>
+        <kbd>1</kbd> 몰랐음 · <kbd>2</kbd> 헷갈림 · <kbd>3</kbd> 알았음
+      </div>
+    </aside>
+  </div>
+
+  <div id="quizMode" class="hidden">
+    <div class="quiz-box">
+      <div class="topline"><span id="quizMeta"></span><button id="closeQuiz">카드로 돌아가기</button></div>
+      <div class="quiz-q" id="quizQ"></div>
+      <div class="options" id="quizOptions"></div>
+      <div class="feedback hidden" id="quizFeedback"></div>
+      <button class="primary hidden" id="nextQuiz" style="margin-top:14px">다음 문제</button>
+    </div>
+  </div>
+
+  <div class="footer-note">
+    반복횟수는 업로드된 원본 정리표의 그룹 반복도를 개별 키워드에 적용한 값입니다.
+    법규·기관 역할·229번처럼 원문만으로 범위가 불명확하거나 변경 가능성이 있는 항목은 카드에 주의 문구를 포함했습니다.
+    학습기록은 이 브라우저의 localStorage에만 저장됩니다.
+  </div>
+</div>
+
+<script id="cardData" type="application/json">
+[
+  {
+    &quot;id&quot;: 1,
+    &quot;source_id&quot;: 1,
+    &quot;keyword&quot;: &quot;암호 알고리즘&quot;,
+    &quot;subject&quot;: &quot;정보보안 일반&quot;,
+    &quot;frequency&quot;: 37,
+    &quot;priority&quot;: 5,
+    &quot;question&quot;: &quot;암호 알고리즘란?&quot;,
+    &quot;answer&quot;: &quot;평문을 암호문으로 바꾸거나 복호화하기 위한 수학적 절차.&quot;,
+    &quot;definition&quot;: &quot;평문을 암호문으로 바꾸거나 복호화하기 위한 수학적 절차.&quot;,
+    &quot;memory&quot;: &quot;대칭키·공개키·해시의 목적과 차이를 구분.&quot;,
+    &quot;trap&quot;: &quot;해시는 복호화 목적의 암호 알고리즘이 아니다.&quot;,
+    &quot;compare&quot;: &quot;대칭키 / 공개키 / 해시&quot;
+  },
+  {
+    &quot;id&quot;: 2,
+    &quot;source_id&quot;: 2,
+    &quot;keyword&quot;: &quot;암호공격 RSA&quot;,
+    &quot;subject&quot;: &quot;정보보안 일반&quot;,
+    &quot;frequency&quot;: 37,
+    &quot;priority&quot;: 5,
+    &quot;question&quot;: &quot;암호공격 RSA란?&quot;,
+    &quot;answer&quot;: &quot;암호공격은 암호의 취약점을 이용해 키나 평문을 알아내려는 시도이며, RSA는 소인수분해의 어려움에 기반한 공개키 암호다.&quot;,
+    &quot;definition&quot;: &quot;암호공격은 암호의 취약점을 이용해 키나 평문을 알아내려는 시도이며, RSA는 소인수분해의 어려움에 기반한 공개키 암호다.&quot;,
+    &quot;memory&quot;: &quot;RSA: 공개키 암호화·개인키 복호화 / 개인키 서명·공개키 검증.&quot;,
+    &quot;trap&quot;: &quot;RSA와 암호공격은 원래 별도 개념이므로 문제 문맥을 확인.&quot;,
+    &quot;compare&quot;: &quot;RSA / 암호공격&quot;
+  },
+  {
+    &quot;id&quot;: 3,
+    &quot;source_id&quot;: 3,
+    &quot;keyword&quot;: &quot;ECC&quot;,
+    &quot;subject&quot;: &quot;정보보안 일반&quot;,
+    &quot;frequency&quot;: 37,
+    &quot;priority&quot;: 5,
+    &quot;question&quot;: &quot;ECC란?&quot;,
+    &quot;answer&quot;: &quot;타원곡선 이산대수 문제를 이용하는 공개키 암호 방식.&quot;,
+    &quot;definition&quot;: &quot;타원곡선 이산대수 문제를 이용하는 공개키 암호 방식.&quot;,
+    &quot;memory&quot;: &quot;짧은 키로 RSA보다 높은 효율의 보안강도 제공.&quot;,
+    &quot;trap&quot;: &quot;대칭키 암호가 아니다.&quot;,
+    &quot;compare&quot;: &quot;RSA&quot;
+  },
+  {
+    &quot;id&quot;: 4,
+    &quot;source_id&quot;: 4,
+    &quot;keyword&quot;: &quot;SEED&quot;,
+    &quot;subject&quot;: &quot;정보보안 일반&quot;,
+    &quot;frequency&quot;: 37,
+    &quot;priority&quot;: 5,
+    &quot;question&quot;: &quot;SEED란?&quot;,
+    &quot;answer&quot;: &quot;국내에서 개발된 128비트 블록 대칭키 암호.&quot;,
+    &quot;definition&quot;: &quot;국내에서 개발된 128비트 블록 대칭키 암호.&quot;,
+    &quot;memory&quot;: &quot;블록 128비트, 대칭키.&quot;,
+    &quot;trap&quot;: &quot;AES·ARIA와 혼동 주의.&quot;,
+    &quot;compare&quot;: &quot;AES / ARIA&quot;
+  },
+  {
+    &quot;id&quot;: 5,
+    &quot;source_id&quot;: 5,
+    &quot;keyword&quot;: &quot;AES&quot;,
+    &quot;subject&quot;: &quot;정보보안 일반&quot;,
+    &quot;frequency&quot;: 37,
+    &quot;priority&quot;: 5,
+    &quot;question&quot;: &quot;AES란?&quot;,
+    &quot;answer&quot;: &quot;Rijndael 기반 국제표준 블록 대칭키 암호.&quot;,
+    &quot;definition&quot;: &quot;Rijndael 기반 국제표준 블록 대칭키 암호.&quot;,
+    &quot;memory&quot;: &quot;블록 128비트, 키 128/192/256비트.&quot;,
+    &quot;trap&quot;: &quot;블록 크기가 256비트인 것은 아니다.&quot;,
+    &quot;compare&quot;: &quot;SEED / ARIA / DES&quot;
+  },
+  {
+    &quot;id&quot;: 6,
+    &quot;source_id&quot;: 6,
+    &quot;keyword&quot;: &quot;ARIA&quot;,
+    &quot;subject&quot;: &quot;정보보안 일반&quot;,
+    &quot;frequency&quot;: 37,
+    &quot;priority&quot;: 5,
+    &quot;question&quot;: &quot;ARIA란?&quot;,
+    &quot;answer&quot;: &quot;국내에서 개발된 128비트 블록 대칭키 암호.&quot;,
+    &quot;definition&quot;: &quot;국내에서 개발된 128비트 블록 대칭키 암호.&quot;,
+    &quot;memory&quot;: &quot;블록 128비트, 키 128/192/256비트.&quot;,
+    &quot;trap&quot;: &quot;AES와 숫자가 비슷하나 별도 알고리즘.&quot;,
+    &quot;compare&quot;: &quot;AES / SEED&quot;
+  },
+  {
+    &quot;id&quot;: 7,
+    &quot;source_id&quot;: 7,
+    &quot;keyword&quot;: &quot;DH&quot;,
+    &quot;subject&quot;: &quot;정보보안 일반&quot;,
+    &quot;frequency&quot;: 37,
+    &quot;priority&quot;: 5,
+    &quot;question&quot;: &quot;DH란?&quot;,
+    &quot;answer&quot;: &quot;Diffie-Hellman. 공개 채널에서 공유 비밀값을 합의하는 키 교환 방식.&quot;,
+    &quot;definition&quot;: &quot;Diffie-Hellman. 공개 채널에서 공유 비밀값을 합의하는 키 교환 방식.&quot;,
+    &quot;memory&quot;: &quot;암호화 알고리즘 자체보다 키 합의가 핵심.&quot;,
+    &quot;trap&quot;: &quot;인증이 없으면 중간자 공격에 취약.&quot;,
+    &quot;compare&quot;: &quot;RSA / 키교환&quot;
+  },
+  {
+    &quot;id&quot;: 8,
+    &quot;source_id&quot;: 8,
+    &quot;keyword&quot;: &quot;Grover&quot;,
+    &quot;subject&quot;: &quot;정보보안 일반&quot;,
+    &quot;frequency&quot;: 37,
+    &quot;priority&quot;: 5,
+    &quot;question&quot;: &quot;Grover란?&quot;,
+    &quot;answer&quot;: &quot;양자컴퓨터에서 비정형 탐색을 제곱근 수준으로 줄이는 알고리즘.&quot;,
+    &quot;definition&quot;: &quot;양자컴퓨터에서 비정형 탐색을 제곱근 수준으로 줄이는 알고리즘.&quot;,
+    &quot;memory&quot;: &quot;대칭키·해시의 전수탐색 보안강도를 낮춤.&quot;,
+    &quot;trap&quot;: &quot;Shor와 혼동 주의.&quot;,
+    &quot;compare&quot;: &quot;Shor&quot;
+  },
+  {
+    &quot;id&quot;: 9,
+    &quot;source_id&quot;: 9,
+    &quot;keyword&quot;: &quot;선택암호문&quot;,
+    &quot;subject&quot;: &quot;정보보안 일반&quot;,
+    &quot;frequency&quot;: 37,
+    &quot;priority&quot;: 5,
+    &quot;question&quot;: &quot;선택암호문란?&quot;,
+    &quot;answer&quot;: &quot;공격자가 선택한 암호문에 대한 복호화 결과를 이용해 암호체계를 공격하는 모델.&quot;,
+    &quot;definition&quot;: &quot;공격자가 선택한 암호문에 대한 복호화 결과를 이용해 암호체계를 공격하는 모델.&quot;,
+    &quot;memory&quot;: &quot;CCA(Chosen Ciphertext Attack).&quot;,
+    &quot;trap&quot;: &quot;선택평문 공격과 반대 방향.&quot;,
+    &quot;compare&quot;: &quot;선택평문 공격&quot;
+  },
+  {
+    &quot;id&quot;: 10,
+    &quot;source_id&quot;: 10,
+    &quot;keyword&quot;: &quot;리눅스&quot;,
+    &quot;subject&quot;: &quot;시스템 보안&quot;,
+    &quot;frequency&quot;: 32,
+    &quot;priority&quot;: 5,
+    &quot;question&quot;: &quot;리눅스란?&quot;,
+    &quot;answer&quot;: &quot;Unix 계열 오픈소스 운영체제.&quot;,
+    &quot;definition&quot;: &quot;Unix 계열 오픈소스 운영체제.&quot;,
+    &quot;memory&quot;: &quot;계정·파일권한·SetUID·PAM·로그를 함께 학습.&quot;,
+    &quot;trap&quot;: &quot;명령어 암기만으로는 권한 문제를 풀기 어렵다.&quot;,
+    &quot;compare&quot;: &quot;Windows&quot;
+  },
+  {
+    &quot;id&quot;: 11,
+    &quot;source_id&quot;: 11,
+    &quot;keyword&quot;: &quot;권한&quot;,
+    &quot;subject&quot;: &quot;시스템 보안&quot;,
+    &quot;frequency&quot;: 32,
+    &quot;priority&quot;: 5,
+    &quot;question&quot;: &quot;권한란?&quot;,
+    &quot;answer&quot;: &quot;사용자나 프로세스가 자원에 수행할 수 있는 허용 동작 범위.&quot;,
+    &quot;definition&quot;: &quot;사용자나 프로세스가 자원에 수행할 수 있는 허용 동작 범위.&quot;,
+    &quot;memory&quot;: &quot;Linux r=4, w=2, x=1.&quot;,
+    &quot;trap&quot;: &quot;디렉터리의 x는 실행이 아니라 진입·검색 의미.&quot;,
+    &quot;compare&quot;: &quot;ACL / 소유권&quot;
+  },
+  {
+    &quot;id&quot;: 12,
+    &quot;source_id&quot;: 12,
+    &quot;keyword&quot;: &quot;SetUID&quot;,
+    &quot;subject&quot;: &quot;시스템 보안&quot;,
+    &quot;frequency&quot;: 32,
+    &quot;priority&quot;: 5,
+    &quot;question&quot;: &quot;SetUID란?&quot;,
+    &quot;answer&quot;: &quot;실행 파일을 파일 소유자의 권한으로 실행하게 하는 Unix 특수 권한.&quot;,
+    &quot;definition&quot;: &quot;실행 파일을 파일 소유자의 권한으로 실행하게 하는 Unix 특수 권한.&quot;,
+    &quot;memory&quot;: &quot;root 소유 SetUID는 권한상승 위험 점검 대상.&quot;,
+    &quot;trap&quot;: &quot;SetGID·Sticky bit와 혼동 주의.&quot;,
+    &quot;compare&quot;: &quot;SetGID / Sticky bit&quot;
+  },
+  {
+    &quot;id&quot;: 13,
+    &quot;source_id&quot;: 13,
+    &quot;keyword&quot;: &quot;PAM&quot;,
+    &quot;subject&quot;: &quot;시스템 보안&quot;,
+    &quot;frequency&quot;: 32,
+    &quot;priority&quot;: 5,
+    &quot;question&quot;: &quot;PAM란?&quot;,
+    &quot;answer&quot;: &quot;Pluggable Authentication Modules. Linux 인증 기능을 모듈화한 프레임워크.&quot;,
+    &quot;definition&quot;: &quot;Pluggable Authentication Modules. Linux 인증 기능을 모듈화한 프레임워크.&quot;,
+    &quot;memory&quot;: &quot;auth / account / password / session.&quot;,
+    &quot;trap&quot;: &quot;방화벽 모듈이 아니다.&quot;,
+    &quot;compare&quot;: &quot;Linux 인증&quot;
+  },
+  {
+    &quot;id&quot;: 14,
+    &quot;source_id&quot;: 14,
+    &quot;keyword&quot;: &quot;PATH&quot;,
+    &quot;subject&quot;: &quot;시스템 보안&quot;,
+    &quot;frequency&quot;: 32,
+    &quot;priority&quot;: 5,
+    &quot;question&quot;: &quot;PATH란?&quot;,
+    &quot;answer&quot;: &quot;명령어 실행 파일을 검색할 디렉터리 목록을 지정하는 환경변수.&quot;,
+    &quot;definition&quot;: &quot;명령어 실행 파일을 검색할 디렉터리 목록을 지정하는 환경변수.&quot;,
+    &quot;memory&quot;: &quot;관리자 PATH에 . 또는 쓰기 가능한 경로는 위험.&quot;,
+    &quot;trap&quot;: &quot;파일 권한과 별개 개념.&quot;,
+    &quot;compare&quot;: &quot;환경변수&quot;
+  },
+  {
+    &quot;id&quot;: 15,
+    &quot;source_id&quot;: 15,
+    &quot;keyword&quot;: &quot;로그&quot;,
+    &quot;subject&quot;: &quot;시스템 보안&quot;,
+    &quot;frequency&quot;: 32,
+    &quot;priority&quot;: 5,
+    &quot;question&quot;: &quot;로그란?&quot;,
+    &quot;answer&quot;: &quot;시스템·사용자·응용프로그램의 동작과 이벤트를 기록한 데이터.&quot;,
+    &quot;definition&quot;: &quot;시스템·사용자·응용프로그램의 동작과 이벤트를 기록한 데이터.&quot;,
+    &quot;memory&quot;: &quot;감사·추적·침해사고 분석의 핵심 증거.&quot;,
+    &quot;trap&quot;: &quot;로그 레벨과 로그 파일 자체를 구분.&quot;,
+    &quot;compare&quot;: &quot;Syslog / 이벤트로그&quot;
+  },
+  {
+    &quot;id&quot;: 16,
+    &quot;source_id&quot;: 16,
+    &quot;keyword&quot;: &quot;tmp 권한&quot;,
+    &quot;subject&quot;: &quot;시스템 보안&quot;,
+    &quot;frequency&quot;: 32,
+    &quot;priority&quot;: 5,
+    &quot;question&quot;: &quot;tmp 권한란?&quot;,
+    &quot;answer&quot;: &quot;공용 임시 디렉터리의 접근 및 삭제 권한 관리.&quot;,
+    &quot;definition&quot;: &quot;공용 임시 디렉터리의 접근 및 삭제 권한 관리.&quot;,
+    &quot;memory&quot;: &quot;/tmp는 보통 Sticky bit가 있는 1777.&quot;,
+    &quot;trap&quot;: &quot;777만 외우면 다른 사용자의 파일 삭제 위험을 놓침.&quot;,
+    &quot;compare&quot;: &quot;Sticky bit&quot;
+  },
+  {
+    &quot;id&quot;: 17,
+    &quot;source_id&quot;: 17,
+    &quot;keyword&quot;: &quot;라우팅&quot;,
+    &quot;subject&quot;: &quot;네트워크 보안&quot;,
+    &quot;frequency&quot;: 24,
+    &quot;priority&quot;: 5,
+    &quot;question&quot;: &quot;라우팅란?&quot;,
+    &quot;answer&quot;: &quot;패킷이 목적지 네트워크까지 갈 경로를 선택하는 과정.&quot;,
+    &quot;definition&quot;: &quot;패킷이 목적지 네트워크까지 갈 경로를 선택하는 과정.&quot;,
+    &quot;memory&quot;: &quot;정적/동적, 거리벡터/링크상태 구분.&quot;,
+    &quot;trap&quot;: &quot;스위칭과 계층이 다름.&quot;,
+    &quot;compare&quot;: &quot;라우터 / 스위칭&quot;
+  },
+  {
+    &quot;id&quot;: 18,
+    &quot;source_id&quot;: 18,
+    &quot;keyword&quot;: &quot;라우터&quot;,
+    &quot;subject&quot;: &quot;네트워크 보안&quot;,
+    &quot;frequency&quot;: 24,
+    &quot;priority&quot;: 5,
+    &quot;question&quot;: &quot;라우터란?&quot;,
+    &quot;answer&quot;: &quot;서로 다른 네트워크 사이에서 IP 패킷을 전달하는 3계층 장비.&quot;,
+    &quot;definition&quot;: &quot;서로 다른 네트워크 사이에서 IP 패킷을 전달하는 3계층 장비.&quot;,
+    &quot;memory&quot;: &quot;라우팅 테이블 기반 전달.&quot;,
+    &quot;trap&quot;: &quot;일반 L2 스위치와 구분.&quot;,
+    &quot;compare&quot;: &quot;스위치&quot;
+  },
+  {
+    &quot;id&quot;: 19,
+    &quot;source_id&quot;: 19,
+    &quot;keyword&quot;: &quot;NAT&quot;,
+    &quot;subject&quot;: &quot;네트워크 보안&quot;,
+    &quot;frequency&quot;: 24,
+    &quot;priority&quot;: 5,
+    &quot;question&quot;: &quot;NAT란?&quot;,
+    &quot;answer&quot;: &quot;사설 IP와 공인 IP 주소를 변환하는 기술.&quot;,
+    &quot;definition&quot;: &quot;사설 IP와 공인 IP 주소를 변환하는 기술.&quot;,
+    &quot;memory&quot;: &quot;주소 변환이 핵심.&quot;,
+    &quot;trap&quot;: &quot;PAT는 포트까지 변환.&quot;,
+    &quot;compare&quot;: &quot;PAT&quot;
+  },
+  {
+    &quot;id&quot;: 20,
+    &quot;source_id&quot;: 20,
+    &quot;keyword&quot;: &quot;PAT&quot;,
+    &quot;subject&quot;: &quot;네트워크 보안&quot;,
+    &quot;frequency&quot;: 24,
+    &quot;priority&quot;: 5,
+    &quot;question&quot;: &quot;PAT란?&quot;,
+    &quot;answer&quot;: &quot;여러 사설 주소를 포트번호와 함께 변환해 하나의 공인 IP를 공유하는 기술.&quot;,
+    &quot;definition&quot;: &quot;여러 사설 주소를 포트번호와 함께 변환해 하나의 공인 IP를 공유하는 기술.&quot;,
+    &quot;memory&quot;: &quot;IP + Port 변환.&quot;,
+    &quot;trap&quot;: &quot;NAT와 완전히 같은 말로만 보지 말 것.&quot;,
+    &quot;compare&quot;: &quot;NAT&quot;
+  },
+  {
+    &quot;id&quot;: 21,
+    &quot;source_id&quot;: 21,
+    &quot;keyword&quot;: &quot;서브넷&quot;,
+    &quot;subject&quot;: &quot;네트워크 보안&quot;,
+    &quot;frequency&quot;: 24,
+    &quot;priority&quot;: 5,
+    &quot;question&quot;: &quot;서브넷란?&quot;,
+    &quot;answer&quot;: &quot;하나의 IP 네트워크를 논리적으로 나눈 작은 네트워크.&quot;,
+    &quot;definition&quot;: &quot;하나의 IP 네트워크를 논리적으로 나눈 작은 네트워크.&quot;,
+    &quot;memory&quot;: &quot;CIDR·서브넷마스크·호스트 수 계산.&quot;,
+    &quot;trap&quot;: &quot;브로드캐스트 주소 계산 실수 주의.&quot;,
+    &quot;compare&quot;: &quot;CIDR&quot;
+  },
+  {
+    &quot;id&quot;: 22,
+    &quot;source_id&quot;: 22,
+    &quot;keyword&quot;: &quot;포트&quot;,
+    &quot;subject&quot;: &quot;네트워크 보안&quot;,
+    &quot;frequency&quot;: 24,
+    &quot;priority&quot;: 5,
+    &quot;question&quot;: &quot;포트란?&quot;,
+    &quot;answer&quot;: &quot;TCP/UDP에서 애플리케이션 서비스를 구분하는 번호.&quot;,
+    &quot;definition&quot;: &quot;TCP/UDP에서 애플리케이션 서비스를 구분하는 번호.&quot;,
+    &quot;memory&quot;: &quot;FTP20/21, SSH22, Telnet23, DNS53, HTTP80, HTTPS443.&quot;,
+    &quot;trap&quot;: &quot;IP 주소와 포트번호를 혼동하지 않기.&quot;,
+    &quot;compare&quot;: &quot;TCP / UDP&quot;
+  },
+  {
+    &quot;id&quot;: 23,
+    &quot;source_id&quot;: 23,
+    &quot;keyword&quot;: &quot;트레이스&quot;,
+    &quot;subject&quot;: &quot;네트워크 보안&quot;,
+    &quot;frequency&quot;: 24,
+    &quot;priority&quot;: 5,
+    &quot;question&quot;: &quot;트레이스란?&quot;,
+    &quot;answer&quot;: &quot;패킷 경로나 프로그램 실행 흐름을 추적하는 행위.&quot;,
+    &quot;definition&quot;: &quot;패킷 경로나 프로그램 실행 흐름을 추적하는 행위.&quot;,
+    &quot;memory&quot;: &quot;traceroute/tracert는 TTL 감소와 ICMP 응답을 활용.&quot;,
+    &quot;trap&quot;: &quot;ping과 목적이 다름.&quot;,
+    &quot;compare&quot;: &quot;traceroute / ping&quot;
+  },
+  {
+    &quot;id&quot;: 24,
+    &quot;source_id&quot;: 24,
+    &quot;keyword&quot;: &quot;해시함수&quot;,
+    &quot;subject&quot;: &quot;정보보안 일반&quot;,
+    &quot;frequency&quot;: 23,
+    &quot;priority&quot;: 5,
+    &quot;question&quot;: &quot;해시함수란?&quot;,
+    &quot;answer&quot;: &quot;임의 길이 입력을 고정 길이 해시값으로 바꾸는 일방향 함수.&quot;,
+    &quot;definition&quot;: &quot;임의 길이 입력을 고정 길이 해시값으로 바꾸는 일방향 함수.&quot;,
+    &quot;memory&quot;: &quot;역상저항성·2차 역상저항성·충돌저항성.&quot;,
+    &quot;trap&quot;: &quot;암호화처럼 복호화하는 함수가 아니다.&quot;,
+    &quot;compare&quot;: &quot;MAC / 암호화&quot;
+  },
+  {
+    &quot;id&quot;: 25,
+    &quot;source_id&quot;: 25,
+    &quot;keyword&quot;: &quot;충돌&quot;,
+    &quot;subject&quot;: &quot;정보보안 일반&quot;,
+    &quot;frequency&quot;: 23,
+    &quot;priority&quot;: 5,
+    &quot;question&quot;: &quot;충돌란?&quot;,
+    &quot;answer&quot;: &quot;서로 다른 두 입력이 같은 해시값을 만드는 현상.&quot;,
+    &quot;definition&quot;: &quot;서로 다른 두 입력이 같은 해시값을 만드는 현상.&quot;,
+    &quot;memory&quot;: &quot;생일공격과 연결.&quot;,
+    &quot;trap&quot;: &quot;역상 공격과 구분.&quot;,
+    &quot;compare&quot;: &quot;Birthday Attack&quot;
+  },
+  {
+    &quot;id&quot;: 26,
+    &quot;source_id&quot;: 26,
+    &quot;keyword&quot;: &quot;MD5&quot;,
+    &quot;subject&quot;: &quot;정보보안 일반&quot;,
+    &quot;frequency&quot;: 23,
+    &quot;priority&quot;: 5,
+    &quot;question&quot;: &quot;MD5란?&quot;,
+    &quot;answer&quot;: &quot;128비트 해시값을 만드는 해시 함수.&quot;,
+    &quot;definition&quot;: &quot;128비트 해시값을 만드는 해시 함수.&quot;,
+    &quot;memory&quot;: &quot;충돌 취약점 때문에 보안용으로 권장되지 않음.&quot;,
+    &quot;trap&quot;: &quot;암호화 알고리즘이 아니다.&quot;,
+    &quot;compare&quot;: &quot;SHA&quot;
+  },
+  {
+    &quot;id&quot;: 27,
+    &quot;source_id&quot;: 27,
+    &quot;keyword&quot;: &quot;SHA&quot;,
+    &quot;subject&quot;: &quot;정보보안 일반&quot;,
+    &quot;frequency&quot;: 23,
+    &quot;priority&quot;: 5,
+    &quot;question&quot;: &quot;SHA란?&quot;,
+    &quot;answer&quot;: &quot;NIST 표준 계열의 암호학적 해시 함수.&quot;,
+    &quot;definition&quot;: &quot;NIST 표준 계열의 암호학적 해시 함수.&quot;,
+    &quot;memory&quot;: &quot;SHA-1은 160비트, SHA-2에는 SHA-256·SHA-512 등이 있음.&quot;,
+    &quot;trap&quot;: &quot;SHA-1의 충돌 취약성 주의.&quot;,
+    &quot;compare&quot;: &quot;MD5 / SHA-2&quot;
+  },
+  {
+    &quot;id&quot;: 28,
+    &quot;source_id&quot;: 28,
+    &quot;keyword&quot;: &quot;RIPEMD&quot;,
+    &quot;subject&quot;: &quot;정보보안 일반&quot;,
+    &quot;frequency&quot;: 23,
+    &quot;priority&quot;: 5,
+    &quot;question&quot;: &quot;RIPEMD란?&quot;,
+    &quot;answer&quot;: &quot;암호학적 해시 함수 계열.&quot;,
+    &quot;definition&quot;: &quot;암호학적 해시 함수 계열.&quot;,
+    &quot;memory&quot;: &quot;RIPEMD-160은 160비트 출력.&quot;,
+    &quot;trap&quot;: &quot;RSA와 무관.&quot;,
+    &quot;compare&quot;: &quot;SHA&quot;
+  },
+  {
+    &quot;id&quot;: 29,
+    &quot;source_id&quot;: 29,
+    &quot;keyword&quot;: &quot;Salt&quot;,
+    &quot;subject&quot;: &quot;정보보안 일반&quot;,
+    &quot;frequency&quot;: 23,
+    &quot;priority&quot;: 5,
+    &quot;question&quot;: &quot;Salt란?&quot;,
+    &quot;answer&quot;: &quot;비밀번호 해싱 전에 추가하는 임의값.&quot;,
+    &quot;definition&quot;: &quot;비밀번호 해싱 전에 추가하는 임의값.&quot;,
+    &quot;memory&quot;: &quot;같은 비밀번호도 다른 해시를 만들고 Rainbow Table을 어렵게 함.&quot;,
+    &quot;trap&quot;: &quot;Salt는 반드시 비밀이어야 하는 키가 아니다.&quot;,
+    &quot;compare&quot;: &quot;Pepper / 해시&quot;
+  },
+  {
+    &quot;id&quot;: 30,
+    &quot;source_id&quot;: 30,
+    &quot;keyword&quot;: &quot;MAC&quot;,
+    &quot;subject&quot;: &quot;정보보안 일반&quot;,
+    &quot;frequency&quot;: 23,
+    &quot;priority&quot;: 5,
+    &quot;question&quot;: &quot;MAC란?&quot;,
+    &quot;answer&quot;: &quot;Message Authentication Code. 비밀키를 이용해 메시지의 무결성과 인증을 확인하는 값.&quot;,
+    &quot;definition&quot;: &quot;Message Authentication Code. 비밀키를 이용해 메시지의 무결성과 인증을 확인하는 값.&quot;,
+    &quot;memory&quot;: &quot;무결성 + 송신자 인증.&quot;,
+    &quot;trap&quot;: &quot;Mandatory Access Control의 MAC과 약어가 같음.&quot;,
+    &quot;compare&quot;: &quot;해시 / 전자서명 / 강제적 접근통제&quot;
+  },
+  {
+    &quot;id&quot;: 31,
+    &quot;source_id&quot;: 31,
+    &quot;keyword&quot;: &quot;SQL&quot;,
+    &quot;subject&quot;: &quot;애플리케이션 보안&quot;,
+    &quot;frequency&quot;: 20,
+    &quot;priority&quot;: 5,
+    &quot;question&quot;: &quot;SQL란?&quot;,
+    &quot;answer&quot;: &quot;관계형 데이터베이스의 데이터를 조회·조작하는 질의 언어.&quot;,
+    &quot;definition&quot;: &quot;관계형 데이터베이스의 데이터를 조회·조작하는 질의 언어.&quot;,
+    &quot;memory&quot;: &quot;SQL Injection과 DB 권한 문제로 자주 연결.&quot;,
+    &quot;trap&quot;: &quot;SQL 자체와 SQLi를 구분.&quot;,
+    &quot;compare&quot;: &quot;SQL Injection&quot;
+  },
+  {
+    &quot;id&quot;: 32,
+    &quot;source_id&quot;: 32,
+    &quot;keyword&quot;: &quot;XSS&quot;,
+    &quot;subject&quot;: &quot;애플리케이션 보안&quot;,
+    &quot;frequency&quot;: 20,
+    &quot;priority&quot;: 5,
+    &quot;question&quot;: &quot;XSS란?&quot;,
+    &quot;answer&quot;: &quot;악성 스크립트를 피해자 브라우저에서 실행시키는 웹 공격.&quot;,
+    &quot;definition&quot;: &quot;악성 스크립트를 피해자 브라우저에서 실행시키는 웹 공격.&quot;,
+    &quot;memory&quot;: &quot;Stored / Reflected / DOM-based.&quot;,
+    &quot;trap&quot;: &quot;CSRF는 사용자의 권한을 악용한 요청이 핵심.&quot;,
+    &quot;compare&quot;: &quot;CSRF&quot;
+  },
+  {
+    &quot;id&quot;: 33,
+    &quot;source_id&quot;: 33,
+    &quot;keyword&quot;: &quot;CSRF&quot;,
+    &quot;subject&quot;: &quot;애플리케이션 보안&quot;,
+    &quot;frequency&quot;: 20,
+    &quot;priority&quot;: 5,
+    &quot;question&quot;: &quot;CSRF란?&quot;,
+    &quot;answer&quot;: &quot;로그인된 사용자의 인증 상태를 악용해 원하지 않는 요청을 수행시키는 공격.&quot;,
+    &quot;definition&quot;: &quot;로그인된 사용자의 인증 상태를 악용해 원하지 않는 요청을 수행시키는 공격.&quot;,
+    &quot;memory&quot;: &quot;CSRF Token, SameSite Cookie 등이 대응.&quot;,
+    &quot;trap&quot;: &quot;악성 스크립트 실행 자체가 핵심인 것은 XSS.&quot;,
+    &quot;compare&quot;: &quot;XSS&quot;
+  },
+  {
+    &quot;id&quot;: 34,
+    &quot;source_id&quot;: 34,
+    &quot;keyword&quot;: &quot;XPath&quot;,
+    &quot;subject&quot;: &quot;애플리케이션 보안&quot;,
+    &quot;frequency&quot;: 20,
+    &quot;priority&quot;: 5,
+    &quot;question&quot;: &quot;XPath란?&quot;,
+    &quot;answer&quot;: &quot;XML 문서에서 노드나 데이터를 선택하는 질의 언어.&quot;,
+    &quot;definition&quot;: &quot;XML 문서에서 노드나 데이터를 선택하는 질의 언어.&quot;,
+    &quot;memory&quot;: &quot;입력 조작 시 XPath Injection 가능.&quot;,
+    &quot;trap&quot;: &quot;SQL이 아니다.&quot;,
+    &quot;compare&quot;: &quot;SQL / XML&quot;
+  },
+  {
+    &quot;id&quot;: 35,
+    &quot;source_id&quot;: 35,
+    &quot;keyword&quot;: &quot;웹 취약점&quot;,
+    &quot;subject&quot;: &quot;애플리케이션 보안&quot;,
+    &quot;frequency&quot;: 20,
+    &quot;priority&quot;: 5,
+    &quot;question&quot;: &quot;웹 취약점란?&quot;,
+    &quot;answer&quot;: &quot;웹 애플리케이션에서 공격에 악용될 수 있는 보안상 약점.&quot;,
+    &quot;definition&quot;: &quot;웹 애플리케이션에서 공격에 악용될 수 있는 보안상 약점.&quot;,
+    &quot;memory&quot;: &quot;SQLi·XSS·CSRF·업로드·경로조작 등을 묶어 학습.&quot;,
+    &quot;trap&quot;: &quot;공격 원리와 대응책을 짝지어야 함.&quot;,
+    &quot;compare&quot;: &quot;OWASP&quot;
+  },
+  {
+    &quot;id&quot;: 36,
+    &quot;source_id&quot;: 36,
+    &quot;keyword&quot;: &quot;Time-based SQLi&quot;,
+    &quot;subject&quot;: &quot;애플리케이션 보안&quot;,
+    &quot;frequency&quot;: 20,
+    &quot;priority&quot;: 5,
+    &quot;question&quot;: &quot;Time-based SQLi란?&quot;,
+    &quot;answer&quot;: &quot;응답 지연 시간을 이용해 참·거짓을 추론하는 Blind SQL Injection.&quot;,
+    &quot;definition&quot;: &quot;응답 지연 시간을 이용해 참·거짓을 추론하는 Blind SQL Injection.&quot;,
+    &quot;memory&quot;: &quot;화면 출력이 없어도 시간차로 정보 추론.&quot;,
+    &quot;trap&quot;: &quot;Error-based SQLi와 구분.&quot;,
+    &quot;compare&quot;: &quot;Blind SQLi&quot;
+  },
+  {
+    &quot;id&quot;: 37,
+    &quot;source_id&quot;: 37,
+    &quot;keyword&quot;: &quot;Cookie 공격&quot;,
+    &quot;subject&quot;: &quot;애플리케이션 보안&quot;,
+    &quot;frequency&quot;: 20,
+    &quot;priority&quot;: 5,
+    &quot;question&quot;: &quot;Cookie 공격란?&quot;,
+    &quot;answer&quot;: &quot;쿠키나 세션 식별자를 탈취·변조·재사용해 세션을 악용하는 공격.&quot;,
+    &quot;definition&quot;: &quot;쿠키나 세션 식별자를 탈취·변조·재사용해 세션을 악용하는 공격.&quot;,
+    &quot;memory&quot;: &quot;Secure·HttpOnly·SameSite 속성 기억.&quot;,
+    &quot;trap&quot;: &quot;쿠키 자체가 항상 안전한 인증수단은 아님.&quot;,
+    &quot;compare&quot;: &quot;Session Hijacking&quot;
+  },
+  {
+    &quot;id&quot;: 38,
+    &quot;source_id&quot;: 38,
+    &quot;keyword&quot;: &quot;ESM&quot;,
+    &quot;subject&quot;: &quot;정보보안 일반&quot;,
+    &quot;frequency&quot;: 17,
+    &quot;priority&quot;: 4,
+    &quot;question&quot;: &quot;ESM란?&quot;,
+    &quot;answer&quot;: &quot;Enterprise Security Management. 여러 보안 시스템의 로그·이벤트를 통합 관리.&quot;,
+    &quot;definition&quot;: &quot;Enterprise Security Management. 여러 보안 시스템의 로그·이벤트를 통합 관리.&quot;,
+    &quot;memory&quot;: &quot;통합 수집·분석·상관관계.&quot;,
+    &quot;trap&quot;: &quot;DRM과 목적이 다름.&quot;,
+    &quot;compare&quot;: &quot;SIEM / DRM&quot;
+  },
+  {
+    &quot;id&quot;: 39,
+    &quot;source_id&quot;: 39,
+    &quot;keyword&quot;: &quot;DRM&quot;,
+    &quot;subject&quot;: &quot;정보보안 일반&quot;,
+    &quot;frequency&quot;: 17,
+    &quot;priority&quot;: 4,
+    &quot;question&quot;: &quot;DRM란?&quot;,
+    &quot;answer&quot;: &quot;Digital Rights Management. 디지털 콘텐츠의 복사·출력·사용·유출을 통제.&quot;,
+    &quot;definition&quot;: &quot;Digital Rights Management. 디지털 콘텐츠의 복사·출력·사용·유출을 통제.&quot;,
+    &quot;memory&quot;: &quot;문서/콘텐츠 사용권한 통제.&quot;,
+    &quot;trap&quot;: &quot;ESM은 보안 이벤트 관리.&quot;,
+    &quot;compare&quot;: &quot;ESM / DLP&quot;
+  },
+  {
+    &quot;id&quot;: 40,
+    &quot;source_id&quot;: 40,
+    &quot;keyword&quot;: &quot;SET&quot;,
+    &quot;subject&quot;: &quot;정보보안 일반&quot;,
+    &quot;frequency&quot;: 17,
+    &quot;priority&quot;: 4,
+    &quot;question&quot;: &quot;SET란?&quot;,
+    &quot;answer&quot;: &quot;Secure Electronic Transaction. 전자상거래 카드결제를 보호하기 위해 개발된 프로토콜.&quot;,
+    &quot;definition&quot;: &quot;Secure Electronic Transaction. 전자상거래 카드결제를 보호하기 위해 개발된 프로토콜.&quot;,
+    &quot;memory&quot;: &quot;이중서명(Dual Signature) 기억.&quot;,
+    &quot;trap&quot;: &quot;현재 일반 웹 TLS와 동일한 개념 아님.&quot;,
+    &quot;compare&quot;: &quot;전자상거래 / 이중서명&quot;
+  },
+  {
+    &quot;id&quot;: 41,
+    &quot;source_id&quot;: 41,
+    &quot;keyword&quot;: &quot;PKI&quot;,
+    &quot;subject&quot;: &quot;정보보안 일반&quot;,
+    &quot;frequency&quot;: 17,
+    &quot;priority&quot;: 4,
+    &quot;question&quot;: &quot;PKI란?&quot;,
+    &quot;answer&quot;: &quot;공개키·인증서·인증기관을 이용해 신뢰관계를 구축하는 체계.&quot;,
+    &quot;definition&quot;: &quot;공개키·인증서·인증기관을 이용해 신뢰관계를 구축하는 체계.&quot;,
+    &quot;memory&quot;: &quot;CA / RA / 인증서 / CRL / 저장소.&quot;,
+    &quot;trap&quot;: &quot;단일 암호 알고리즘이 아니다.&quot;,
+    &quot;compare&quot;: &quot;CA / X.509&quot;
+  },
+  {
+    &quot;id&quot;: 42,
+    &quot;source_id&quot;: 42,
+    &quot;keyword&quot;: &quot;X.509&quot;,
+    &quot;subject&quot;: &quot;정보보안 일반&quot;,
+    &quot;frequency&quot;: 17,
+    &quot;priority&quot;: 4,
+    &quot;question&quot;: &quot;X.509란?&quot;,
+    &quot;answer&quot;: &quot;공개키 인증서의 형식과 구조를 정의한 국제 표준.&quot;,
+    &quot;definition&quot;: &quot;공개키 인증서의 형식과 구조를 정의한 국제 표준.&quot;,
+    &quot;memory&quot;: &quot;주체·발급자·공개키·유효기간·일련번호·서명.&quot;,
+    &quot;trap&quot;: &quot;CRL 자체가 인증서는 아님.&quot;,
+    &quot;compare&quot;: &quot;PKI / 인증서&quot;
+  },
+  {
+    &quot;id&quot;: 43,
+    &quot;source_id&quot;: 43,
+    &quot;keyword&quot;: &quot;WPKI&quot;,
+    &quot;subject&quot;: &quot;정보보안 일반&quot;,
+    &quot;frequency&quot;: 17,
+    &quot;priority&quot;: 4,
+    &quot;question&quot;: &quot;WPKI란?&quot;,
+    &quot;answer&quot;: &quot;무선·모바일 환경에서 활용되는 공개키 기반구조.&quot;,
+    &quot;definition&quot;: &quot;무선·모바일 환경에서 활용되는 공개키 기반구조.&quot;,
+    &quot;memory&quot;: &quot;Wireless PKI.&quot;,
+    &quot;trap&quot;: &quot;일반 PKI와 목적은 유사하나 환경이 다름.&quot;,
+    &quot;compare&quot;: &quot;PKI&quot;
+  },
+  {
+    &quot;id&quot;: 44,
+    &quot;source_id&quot;: 44,
+    &quot;keyword&quot;: &quot;CRL&quot;,
+    &quot;subject&quot;: &quot;정보보안 일반&quot;,
+    &quot;frequency&quot;: 17,
+    &quot;priority&quot;: 4,
+    &quot;question&quot;: &quot;CRL란?&quot;,
+    &quot;answer&quot;: &quot;CA가 발행하는 폐기 인증서 목록.&quot;,
+    &quot;definition&quot;: &quot;CA가 발행하는 폐기 인증서 목록.&quot;,
+    &quot;memory&quot;: &quot;목록 전체를 배포해 폐기 여부 확인.&quot;,
+    &quot;trap&quot;: &quot;OCSP는 온라인 개별 조회.&quot;,
+    &quot;compare&quot;: &quot;OCSP / Delta CRL&quot;
+  },
+  {
+    &quot;id&quot;: 45,
+    &quot;source_id&quot;: 45,
+    &quot;keyword&quot;: &quot;Delta CRL&quot;,
+    &quot;subject&quot;: &quot;정보보안 일반&quot;,
+    &quot;frequency&quot;: 17,
+    &quot;priority&quot;: 4,
+    &quot;question&quot;: &quot;Delta CRL란?&quot;,
+    &quot;answer&quot;: &quot;기본 CRL 이후 변경된 폐기 정보만 담는 증분 목록.&quot;,
+    &quot;definition&quot;: &quot;기본 CRL 이후 변경된 폐기 정보만 담는 증분 목록.&quot;,
+    &quot;memory&quot;: &quot;변경분만 제공해 크기를 줄임.&quot;,
+    &quot;trap&quot;: &quot;기본 CRL 없이 항상 독립적으로 쓰는 목록으로 보면 안 됨.&quot;,
+    &quot;compare&quot;: &quot;CRL&quot;
+  },
+  {
+    &quot;id&quot;: 46,
+    &quot;source_id&quot;: 46,
+    &quot;keyword&quot;: &quot;OCSP&quot;,
+    &quot;subject&quot;: &quot;정보보안 일반&quot;,
+    &quot;frequency&quot;: 17,
+    &quot;priority&quot;: 4,
+    &quot;question&quot;: &quot;OCSP란?&quot;,
+    &quot;answer&quot;: &quot;특정 인증서의 현재 상태를 온라인으로 질의하는 프로토콜.&quot;,
+    &quot;definition&quot;: &quot;특정 인증서의 현재 상태를 온라인으로 질의하는 프로토콜.&quot;,
+    &quot;memory&quot;: &quot;온라인 상태조회.&quot;,
+    &quot;trap&quot;: &quot;CRL은 목록 기반.&quot;,
+    &quot;compare&quot;: &quot;CRL&quot;
+  },
+  {
+    &quot;id&quot;: 47,
+    &quot;source_id&quot;: 47,
+    &quot;keyword&quot;: &quot;IDS&quot;,
+    &quot;subject&quot;: &quot;네트워크 보안&quot;,
+    &quot;frequency&quot;: 17,
+    &quot;priority&quot;: 4,
+    &quot;question&quot;: &quot;IDS란?&quot;,
+    &quot;answer&quot;: &quot;침입을 탐지하고 경고하는 시스템.&quot;,
+    &quot;definition&quot;: &quot;침입을 탐지하고 경고하는 시스템.&quot;,
+    &quot;memory&quot;: &quot;탐지 중심.&quot;,
+    &quot;trap&quot;: &quot;IPS는 차단 기능까지 수행.&quot;,
+    &quot;compare&quot;: &quot;IPS&quot;
+  },
+  {
+    &quot;id&quot;: 48,
+    &quot;source_id&quot;: 48,
+    &quot;keyword&quot;: &quot;IPS&quot;,
+    &quot;subject&quot;: &quot;네트워크 보안&quot;,
+    &quot;frequency&quot;: 17,
+    &quot;priority&quot;: 4,
+    &quot;question&quot;: &quot;IPS란?&quot;,
+    &quot;answer&quot;: &quot;침입을 탐지하고 인라인에서 차단까지 수행하는 시스템.&quot;,
+    &quot;definition&quot;: &quot;침입을 탐지하고 인라인에서 차단까지 수행하는 시스템.&quot;,
+    &quot;memory&quot;: &quot;탐지 + 차단.&quot;,
+    &quot;trap&quot;: &quot;오탐이면 정상 트래픽까지 차단 가능.&quot;,
+    &quot;compare&quot;: &quot;IDS&quot;
+  },
+  {
+    &quot;id&quot;: 49,
+    &quot;source_id&quot;: 49,
+    &quot;keyword&quot;: &quot;NIDS&quot;,
+    &quot;subject&quot;: &quot;네트워크 보안&quot;,
+    &quot;frequency&quot;: 17,
+    &quot;priority&quot;: 4,
+    &quot;question&quot;: &quot;NIDS란?&quot;,
+    &quot;answer&quot;: &quot;네트워크 구간의 패킷과 트래픽을 감시하는 IDS.&quot;,
+    &quot;definition&quot;: &quot;네트워크 구간의 패킷과 트래픽을 감시하는 IDS.&quot;,
+    &quot;memory&quot;: &quot;Network 기반.&quot;,
+    &quot;trap&quot;: &quot;호스트 내부 행위에는 HIDS가 강함.&quot;,
+    &quot;compare&quot;: &quot;HIDS&quot;
+  },
+  {
+    &quot;id&quot;: 50,
+    &quot;source_id&quot;: 50,
+    &quot;keyword&quot;: &quot;HIDS&quot;,
+    &quot;subject&quot;: &quot;시스템 보안&quot;,
+    &quot;frequency&quot;: 17,
+    &quot;priority&quot;: 4,
+    &quot;question&quot;: &quot;HIDS란?&quot;,
+    &quot;answer&quot;: &quot;개별 호스트의 로그·파일·프로세스 등을 감시하는 IDS.&quot;,
+    &quot;definition&quot;: &quot;개별 호스트의 로그·파일·프로세스 등을 감시하는 IDS.&quot;,
+    &quot;memory&quot;: &quot;Host 기반.&quot;,
+    &quot;trap&quot;: &quot;네트워크 전체 트래픽 감시는 NIDS.&quot;,
+    &quot;compare&quot;: &quot;NIDS&quot;
+  },
+  {
+    &quot;id&quot;: 51,
+    &quot;source_id&quot;: 51,
+    &quot;keyword&quot;: &quot;오용탐지&quot;,
+    &quot;subject&quot;: &quot;네트워크 보안&quot;,
+    &quot;frequency&quot;: 17,
+    &quot;priority&quot;: 4,
+    &quot;question&quot;: &quot;오용탐지란?&quot;,
+    &quot;answer&quot;: &quot;알려진 공격 패턴이나 시그니처와 비교해 탐지하는 방식.&quot;,
+    &quot;definition&quot;: &quot;알려진 공격 패턴이나 시그니처와 비교해 탐지하는 방식.&quot;,
+    &quot;memory&quot;: &quot;Known Attack에 강함.&quot;,
+    &quot;trap&quot;: &quot;새로운 공격 탐지에는 약함.&quot;,
+    &quot;compare&quot;: &quot;이상탐지&quot;
+  },
+  {
+    &quot;id&quot;: 52,
+    &quot;source_id&quot;: 52,
+    &quot;keyword&quot;: &quot;이상탐지&quot;,
+    &quot;subject&quot;: &quot;네트워크 보안&quot;,
+    &quot;frequency&quot;: 17,
+    &quot;priority&quot;: 4,
+    &quot;question&quot;: &quot;이상탐지란?&quot;,
+    &quot;answer&quot;: &quot;정상행위 모델에서 벗어난 행동을 공격으로 판단하는 방식.&quot;,
+    &quot;definition&quot;: &quot;정상행위 모델에서 벗어난 행동을 공격으로 판단하는 방식.&quot;,
+    &quot;memory&quot;: &quot;Unknown Attack 탐지 가능.&quot;,
+    &quot;trap&quot;: &quot;False Positive가 증가할 수 있음.&quot;,
+    &quot;compare&quot;: &quot;오용탐지&quot;
+  },
+  {
+    &quot;id&quot;: 53,
+    &quot;source_id&quot;: 53,
+    &quot;keyword&quot;: &quot;비정상탐지&quot;,
+    &quot;subject&quot;: &quot;네트워크 보안&quot;,
+    &quot;frequency&quot;: 17,
+    &quot;priority&quot;: 4,
+    &quot;question&quot;: &quot;비정상탐지란?&quot;,
+    &quot;answer&quot;: &quot;정상 상태와 다른 비정상 행위를 탐지하는 방식으로 보통 이상탐지와 같은 맥락.&quot;,
+    &quot;definition&quot;: &quot;정상 상태와 다른 비정상 행위를 탐지하는 방식으로 보통 이상탐지와 같은 맥락.&quot;,
+    &quot;memory&quot;: &quot;정상 패턴과의 편차.&quot;,
+    &quot;trap&quot;: &quot;용어가 교재마다 조금 다를 수 있음.&quot;,
+    &quot;compare&quot;: &quot;이상탐지&quot;
+  },
+  {
+    &quot;id&quot;: 54,
+    &quot;source_id&quot;: 54,
+    &quot;keyword&quot;: &quot;DNS&quot;,
+    &quot;subject&quot;: &quot;네트워크 보안&quot;,
+    &quot;frequency&quot;: 16,
+    &quot;priority&quot;: 4,
+    &quot;question&quot;: &quot;DNS란?&quot;,
+    &quot;answer&quot;: &quot;도메인 이름과 IP 주소를 대응시키는 분산형 이름해석 시스템.&quot;,
+    &quot;definition&quot;: &quot;도메인 이름과 IP 주소를 대응시키는 분산형 이름해석 시스템.&quot;,
+    &quot;memory&quot;: &quot;53/UDP·TCP.&quot;,
+    &quot;trap&quot;: &quot;TCP는 영역전송에만 쓴다고 단정하면 위험.&quot;,
+    &quot;compare&quot;: &quot;DNSSEC / DHCP&quot;
+  },
+  {
+    &quot;id&quot;: 55,
+    &quot;source_id&quot;: 55,
+    &quot;keyword&quot;: &quot;DNSSEC&quot;,
+    &quot;subject&quot;: &quot;네트워크 보안&quot;,
+    &quot;frequency&quot;: 16,
+    &quot;priority&quot;: 4,
+    &quot;question&quot;: &quot;DNSSEC란?&quot;,
+    &quot;answer&quot;: &quot;DNS 데이터에 전자서명을 적용해 출처인증과 무결성을 검증하는 기술.&quot;,
+    &quot;definition&quot;: &quot;DNS 데이터에 전자서명을 적용해 출처인증과 무결성을 검증하는 기술.&quot;,
+    &quot;memory&quot;: &quot;인증·무결성 O, 기밀성 X.&quot;,
+    &quot;trap&quot;: &quot;DNS 내용을 암호화하는 기술이 아니다.&quot;,
+    &quot;compare&quot;: &quot;DNS over HTTPS&quot;
+  },
+  {
+    &quot;id&quot;: 56,
+    &quot;source_id&quot;: 56,
+    &quot;keyword&quot;: &quot;파밍&quot;,
+    &quot;subject&quot;: &quot;애플리케이션 보안&quot;,
+    &quot;frequency&quot;: 16,
+    &quot;priority&quot;: 4,
+    &quot;question&quot;: &quot;파밍란?&quot;,
+    &quot;answer&quot;: &quot;DNS나 hosts 등을 조작해 정상 주소를 입력해도 가짜 사이트로 유도하는 공격.&quot;,
+    &quot;definition&quot;: &quot;DNS나 hosts 등을 조작해 정상 주소를 입력해도 가짜 사이트로 유도하는 공격.&quot;,
+    &quot;memory&quot;: &quot;주소 해석 자체를 조작.&quot;,
+    &quot;trap&quot;: &quot;피싱은 사용자를 속여 링크 클릭 등을 유도.&quot;,
+    &quot;compare&quot;: &quot;피싱&quot;
+  },
+  {
+    &quot;id&quot;: 57,
+    &quot;source_id&quot;: 57,
+    &quot;keyword&quot;: &quot;DNS 구성요소&quot;,
+    &quot;subject&quot;: &quot;네트워크 보안&quot;,
+    &quot;frequency&quot;: 16,
+    &quot;priority&quot;: 4,
+    &quot;question&quot;: &quot;DNS 구성요소란?&quot;,
+    &quot;answer&quot;: &quot;Resolver, Recursive DNS, Root, TLD, Authoritative DNS 등 DNS 질의를 처리하는 구성요소.&quot;,
+    &quot;definition&quot;: &quot;Resolver, Recursive DNS, Root, TLD, Authoritative DNS 등 DNS 질의를 처리하는 구성요소.&quot;,
+    &quot;memory&quot;: &quot;질의 흐름 순서 이해.&quot;,
+    &quot;trap&quot;: &quot;모든 DNS 서버 역할이 동일하지 않음.&quot;,
+    &quot;compare&quot;: &quot;Resolver / Authoritative DNS&quot;
+  },
+  {
+    &quot;id&quot;: 58,
+    &quot;source_id&quot;: 58,
+    &quot;keyword&quot;: &quot;Query Flooding&quot;,
+    &quot;subject&quot;: &quot;네트워크 보안&quot;,
+    &quot;frequency&quot;: 16,
+    &quot;priority&quot;: 4,
+    &quot;question&quot;: &quot;Query Flooding란?&quot;,
+    &quot;answer&quot;: &quot;DNS 등에 대량의 질의를 보내 처리자원을 고갈시키는 DoS/DDoS 유형.&quot;,
+    &quot;definition&quot;: &quot;DNS 등에 대량의 질의를 보내 처리자원을 고갈시키는 DoS/DDoS 유형.&quot;,
+    &quot;memory&quot;: &quot;대량 질의로 자원 소진.&quot;,
+    &quot;trap&quot;: &quot;DNS Amplification은 반사·증폭 구조가 핵심.&quot;,
+    &quot;compare&quot;: &quot;DNS Amplification&quot;
+  },
+  {
+    &quot;id&quot;: 59,
+    &quot;source_id&quot;: 59,
+    &quot;keyword&quot;: &quot;개인정보보호&quot;,
+    &quot;subject&quot;: &quot;정보보안 관리·법규&quot;,
+    &quot;frequency&quot;: 16,
+    &quot;priority&quot;: 4,
+    &quot;question&quot;: &quot;개인정보보호란?&quot;,
+    &quot;answer&quot;: &quot;개인정보의 수집·이용·제공·보관·파기 전 과정에서 정보주체의 권리를 보호하는 활동.&quot;,
+    &quot;definition&quot;: &quot;개인정보의 수집·이용·제공·보관·파기 전 과정에서 정보주체의 권리를 보호하는 활동.&quot;,
+    &quot;memory&quot;: &quot;최소수집·목적 제한·안전조치.&quot;,
+    &quot;trap&quot;: &quot;세부 법정 보존기간은 최신 법령 확인이 필요.&quot;,
+    &quot;compare&quot;: &quot;개인정보 보호법&quot;
+  },
+  {
+    &quot;id&quot;: 60,
+    &quot;source_id&quot;: 60,
+    &quot;keyword&quot;: &quot;제 3 자 제공&quot;,
+    &quot;subject&quot;: &quot;정보보안 관리·법규&quot;,
+    &quot;frequency&quot;: 16,
+    &quot;priority&quot;: 4,
+    &quot;question&quot;: &quot;제 3 자 제공란?&quot;,
+    &quot;answer&quot;: &quot;개인정보를 정보주체와 처리자 외의 제3자가 이용할 수 있도록 제공하는 행위.&quot;,
+    &quot;definition&quot;: &quot;개인정보를 정보주체와 처리자 외의 제3자가 이용할 수 있도록 제공하는 행위.&quot;,
+    &quot;memory&quot;: &quot;처리위탁과 구분.&quot;,
+    &quot;trap&quot;: &quot;위탁과 제3자 제공은 법적 성격이 다름.&quot;,
+    &quot;compare&quot;: &quot;처리위탁&quot;
+  },
+  {
+    &quot;id&quot;: 61,
+    &quot;source_id&quot;: 61,
+    &quot;keyword&quot;: &quot;접속기록&quot;,
+    &quot;subject&quot;: &quot;정보보안 관리·법규&quot;,
+    &quot;frequency&quot;: 16,
+    &quot;priority&quot;: 4,
+    &quot;question&quot;: &quot;접속기록란?&quot;,
+    &quot;answer&quot;: &quot;개인정보처리시스템 등에 누가 언제 어떻게 접속·처리했는지 남긴 기록.&quot;,
+    &quot;definition&quot;: &quot;개인정보처리시스템 등에 누가 언제 어떻게 접속·처리했는지 남긴 기록.&quot;,
+    &quot;memory&quot;: &quot;감사·책임추적·사고분석.&quot;,
+    &quot;trap&quot;: &quot;정확한 보존기간은 최신 법령·고시 기준 확인.&quot;,
+    &quot;compare&quot;: &quot;로그 / 감사기록&quot;
+  },
+  {
+    &quot;id&quot;: 62,
+    &quot;source_id&quot;: 62,
+    &quot;keyword&quot;: &quot;손해배상책임&quot;,
+    &quot;subject&quot;: &quot;정보보안 관리·법규&quot;,
+    &quot;frequency&quot;: 16,
+    &quot;priority&quot;: 4,
+    &quot;question&quot;: &quot;손해배상책임란?&quot;,
+    &quot;answer&quot;: &quot;개인정보 침해 등 위법행위로 발생한 손해를 배상할 법적 책임.&quot;,
+    &quot;definition&quot;: &quot;개인정보 침해 등 위법행위로 발생한 손해를 배상할 법적 책임.&quot;,
+    &quot;memory&quot;: &quot;민사상 구제와 책임.&quot;,
+    &quot;trap&quot;: &quot;구체적 배상 범위·절차는 최신 법령 확인.&quot;,
+    &quot;compare&quot;: &quot;개인정보 침해&quot;
+  },
+  {
+    &quot;id&quot;: 63,
+    &quot;source_id&quot;: 63,
+    &quot;keyword&quot;: &quot;법령&quot;,
+    &quot;subject&quot;: &quot;정보보안 관리·법규&quot;,
+    &quot;frequency&quot;: 16,
+    &quot;priority&quot;: 4,
+    &quot;question&quot;: &quot;법령란?&quot;,
+    &quot;answer&quot;: &quot;정보보호·개인정보와 관련된 법률·시행령·시행규칙 등의 규범.&quot;,
+    &quot;definition&quot;: &quot;정보보호·개인정보와 관련된 법률·시행령·시행규칙 등의 규범.&quot;,
+    &quot;memory&quot;: &quot;주체·의무·기간·제재를 구분.&quot;,
+    &quot;trap&quot;: &quot;법령 문제는 개정 가능성이 높아 최신 기준 필요.&quot;,
+    &quot;compare&quot;: &quot;개인정보 보호법&quot;
+  },
+  {
+    &quot;id&quot;: 64,
+    &quot;source_id&quot;: 64,
+    &quot;keyword&quot;: &quot;전자서명&quot;,
+    &quot;subject&quot;: &quot;정보보안 일반&quot;,
+    &quot;frequency&quot;: 15,
+    &quot;priority&quot;: 4,
+    &quot;question&quot;: &quot;전자서명란?&quot;,
+    &quot;answer&quot;: &quot;전자문서에서 서명자 식별과 내용 변경 여부 확인에 쓰이는 전자적 정보.&quot;,
+    &quot;definition&quot;: &quot;전자문서에서 서명자 식별과 내용 변경 여부 확인에 쓰이는 전자적 정보.&quot;,
+    &quot;memory&quot;: &quot;인증·무결성·부인방지와 연결.&quot;,
+    &quot;trap&quot;: &quot;기밀성 자체를 제공하지 않음.&quot;,
+    &quot;compare&quot;: &quot;디지털서명&quot;
+  },
+  {
+    &quot;id&quot;: 65,
+    &quot;source_id&quot;: 65,
+    &quot;keyword&quot;: &quot;디지털서명&quot;,
+    &quot;subject&quot;: &quot;정보보안 일반&quot;,
+    &quot;frequency&quot;: 15,
+    &quot;priority&quot;: 4,
+    &quot;question&quot;: &quot;디지털서명란?&quot;,
+    &quot;answer&quot;: &quot;해시값을 서명자의 개인키로 서명하고 공개키로 검증하는 공개키 기반 서명 방식.&quot;,
+    &quot;definition&quot;: &quot;해시값을 서명자의 개인키로 서명하고 공개키로 검증하는 공개키 기반 서명 방식.&quot;,
+    &quot;memory&quot;: &quot;개인키 서명 → 공개키 검증.&quot;,
+    &quot;trap&quot;: &quot;공개키로 서명한다고 외우면 오류.&quot;,
+    &quot;compare&quot;: &quot;전자서명 / RSA&quot;
+  },
+  {
+    &quot;id&quot;: 66,
+    &quot;source_id&quot;: 66,
+    &quot;keyword&quot;: &quot;RSA 전자서명&quot;,
+    &quot;subject&quot;: &quot;정보보안 일반&quot;,
+    &quot;frequency&quot;: 15,
+    &quot;priority&quot;: 4,
+    &quot;question&quot;: &quot;RSA 전자서명란?&quot;,
+    &quot;answer&quot;: &quot;RSA 알고리즘을 이용한 디지털서명 방식.&quot;,
+    &quot;definition&quot;: &quot;RSA 알고리즘을 이용한 디지털서명 방식.&quot;,
+    &quot;memory&quot;: &quot;개인키로 서명, 공개키로 검증.&quot;,
+    &quot;trap&quot;: &quot;RSA 암호화의 키 사용 방향과 구분.&quot;,
+    &quot;compare&quot;: &quot;RSA 암호화&quot;
+  },
+  {
+    &quot;id&quot;: 67,
+    &quot;source_id&quot;: 67,
+    &quot;keyword&quot;: &quot;은닉서명&quot;,
+    &quot;subject&quot;: &quot;정보보안 일반&quot;,
+    &quot;frequency&quot;: 15,
+    &quot;priority&quot;: 4,
+    &quot;question&quot;: &quot;은닉서명란?&quot;,
+    &quot;answer&quot;: &quot;서명자가 메시지 내용을 알 수 없는 상태에서 서명하는 Blind Signature.&quot;,
+    &quot;definition&quot;: &quot;서명자가 메시지 내용을 알 수 없는 상태에서 서명하는 Blind Signature.&quot;,
+    &quot;memory&quot;: &quot;익명성·전자화폐와 연결.&quot;,
+    &quot;trap&quot;: &quot;일반 디지털서명과 달리 메시지 내용을 숨긴 채 서명.&quot;,
+    &quot;compare&quot;: &quot;Blind Signature&quot;
+  },
+  {
+    &quot;id&quot;: 68,
+    &quot;source_id&quot;: 68,
+    &quot;keyword&quot;: &quot;NMAP&quot;,
+    &quot;subject&quot;: &quot;네트워크 보안&quot;,
+    &quot;frequency&quot;: 15,
+    &quot;priority&quot;: 4,
+    &quot;question&quot;: &quot;NMAP란?&quot;,
+    &quot;answer&quot;: &quot;호스트·포트·서비스·OS 등을 탐색하는 대표 네트워크 스캐닝 도구.&quot;,
+    &quot;definition&quot;: &quot;호스트·포트·서비스·OS 등을 탐색하는 대표 네트워크 스캐닝 도구.&quot;,
+    &quot;memory&quot;: &quot;포트 스캔.&quot;,
+    &quot;trap&quot;: &quot;취약점 스캐너 Nessus와 용도가 다름.&quot;,
+    &quot;compare&quot;: &quot;Nessus&quot;
+  },
+  {
+    &quot;id&quot;: 69,
+    &quot;source_id&quot;: 69,
+    &quot;keyword&quot;: &quot;스캔&quot;,
+    &quot;subject&quot;: &quot;네트워크 보안&quot;,
+    &quot;frequency&quot;: 15,
+    &quot;priority&quot;: 4,
+    &quot;question&quot;: &quot;스캔란?&quot;,
+    &quot;answer&quot;: &quot;대상 시스템의 활성 호스트·포트·서비스 등을 조사하는 행위.&quot;,
+    &quot;definition&quot;: &quot;대상 시스템의 활성 호스트·포트·서비스 등을 조사하는 행위.&quot;,
+    &quot;memory&quot;: &quot;공격 전 정보수집 단계.&quot;,
+    &quot;trap&quot;: &quot;DoS 자체와 다름.&quot;,
+    &quot;compare&quot;: &quot;NMAP&quot;
+  },
+  {
+    &quot;id&quot;: 70,
+    &quot;source_id&quot;: 70,
+    &quot;keyword&quot;: &quot;스텔스&quot;,
+    &quot;subject&quot;: &quot;네트워크 보안&quot;,
+    &quot;frequency&quot;: 15,
+    &quot;priority&quot;: 4,
+    &quot;question&quot;: &quot;스텔스란?&quot;,
+    &quot;answer&quot;: &quot;탐지를 줄이기 위해 정상 TCP 연결을 완전히 맺지 않는 등 은밀하게 수행하는 스캔.&quot;,
+    &quot;definition&quot;: &quot;탐지를 줄이기 위해 정상 TCP 연결을 완전히 맺지 않는 등 은밀하게 수행하는 스캔.&quot;,
+    &quot;memory&quot;: &quot;Half-open 등의 방식.&quot;,
+    &quot;trap&quot;: &quot;완전한 연결을 반드시 수립하는 스캔이 아님.&quot;,
+    &quot;compare&quot;: &quot;SYN Scan&quot;
+  },
+  {
+    &quot;id&quot;: 71,
+    &quot;source_id&quot;: 71,
+    &quot;keyword&quot;: &quot;Xmas&quot;,
+    &quot;subject&quot;: &quot;네트워크 보안&quot;,
+    &quot;frequency&quot;: 15,
+    &quot;priority&quot;: 4,
+    &quot;question&quot;: &quot;Xmas란?&quot;,
+    &quot;answer&quot;: &quot;TCP FIN·PSH·URG 플래그를 동시에 설정하여 보내는 스캔.&quot;,
+    &quot;definition&quot;: &quot;TCP FIN·PSH·URG 플래그를 동시에 설정하여 보내는 스캔.&quot;,
+    &quot;memory&quot;: &quot;FIN+PSH+URG.&quot;,
+    &quot;trap&quot;: &quot;SYN Scan과 플래그 조합이 다름.&quot;,
+    &quot;compare&quot;: &quot;FIN / NULL Scan&quot;
+  },
+  {
+    &quot;id&quot;: 72,
+    &quot;source_id&quot;: 72,
+    &quot;keyword&quot;: &quot;SYN 스캔&quot;,
+    &quot;subject&quot;: &quot;네트워크 보안&quot;,
+    &quot;frequency&quot;: 15,
+    &quot;priority&quot;: 4,
+    &quot;question&quot;: &quot;SYN 스캔란?&quot;,
+    &quot;answer&quot;: &quot;SYN을 보내고 SYN/ACK 여부로 포트를 판단한 뒤 연결을 완성하지 않는 Half-open Scan.&quot;,
+    &quot;definition&quot;: &quot;SYN을 보내고 SYN/ACK 여부로 포트를 판단한 뒤 연결을 완성하지 않는 Half-open Scan.&quot;,
+    &quot;memory&quot;: &quot;SYN → SYN/ACK면 열림 가능.&quot;,
+    &quot;trap&quot;: &quot;3-way handshake를 끝까지 완료하지 않음.&quot;,
+    &quot;compare&quot;: &quot;TCP Connect Scan&quot;
+  },
+  {
+    &quot;id&quot;: 73,
+    &quot;source_id&quot;: 73,
+    &quot;keyword&quot;: &quot;접근통제 DAC&quot;,
+    &quot;subject&quot;: &quot;정보보안 일반&quot;,
+    &quot;frequency&quot;: 15,
+    &quot;priority&quot;: 4,
+    &quot;question&quot;: &quot;접근통제 DAC란?&quot;,
+    &quot;answer&quot;: &quot;접근통제는 자원 사용을 제한하는 보안기법이며 DAC는 객체 소유자가 권한을 결정하는 임의적 접근통제다.&quot;,
+    &quot;definition&quot;: &quot;접근통제는 자원 사용을 제한하는 보안기법이며 DAC는 객체 소유자가 권한을 결정하는 임의적 접근통제다.&quot;,
+    &quot;memory&quot;: &quot;DAC = 소유자 중심.&quot;,
+    &quot;trap&quot;: &quot;MAC의 보안등급·정책 강제와 구분.&quot;,
+    &quot;compare&quot;: &quot;MAC / RBAC&quot;
+  },
+  {
+    &quot;id&quot;: 74,
+    &quot;source_id&quot;: 74,
+    &quot;keyword&quot;: &quot;RBAC&quot;,
+    &quot;subject&quot;: &quot;정보보안 일반&quot;,
+    &quot;frequency&quot;: 15,
+    &quot;priority&quot;: 4,
+    &quot;question&quot;: &quot;RBAC란?&quot;,
+    &quot;answer&quot;: &quot;사용자의 역할(Role)에 따라 권한을 부여하는 접근통제 방식.&quot;,
+    &quot;definition&quot;: &quot;사용자의 역할(Role)에 따라 권한을 부여하는 접근통제 방식.&quot;,
+    &quot;memory&quot;: &quot;Role 중심, 직무분리에 적합.&quot;,
+    &quot;trap&quot;: &quot;사용자 개인에게 직접 권한을 붙이는 DAC와 구분.&quot;,
+    &quot;compare&quot;: &quot;DAC / MAC&quot;
+  },
+  {
+    &quot;id&quot;: 75,
+    &quot;source_id&quot;: 75,
+    &quot;keyword&quot;: &quot;ACL&quot;,
+    &quot;subject&quot;: &quot;정보보안 일반&quot;,
+    &quot;frequency&quot;: 15,
+    &quot;priority&quot;: 4,
+    &quot;question&quot;: &quot;ACL란?&quot;,
+    &quot;answer&quot;: &quot;객체별로 어떤 주체가 어떤 접근권한을 갖는지 기록한 목록.&quot;,
+    &quot;definition&quot;: &quot;객체별로 어떤 주체가 어떤 접근권한을 갖는지 기록한 목록.&quot;,
+    &quot;memory&quot;: &quot;객체 기준 목록.&quot;,
+    &quot;trap&quot;: &quot;Capability List는 주체 기준.&quot;,
+    &quot;compare&quot;: &quot;Capability List&quot;
+  },
+  {
+    &quot;id&quot;: 76,
+    &quot;source_id&quot;: 76,
+    &quot;keyword&quot;: &quot;ACM&quot;,
+    &quot;subject&quot;: &quot;정보보안 일반&quot;,
+    &quot;frequency&quot;: 15,
+    &quot;priority&quot;: 4,
+    &quot;question&quot;: &quot;ACM란?&quot;,
+    &quot;answer&quot;: &quot;Access Control Matrix. 주체와 객체의 권한 관계를 행렬로 표현한 모델.&quot;,
+    &quot;definition&quot;: &quot;Access Control Matrix. 주체와 객체의 권한 관계를 행렬로 표현한 모델.&quot;,
+    &quot;memory&quot;: &quot;행=주체, 열=객체 관점으로 이해.&quot;,
+    &quot;trap&quot;: &quot;ACL과 Capability는 ACM 구현 관점.&quot;,
+    &quot;compare&quot;: &quot;ACL / Capability&quot;
+  },
+  {
+    &quot;id&quot;: 77,
+    &quot;source_id&quot;: 77,
+    &quot;keyword&quot;: &quot;BLP&quot;,
+    &quot;subject&quot;: &quot;정보보안 일반&quot;,
+    &quot;frequency&quot;: 15,
+    &quot;priority&quot;: 4,
+    &quot;question&quot;: &quot;BLP란?&quot;,
+    &quot;answer&quot;: &quot;Bell-LaPadula. 기밀성 보호를 목적으로 하는 다단계 보안 모델.&quot;,
+    &quot;definition&quot;: &quot;Bell-LaPadula. 기밀성 보호를 목적으로 하는 다단계 보안 모델.&quot;,
+    &quot;memory&quot;: &quot;No Read Up / No Write Down.&quot;,
+    &quot;trap&quot;: &quot;Biba는 무결성.&quot;,
+    &quot;compare&quot;: &quot;Biba&quot;
+  },
+  {
+    &quot;id&quot;: 78,
+    &quot;source_id&quot;: 78,
+    &quot;keyword&quot;: &quot;Biba&quot;,
+    &quot;subject&quot;: &quot;정보보안 일반&quot;,
+    &quot;frequency&quot;: 15,
+    &quot;priority&quot;: 4,
+    &quot;question&quot;: &quot;Biba란?&quot;,
+    &quot;answer&quot;: &quot;데이터 무결성 보호를 목적으로 하는 보안 모델.&quot;,
+    &quot;definition&quot;: &quot;데이터 무결성 보호를 목적으로 하는 보안 모델.&quot;,
+    &quot;memory&quot;: &quot;No Read Down / No Write Up.&quot;,
+    &quot;trap&quot;: &quot;BLP와 방향이 반대.&quot;,
+    &quot;compare&quot;: &quot;BLP&quot;
+  },
+  {
+    &quot;id&quot;: 79,
+    &quot;source_id&quot;: 79,
+    &quot;keyword&quot;: &quot;무선&quot;,
+    &quot;subject&quot;: &quot;네트워크 보안&quot;,
+    &quot;frequency&quot;: 15,
+    &quot;priority&quot;: 4,
+    &quot;question&quot;: &quot;무선란?&quot;,
+    &quot;answer&quot;: &quot;전파를 이용해 데이터를 송수신하는 네트워크 환경.&quot;,
+    &quot;definition&quot;: &quot;전파를 이용해 데이터를 송수신하는 네트워크 환경.&quot;,
+    &quot;memory&quot;: &quot;WEP/WPA/802.11과 묶어 학습.&quot;,
+    &quot;trap&quot;: &quot;유선망과 위협 모델이 다름.&quot;,
+    &quot;compare&quot;: &quot;WEP / WPA&quot;
+  },
+  {
+    &quot;id&quot;: 80,
+    &quot;source_id&quot;: 80,
+    &quot;keyword&quot;: &quot;WEP&quot;,
+    &quot;subject&quot;: &quot;네트워크 보안&quot;,
+    &quot;frequency&quot;: 15,
+    &quot;priority&quot;: 4,
+    &quot;question&quot;: &quot;WEP란?&quot;,
+    &quot;answer&quot;: &quot;RC4 기반 초기 Wi-Fi 보안 규격.&quot;,
+    &quot;definition&quot;: &quot;RC4 기반 초기 Wi-Fi 보안 규격.&quot;,
+    &quot;memory&quot;: &quot;짧은 IV와 키 재사용 문제로 취약.&quot;,
+    &quot;trap&quot;: &quot;현재 안전한 무선 보안으로 보지 않음.&quot;,
+    &quot;compare&quot;: &quot;WPA / WPA2&quot;
+  },
+  {
+    &quot;id&quot;: 81,
+    &quot;source_id&quot;: 81,
+    &quot;keyword&quot;: &quot;WPA&quot;,
+    &quot;subject&quot;: &quot;네트워크 보안&quot;,
+    &quot;frequency&quot;: 15,
+    &quot;priority&quot;: 4,
+    &quot;question&quot;: &quot;WPA란?&quot;,
+    &quot;answer&quot;: &quot;WEP의 취약점을 개선한 무선 보안 규격.&quot;,
+    &quot;definition&quot;: &quot;WEP의 취약점을 개선한 무선 보안 규격.&quot;,
+    &quot;memory&quot;: &quot;초기 WPA=TKIP, WPA2=AES-CCMP와 연결.&quot;,
+    &quot;trap&quot;: &quot;WPA와 WPA2를 동일시하지 않기.&quot;,
+    &quot;compare&quot;: &quot;WEP / WPA2&quot;
+  },
+  {
+    &quot;id&quot;: 82,
+    &quot;source_id&quot;: 82,
+    &quot;keyword&quot;: &quot;802.11&quot;,
+    &quot;subject&quot;: &quot;네트워크 보안&quot;,
+    &quot;frequency&quot;: 15,
+    &quot;priority&quot;: 4,
+    &quot;question&quot;: &quot;802.11란?&quot;,
+    &quot;answer&quot;: &quot;IEEE가 정의한 무선 LAN 표준 계열.&quot;,
+    &quot;definition&quot;: &quot;IEEE가 정의한 무선 LAN 표준 계열.&quot;,
+    &quot;memory&quot;: &quot;규격별 주파수·속도·보안 특징.&quot;,
+    &quot;trap&quot;: &quot;802.3은 Ethernet 계열.&quot;,
+    &quot;compare&quot;: &quot;802.3&quot;
+  },
+  {
+    &quot;id&quot;: 83,
+    &quot;source_id&quot;: 83,
+    &quot;keyword&quot;: &quot;블루투스&quot;,
+    &quot;subject&quot;: &quot;네트워크 보안&quot;,
+    &quot;frequency&quot;: 15,
+    &quot;priority&quot;: 4,
+    &quot;question&quot;: &quot;블루투스란?&quot;,
+    &quot;answer&quot;: &quot;근거리에서 기기 간 데이터를 무선 전송하는 기술.&quot;,
+    &quot;definition&quot;: &quot;근거리에서 기기 간 데이터를 무선 전송하는 기술.&quot;,
+    &quot;memory&quot;: &quot;Bluejacking·Bluesnarfing과 연결.&quot;,
+    &quot;trap&quot;: &quot;Wi-Fi와 사용범위·프로토콜이 다름.&quot;,
+    &quot;compare&quot;: &quot;Wi-Fi&quot;
+  },
+  {
+    &quot;id&quot;: 84,
+    &quot;source_id&quot;: 84,
+    &quot;keyword&quot;: &quot;BYOD&quot;,
+    &quot;subject&quot;: &quot;정보보안 관리·법규&quot;,
+    &quot;frequency&quot;: 15,
+    &quot;priority&quot;: 4,
+    &quot;question&quot;: &quot;BYOD란?&quot;,
+    &quot;answer&quot;: &quot;Bring Your Own Device. 개인 소유 기기를 업무에 사용하는 정책.&quot;,
+    &quot;definition&quot;: &quot;Bring Your Own Device. 개인 소유 기기를 업무에 사용하는 정책.&quot;,
+    &quot;memory&quot;: &quot;편의성 vs 정보유출·단말통제 위험.&quot;,
+    &quot;trap&quot;: &quot;회사 지급 단말 정책과 다름.&quot;,
+    &quot;compare&quot;: &quot;MDM&quot;
+  },
+  {
+    &quot;id&quot;: 85,
+    &quot;source_id&quot;: 85,
+    &quot;keyword&quot;: &quot;IoT&quot;,
+    &quot;subject&quot;: &quot;네트워크 보안&quot;,
+    &quot;frequency&quot;: 15,
+    &quot;priority&quot;: 4,
+    &quot;question&quot;: &quot;IoT란?&quot;,
+    &quot;answer&quot;: &quot;센서·통신 기능을 가진 사물이 네트워크에 연결되는 환경.&quot;,
+    &quot;definition&quot;: &quot;센서·통신 기능을 가진 사물이 네트워크에 연결되는 환경.&quot;,
+    &quot;memory&quot;: &quot;기본 비밀번호·취약한 인증·패치 지연이 주요 위험.&quot;,
+    &quot;trap&quot;: &quot;단순 모바일 기기만 의미하지 않음.&quot;,
+    &quot;compare&quot;: &quot;IoT 보안&quot;
+  },
+  {
+    &quot;id&quot;: 86,
+    &quot;source_id&quot;: 86,
+    &quot;keyword&quot;: &quot;윈도우&quot;,
+    &quot;subject&quot;: &quot;시스템 보안&quot;,
+    &quot;frequency&quot;: 15,
+    &quot;priority&quot;: 4,
+    &quot;question&quot;: &quot;윈도우란?&quot;,
+    &quot;answer&quot;: &quot;Microsoft의 범용 운영체제 계열.&quot;,
+    &quot;definition&quot;: &quot;Microsoft의 범용 운영체제 계열.&quot;,
+    &quot;memory&quot;: &quot;SAM·SRM·NTFS·레지스트리·이벤트로그와 연결.&quot;,
+    &quot;trap&quot;: &quot;Unix 권한모델과 동일하지 않음.&quot;,
+    &quot;compare&quot;: &quot;Linux&quot;
+  },
+  {
+    &quot;id&quot;: 87,
+    &quot;source_id&quot;: 87,
+    &quot;keyword&quot;: &quot;SAM&quot;,
+    &quot;subject&quot;: &quot;시스템 보안&quot;,
+    &quot;frequency&quot;: 15,
+    &quot;priority&quot;: 4,
+    &quot;question&quot;: &quot;SAM란?&quot;,
+    &quot;answer&quot;: &quot;Security Account Manager. Windows 로컬 계정과 암호 관련 정보를 저장하는 데이터베이스.&quot;,
+    &quot;definition&quot;: &quot;Security Account Manager. Windows 로컬 계정과 암호 관련 정보를 저장하는 데이터베이스.&quot;,
+    &quot;memory&quot;: &quot;로컬 계정 인증 정보.&quot;,
+    &quot;trap&quot;: &quot;Active Directory DB와 구분.&quot;,
+    &quot;compare&quot;: &quot;AD / NTDS.dit&quot;
+  },
+  {
+    &quot;id&quot;: 88,
+    &quot;source_id&quot;: 88,
+    &quot;keyword&quot;: &quot;SRM&quot;,
+    &quot;subject&quot;: &quot;시스템 보안&quot;,
+    &quot;frequency&quot;: 15,
+    &quot;priority&quot;: 4,
+    &quot;question&quot;: &quot;SRM란?&quot;,
+    &quot;answer&quot;: &quot;Security Reference Monitor. Windows에서 객체 접근 권한을 검사하고 강제하는 핵심 보안 구성요소.&quot;,
+    &quot;definition&quot;: &quot;Security Reference Monitor. Windows에서 객체 접근 권한을 검사하고 강제하는 핵심 보안 구성요소.&quot;,
+    &quot;memory&quot;: &quot;접근 검사·강제.&quot;,
+    &quot;trap&quot;: &quot;SAM은 계정 저장소.&quot;,
+    &quot;compare&quot;: &quot;SAM&quot;
+  },
+  {
+    &quot;id&quot;: 89,
+    &quot;source_id&quot;: 89,
+    &quot;keyword&quot;: &quot;SMB&quot;,
+    &quot;subject&quot;: &quot;네트워크 보안&quot;,
+    &quot;frequency&quot;: 15,
+    &quot;priority&quot;: 4,
+    &quot;question&quot;: &quot;SMB란?&quot;,
+    &quot;answer&quot;: &quot;Windows 중심의 파일·프린터 공유 프로토콜.&quot;,
+    &quot;definition&quot;: &quot;Windows 중심의 파일·프린터 공유 프로토콜.&quot;,
+    &quot;memory&quot;: &quot;TCP 445.&quot;,
+    &quot;trap&quot;: &quot;FTP와 목적·프로토콜이 다름.&quot;,
+    &quot;compare&quot;: &quot;CIFS / FTP&quot;
+  },
+  {
+    &quot;id&quot;: 90,
+    &quot;source_id&quot;: 90,
+    &quot;keyword&quot;: &quot;레지스트리&quot;,
+    &quot;subject&quot;: &quot;시스템 보안&quot;,
+    &quot;frequency&quot;: 15,
+    &quot;priority&quot;: 4,
+    &quot;question&quot;: &quot;레지스트리란?&quot;,
+    &quot;answer&quot;: &quot;Windows 시스템·사용자·프로그램 설정을 저장하는 계층형 데이터베이스.&quot;,
+    &quot;definition&quot;: &quot;Windows 시스템·사용자·프로그램 설정을 저장하는 계층형 데이터베이스.&quot;,
+    &quot;memory&quot;: &quot;설정·자동실행·포렌식 분석.&quot;,
+    &quot;trap&quot;: &quot;일반 파일시스템과 별개.&quot;,
+    &quot;compare&quot;: &quot;Windows Registry&quot;
+  },
+  {
+    &quot;id&quot;: 91,
+    &quot;source_id&quot;: 91,
+    &quot;keyword&quot;: &quot;PowerShell&quot;,
+    &quot;subject&quot;: &quot;시스템 보안&quot;,
+    &quot;frequency&quot;: 15,
+    &quot;priority&quot;: 4,
+    &quot;question&quot;: &quot;PowerShell란?&quot;,
+    &quot;answer&quot;: &quot;Windows 관리와 자동화를 위한 셸·스크립트 환경.&quot;,
+    &quot;definition&quot;: &quot;Windows 관리와 자동화를 위한 셸·스크립트 환경.&quot;,
+    &quot;memory&quot;: &quot;관리 자동화·로깅·공격 악용 모두 가능.&quot;,
+    &quot;trap&quot;: &quot;cmd와 기능 범위가 다름.&quot;,
+    &quot;compare&quot;: &quot;cmd&quot;
+  },
+  {
+    &quot;id&quot;: 92,
+    &quot;source_id&quot;: 92,
+    &quot;keyword&quot;: &quot;NTFS&quot;,
+    &quot;subject&quot;: &quot;시스템 보안&quot;,
+    &quot;frequency&quot;: 15,
+    &quot;priority&quot;: 4,
+    &quot;question&quot;: &quot;NTFS란?&quot;,
+    &quot;answer&quot;: &quot;Windows의 대표 파일시스템.&quot;,
+    &quot;definition&quot;: &quot;Windows의 대표 파일시스템.&quot;,
+    &quot;memory&quot;: &quot;ACL·EFS·감사 등 보안 기능.&quot;,
+    &quot;trap&quot;: &quot;FAT보다 권한·보안 기능이 풍부.&quot;,
+    &quot;compare&quot;: &quot;FAT&quot;
+  },
+  {
+    &quot;id&quot;: 93,
+    &quot;source_id&quot;: 93,
+    &quot;keyword&quot;: &quot;위험관리&quot;,
+    &quot;subject&quot;: &quot;정보보안 관리·법규&quot;,
+    &quot;frequency&quot;: 15,
+    &quot;priority&quot;: 4,
+    &quot;question&quot;: &quot;위험관리란?&quot;,
+    &quot;answer&quot;: &quot;자산·위협·취약점을 식별하고 위험을 분석·평가한 뒤 대응하는 전체 과정.&quot;,
+    &quot;definition&quot;: &quot;자산·위협·취약점을 식별하고 위험을 분석·평가한 뒤 대응하는 전체 과정.&quot;,
+    &quot;memory&quot;: &quot;식별→분석/평가→처리→모니터링.&quot;,
+    &quot;trap&quot;: &quot;위험분석은 위험관리의 일부.&quot;,
+    &quot;compare&quot;: &quot;위험분석&quot;
+  },
+  {
+    &quot;id&quot;: 94,
+    &quot;source_id&quot;: 94,
+    &quot;keyword&quot;: &quot;위험분석&quot;,
+    &quot;subject&quot;: &quot;정보보안 관리·법규&quot;,
+    &quot;frequency&quot;: 15,
+    &quot;priority&quot;: 4,
+    &quot;question&quot;: &quot;위험분석란?&quot;,
+    &quot;answer&quot;: &quot;위험의 발생가능성과 영향도를 분석해 위험 수준을 산정하는 과정.&quot;,
+    &quot;definition&quot;: &quot;위험의 발생가능성과 영향도를 분석해 위험 수준을 산정하는 과정.&quot;,
+    &quot;memory&quot;: &quot;정량·정성 기법 구분.&quot;,
+    &quot;trap&quot;: &quot;위험관리 전체와 동일하지 않음.&quot;,
+    &quot;compare&quot;: &quot;델파이&quot;
+  },
+  {
+    &quot;id&quot;: 95,
+    &quot;source_id&quot;: 95,
+    &quot;keyword&quot;: &quot;위험회피&quot;,
+    &quot;subject&quot;: &quot;정보보안 관리·법규&quot;,
+    &quot;frequency&quot;: 15,
+    &quot;priority&quot;: 4,
+    &quot;question&quot;: &quot;위험회피란?&quot;,
+    &quot;answer&quot;: &quot;위험을 발생시키는 활동 자체를 중단하거나 피하는 대응.&quot;,
+    &quot;definition&quot;: &quot;위험을 발생시키는 활동 자체를 중단하거나 피하는 대응.&quot;,
+    &quot;memory&quot;: &quot;안 한다.&quot;,
+    &quot;trap&quot;: &quot;통제를 적용해 줄이는 것은 감소.&quot;,
+    &quot;compare&quot;: &quot;위험감소&quot;
+  },
+  {
+    &quot;id&quot;: 96,
+    &quot;source_id&quot;: 96,
+    &quot;keyword&quot;: &quot;전가&quot;,
+    &quot;subject&quot;: &quot;정보보안 관리·법규&quot;,
+    &quot;frequency&quot;: 15,
+    &quot;priority&quot;: 4,
+    &quot;question&quot;: &quot;전가란?&quot;,
+    &quot;answer&quot;: &quot;보험·계약·외주 등으로 위험의 부담을 다른 주체에 이전하는 대응.&quot;,
+    &quot;definition&quot;: &quot;보험·계약·외주 등으로 위험의 부담을 다른 주체에 이전하는 대응.&quot;,
+    &quot;memory&quot;: &quot;넘긴다.&quot;,
+    &quot;trap&quot;: &quot;위험 자체가 없어지는 것은 아님.&quot;,
+    &quot;compare&quot;: &quot;위험회피&quot;
+  },
+  {
+    &quot;id&quot;: 97,
+    &quot;source_id&quot;: 97,
+    &quot;keyword&quot;: &quot;감소&quot;,
+    &quot;subject&quot;: &quot;정보보안 관리·법규&quot;,
+    &quot;frequency&quot;: 15,
+    &quot;priority&quot;: 4,
+    &quot;question&quot;: &quot;감소란?&quot;,
+    &quot;answer&quot;: &quot;보안통제를 적용해 위험의 발생가능성이나 영향을 낮추는 대응.&quot;,
+    &quot;definition&quot;: &quot;보안통제를 적용해 위험의 발생가능성이나 영향을 낮추는 대응.&quot;,
+    &quot;memory&quot;: &quot;줄인다.&quot;,
+    &quot;trap&quot;: &quot;수용은 남은 위험을 받아들이는 것.&quot;,
+    &quot;compare&quot;: &quot;위험수용&quot;
+  },
+  {
+    &quot;id&quot;: 98,
+    &quot;source_id&quot;: 98,
+    &quot;keyword&quot;: &quot;델파이&quot;,
+    &quot;subject&quot;: &quot;정보보안 관리·법규&quot;,
+    &quot;frequency&quot;: 15,
+    &quot;priority&quot;: 4,
+    &quot;question&quot;: &quot;델파이란?&quot;,
+    &quot;answer&quot;: &quot;전문가 의견을 반복적으로 수렴해 합의를 도출하는 정성적 분석 기법.&quot;,
+    &quot;definition&quot;: &quot;전문가 의견을 반복적으로 수렴해 합의를 도출하는 정성적 분석 기법.&quot;,
+    &quot;memory&quot;: &quot;전문가 합의.&quot;,
+    &quot;trap&quot;: &quot;정량적 계산기법으로 보지 말 것.&quot;,
+    &quot;compare&quot;: &quot;정성적 위험분석&quot;
+  },
+  {
+    &quot;id&quot;: 99,
+    &quot;source_id&quot;: 99,
+    &quot;keyword&quot;: &quot;IPSec&quot;,
+    &quot;subject&quot;: &quot;네트워크 보안&quot;,
+    &quot;frequency&quot;: 13,
+    &quot;priority&quot;: 3,
+    &quot;question&quot;: &quot;IPSec란?&quot;,
+    &quot;answer&quot;: &quot;IP 계층에서 패킷의 기밀성·무결성·인증 등을 제공하는 보안 프로토콜 집합.&quot;,
+    &quot;definition&quot;: &quot;IP 계층에서 패킷의 기밀성·무결성·인증 등을 제공하는 보안 프로토콜 집합.&quot;,
+    &quot;memory&quot;: &quot;AH/ESP, 전송/터널 모드.&quot;,
+    &quot;trap&quot;: &quot;SSL/TLS와 계층이 다름.&quot;,
+    &quot;compare&quot;: &quot;AH / ESP&quot;
+  },
+  {
+    &quot;id&quot;: 100,
+    &quot;source_id&quot;: 100,
+    &quot;keyword&quot;: &quot;AH&quot;,
+    &quot;subject&quot;: &quot;네트워크 보안&quot;,
+    &quot;frequency&quot;: 13,
+    &quot;priority&quot;: 3,
+    &quot;question&quot;: &quot;AH란?&quot;,
+    &quot;answer&quot;: &quot;Authentication Header. IPSec에서 무결성·송신자 인증·재전송 방지를 제공.&quot;,
+    &quot;definition&quot;: &quot;Authentication Header. IPSec에서 무결성·송신자 인증·재전송 방지를 제공.&quot;,
+    &quot;memory&quot;: &quot;암호화 X.&quot;,
+    &quot;trap&quot;: &quot;ESP는 기밀성 제공 가능.&quot;,
+    &quot;compare&quot;: &quot;ESP&quot;
+  },
+  {
+    &quot;id&quot;: 101,
+    &quot;source_id&quot;: 101,
+    &quot;keyword&quot;: &quot;ESP&quot;,
+    &quot;subject&quot;: &quot;네트워크 보안&quot;,
+    &quot;frequency&quot;: 13,
+    &quot;priority&quot;: 3,
+    &quot;question&quot;: &quot;ESP란?&quot;,
+    &quot;answer&quot;: &quot;Encapsulating Security Payload. IPSec에서 암호화를 중심으로 기밀성과 선택적 인증·무결성을 제공.&quot;,
+    &quot;definition&quot;: &quot;Encapsulating Security Payload. IPSec에서 암호화를 중심으로 기밀성과 선택적 인증·무결성을 제공.&quot;,
+    &quot;memory&quot;: &quot;암호화 O.&quot;,
+    &quot;trap&quot;: &quot;AH와 달리 기밀성 제공.&quot;,
+    &quot;compare&quot;: &quot;AH&quot;
+  },
+  {
+    &quot;id&quot;: 102,
+    &quot;source_id&quot;: 102,
+    &quot;keyword&quot;: &quot;전송모드&quot;,
+    &quot;subject&quot;: &quot;네트워크 보안&quot;,
+    &quot;frequency&quot;: 13,
+    &quot;priority&quot;: 3,
+    &quot;question&quot;: &quot;전송모드란?&quot;,
+    &quot;answer&quot;: &quot;IPSec에서 원래 IP 헤더는 유지하고 상위 계층 데이터 부분을 주로 보호하는 방식.&quot;,
+    &quot;definition&quot;: &quot;IPSec에서 원래 IP 헤더는 유지하고 상위 계층 데이터 부분을 주로 보호하는 방식.&quot;,
+    &quot;memory&quot;: &quot;Host-to-Host에 적합.&quot;,
+    &quot;trap&quot;: &quot;원본 IP 패킷 전체 캡슐화는 터널모드.&quot;,
+    &quot;compare&quot;: &quot;터널모드&quot;
+  },
+  {
+    &quot;id&quot;: 103,
+    &quot;source_id&quot;: 103,
+    &quot;keyword&quot;: &quot;터널모드&quot;,
+    &quot;subject&quot;: &quot;네트워크 보안&quot;,
+    &quot;frequency&quot;: 13,
+    &quot;priority&quot;: 3,
+    &quot;question&quot;: &quot;터널모드란?&quot;,
+    &quot;answer&quot;: &quot;원본 IP 패킷 전체를 보호하고 새로운 IP 헤더를 추가하는 IPSec 방식.&quot;,
+    &quot;definition&quot;: &quot;원본 IP 패킷 전체를 보호하고 새로운 IP 헤더를 추가하는 IPSec 방식.&quot;,
+    &quot;memory&quot;: &quot;Gateway-to-Gateway VPN에 흔함.&quot;,
+    &quot;trap&quot;: &quot;전송모드보다 캡슐화 범위가 큼.&quot;,
+    &quot;compare&quot;: &quot;전송모드&quot;
+  },
+  {
+    &quot;id&quot;: 104,
+    &quot;source_id&quot;: 104,
+    &quot;keyword&quot;: &quot;Clark-Wilson&quot;,
+    &quot;subject&quot;: &quot;정보보안 일반&quot;,
+    &quot;frequency&quot;: 13,
+    &quot;priority&quot;: 3,
+    &quot;question&quot;: &quot;Clark-Wilson란?&quot;,
+    &quot;answer&quot;: &quot;잘 정의된 변환절차와 직무분리를 이용해 상업 환경의 무결성을 보호하는 모델.&quot;,
+    &quot;definition&quot;: &quot;잘 정의된 변환절차와 직무분리를 이용해 상업 환경의 무결성을 보호하는 모델.&quot;,
+    &quot;memory&quot;: &quot;무결성 + 직무분리.&quot;,
+    &quot;trap&quot;: &quot;BLP는 기밀성.&quot;,
+    &quot;compare&quot;: &quot;Biba / BLP&quot;
+  },
+  {
+    &quot;id&quot;: 105,
+    &quot;source_id&quot;: 105,
+    &quot;keyword&quot;: &quot;만리장성&quot;,
+    &quot;subject&quot;: &quot;정보보안 일반&quot;,
+    &quot;frequency&quot;: 13,
+    &quot;priority&quot;: 3,
+    &quot;question&quot;: &quot;만리장성란?&quot;,
+    &quot;answer&quot;: &quot;Chinese Wall Model. 과거 접근 이력에 따라 이해충돌 가능성이 있는 정보 접근을 제한하는 모델.&quot;,
+    &quot;definition&quot;: &quot;Chinese Wall Model. 과거 접근 이력에 따라 이해충돌 가능성이 있는 정보 접근을 제한하는 모델.&quot;,
+    &quot;memory&quot;: &quot;이해충돌 방지.&quot;,
+    &quot;trap&quot;: &quot;보안등급 모델과 다름.&quot;,
+    &quot;compare&quot;: &quot;Chinese Wall&quot;
+  },
+  {
+    &quot;id&quot;: 106,
+    &quot;source_id&quot;: 106,
+    &quot;keyword&quot;: &quot;보안모델&quot;,
+    &quot;subject&quot;: &quot;정보보안 일반&quot;,
+    &quot;frequency&quot;: 13,
+    &quot;priority&quot;: 3,
+    &quot;question&quot;: &quot;보안모델란?&quot;,
+    &quot;answer&quot;: &quot;보안정책과 접근통제 규칙을 형식적으로 표현한 모델.&quot;,
+    &quot;definition&quot;: &quot;보안정책과 접근통제 규칙을 형식적으로 표현한 모델.&quot;,
+    &quot;memory&quot;: &quot;BLP·Biba·Clark-Wilson·Chinese Wall 비교.&quot;,
+    &quot;trap&quot;: &quot;목적이 모두 동일하지 않음.&quot;,
+    &quot;compare&quot;: &quot;BLP / Biba&quot;
+  },
+  {
+    &quot;id&quot;: 107,
+    &quot;source_id&quot;: 107,
+    &quot;keyword&quot;: &quot;CC&quot;,
+    &quot;subject&quot;: &quot;정보보안 일반&quot;,
+    &quot;frequency&quot;: 12,
+    &quot;priority&quot;: 3,
+    &quot;question&quot;: &quot;CC란?&quot;,
+    &quot;answer&quot;: &quot;Common Criteria. 정보보호 제품의 보안성을 평가하는 국제 공통평가기준.&quot;,
+    &quot;definition&quot;: &quot;Common Criteria. 정보보호 제품의 보안성을 평가하는 국제 공통평가기준.&quot;,
+    &quot;memory&quot;: &quot;보안기능 + 보증 관점.&quot;,
+    &quot;trap&quot;: &quot;TCSEC와 등급체계가 다름.&quot;,
+    &quot;compare&quot;: &quot;TCSEC / ITSEC&quot;
+  },
+  {
+    &quot;id&quot;: 108,
+    &quot;source_id&quot;: 108,
+    &quot;keyword&quot;: &quot;TCSEC&quot;,
+    &quot;subject&quot;: &quot;정보보안 일반&quot;,
+    &quot;frequency&quot;: 12,
+    &quot;priority&quot;: 3,
+    &quot;question&quot;: &quot;TCSEC란?&quot;,
+    &quot;answer&quot;: &quot;미국 DoD의 Trusted Computer System Evaluation Criteria, 일명 Orange Book.&quot;,
+    &quot;definition&quot;: &quot;미국 DoD의 Trusted Computer System Evaluation Criteria, 일명 Orange Book.&quot;,
+    &quot;memory&quot;: &quot;D→C→B→A 순으로 높은 신뢰.&quot;,
+    &quot;trap&quot;: &quot;CC와 동일한 국제표준이 아님.&quot;,
+    &quot;compare&quot;: &quot;CC&quot;
+  },
+  {
+    &quot;id&quot;: 109,
+    &quot;source_id&quot;: 109,
+    &quot;keyword&quot;: &quot;ITSEC&quot;,
+    &quot;subject&quot;: &quot;정보보안 일반&quot;,
+    &quot;frequency&quot;: 12,
+    &quot;priority&quot;: 3,
+    &quot;question&quot;: &quot;ITSEC란?&quot;,
+    &quot;answer&quot;: &quot;유럽에서 사용된 정보기술 보안 평가기준.&quot;,
+    &quot;definition&quot;: &quot;유럽에서 사용된 정보기술 보안 평가기준.&quot;,
+    &quot;memory&quot;: &quot;기능성과 보증 수준을 분리 평가.&quot;,
+    &quot;trap&quot;: &quot;TCSEC와 평가방식이 다름.&quot;,
+    &quot;compare&quot;: &quot;TCSEC / CC&quot;
+  },
+  {
+    &quot;id&quot;: 110,
+    &quot;source_id&quot;: 110,
+    &quot;keyword&quot;: &quot;KCMVP&quot;,
+    &quot;subject&quot;: &quot;정보보안 일반&quot;,
+    &quot;frequency&quot;: 12,
+    &quot;priority&quot;: 3,
+    &quot;question&quot;: &quot;KCMVP란?&quot;,
+    &quot;answer&quot;: &quot;Korea Cryptographic Module Validation Program. 국내 암호모듈의 안전성과 구현 적합성을 검증하는 제도.&quot;,
+    &quot;definition&quot;: &quot;Korea Cryptographic Module Validation Program. 국내 암호모듈의 안전성과 구현 적합성을 검증하는 제도.&quot;,
+    &quot;memory&quot;: &quot;암호모듈 검증.&quot;,
+    &quot;trap&quot;: &quot;CC 제품평가와 목적이 다름.&quot;,
+    &quot;compare&quot;: &quot;CC&quot;
+  },
+  {
+    &quot;id&quot;: 111,
+    &quot;source_id&quot;: 111,
+    &quot;keyword&quot;: &quot;보안제품 평가기준&quot;,
+    &quot;subject&quot;: &quot;정보보안 일반&quot;,
+    &quot;frequency&quot;: 12,
+    &quot;priority&quot;: 3,
+    &quot;question&quot;: &quot;보안제품 평가기준란?&quot;,
+    &quot;answer&quot;: &quot;보안제품이 요구된 보안기능과 보증수준을 만족하는지 평가하는 기준.&quot;,
+    &quot;definition&quot;: &quot;보안제품이 요구된 보안기능과 보증수준을 만족하는지 평가하는 기준.&quot;,
+    &quot;memory&quot;: &quot;CC·TCSEC·ITSEC 비교.&quot;,
+    &quot;trap&quot;: &quot;암호 알고리즘 평가와 혼동 주의.&quot;,
+    &quot;compare&quot;: &quot;CC&quot;
+  },
+  {
+    &quot;id&quot;: 112,
+    &quot;source_id&quot;: 112,
+    &quot;keyword&quot;: &quot;ARP&quot;,
+    &quot;subject&quot;: &quot;네트워크 보안&quot;,
+    &quot;frequency&quot;: 12,
+    &quot;priority&quot;: 3,
+    &quot;question&quot;: &quot;ARP란?&quot;,
+    &quot;answer&quot;: &quot;같은 LAN에서 IPv4 주소에 해당하는 MAC 주소를 알아내는 프로토콜.&quot;,
+    &quot;definition&quot;: &quot;같은 LAN에서 IPv4 주소에 해당하는 MAC 주소를 알아내는 프로토콜.&quot;,
+    &quot;memory&quot;: &quot;IP → MAC.&quot;,
+    &quot;trap&quot;: &quot;RARP는 반대 방향의 고전적 개념.&quot;,
+    &quot;compare&quot;: &quot;ARP Spoofing&quot;
+  },
+  {
+    &quot;id&quot;: 113,
+    &quot;source_id&quot;: 113,
+    &quot;keyword&quot;: &quot;IP&quot;,
+    &quot;subject&quot;: &quot;네트워크 보안&quot;,
+    &quot;frequency&quot;: 12,
+    &quot;priority&quot;: 3,
+    &quot;question&quot;: &quot;IP란?&quot;,
+    &quot;answer&quot;: &quot;네트워크 계층에서 논리주소 지정과 패킷 전달을 담당하는 프로토콜.&quot;,
+    &quot;definition&quot;: &quot;네트워크 계층에서 논리주소 지정과 패킷 전달을 담당하는 프로토콜.&quot;,
+    &quot;memory&quot;: &quot;비연결형·Best Effort.&quot;,
+    &quot;trap&quot;: &quot;TCP의 신뢰성 기능과 구분.&quot;,
+    &quot;compare&quot;: &quot;TCP&quot;
+  },
+  {
+    &quot;id&quot;: 114,
+    &quot;source_id&quot;: 114,
+    &quot;keyword&quot;: &quot;DNS 스푸핑&quot;,
+    &quot;subject&quot;: &quot;네트워크 보안&quot;,
+    &quot;frequency&quot;: 12,
+    &quot;priority&quot;: 3,
+    &quot;question&quot;: &quot;DNS 스푸핑란?&quot;,
+    &quot;answer&quot;: &quot;위조된 DNS 응답으로 사용자가 잘못된 IP 주소를 사용하게 만드는 공격.&quot;,
+    &quot;definition&quot;: &quot;위조된 DNS 응답으로 사용자가 잘못된 IP 주소를 사용하게 만드는 공격.&quot;,
+    &quot;memory&quot;: &quot;가짜 DNS 응답.&quot;,
+    &quot;trap&quot;: &quot;캐시 포이즈닝은 캐시에 허위 레코드가 저장되는 상태.&quot;,
+    &quot;compare&quot;: &quot;캐시 포이즈닝&quot;
+  },
+  {
+    &quot;id&quot;: 115,
+    &quot;source_id&quot;: 115,
+    &quot;keyword&quot;: &quot;캐시 포이즈닝&quot;,
+    &quot;subject&quot;: &quot;네트워크 보안&quot;,
+    &quot;frequency&quot;: 12,
+    &quot;priority&quot;: 3,
+    &quot;question&quot;: &quot;캐시 포이즈닝란?&quot;,
+    &quot;answer&quot;: &quot;DNS Resolver 캐시에 위조된 레코드를 저장시켜 이후 질의를 잘못된 주소로 유도하는 공격.&quot;,
+    &quot;definition&quot;: &quot;DNS Resolver 캐시에 위조된 레코드를 저장시켜 이후 질의를 잘못된 주소로 유도하는 공격.&quot;,
+    &quot;memory&quot;: &quot;캐시 오염.&quot;,
+    &quot;trap&quot;: &quot;단발성 위조 응답과 구분.&quot;,
+    &quot;compare&quot;: &quot;DNS 스푸핑&quot;
+  },
+  {
+    &quot;id&quot;: 116,
+    &quot;source_id&quot;: 116,
+    &quot;keyword&quot;: &quot;스푸핑 탐지&quot;,
+    &quot;subject&quot;: &quot;네트워크 보안&quot;,
+    &quot;frequency&quot;: 12,
+    &quot;priority&quot;: 3,
+    &quot;question&quot;: &quot;스푸핑 탐지란?&quot;,
+    &quot;answer&quot;: &quot;IP·ARP·DNS 등에서 출발지나 주소 정보를 위조한 패킷을 식별하는 과정.&quot;,
+    &quot;definition&quot;: &quot;IP·ARP·DNS 등에서 출발지나 주소 정보를 위조한 패킷을 식별하는 과정.&quot;,
+    &quot;memory&quot;: &quot;주소 위조 식별.&quot;,
+    &quot;trap&quot;: &quot;스니핑은 도청.&quot;,
+    &quot;compare&quot;: &quot;스니핑&quot;
+  },
+  {
+    &quot;id&quot;: 117,
+    &quot;source_id&quot;: 117,
+    &quot;keyword&quot;: &quot;DB 보안&quot;,
+    &quot;subject&quot;: &quot;애플리케이션 보안&quot;,
+    &quot;frequency&quot;: 11,
+    &quot;priority&quot;: 3,
+    &quot;question&quot;: &quot;DB 보안란?&quot;,
+    &quot;answer&quot;: &quot;데이터베이스의 기밀성·무결성·가용성과 사용자 권한을 보호하는 활동.&quot;,
+    &quot;definition&quot;: &quot;데이터베이스의 기밀성·무결성·가용성과 사용자 권한을 보호하는 활동.&quot;,
+    &quot;memory&quot;: &quot;권한관리·암호화·감사.&quot;,
+    &quot;trap&quot;: &quot;백업만으로 DB 보안이 완성되지는 않음.&quot;,
+    &quot;compare&quot;: &quot;DB 암호화&quot;
+  },
+  {
+    &quot;id&quot;: 118,
+    &quot;source_id&quot;: 118,
+    &quot;keyword&quot;: &quot;DB 암호화&quot;,
+    &quot;subject&quot;: &quot;애플리케이션 보안&quot;,
+    &quot;frequency&quot;: 11,
+    &quot;priority&quot;: 3,
+    &quot;question&quot;: &quot;DB 암호화란?&quot;,
+    &quot;answer&quot;: &quot;DB에 저장되거나 전달되는 중요 데이터를 암호화해 보호하는 기술.&quot;,
+    &quot;definition&quot;: &quot;DB에 저장되거나 전달되는 중요 데이터를 암호화해 보호하는 기술.&quot;,
+    &quot;memory&quot;: &quot;컬럼·파일/TDE·API/Plug-in 방식 비교 가능.&quot;,
+    &quot;trap&quot;: &quot;암호화만으로 접근통제·감사를 대체할 수 없음.&quot;,
+    &quot;compare&quot;: &quot;TDE&quot;
+  },
+  {
+    &quot;id&quot;: 119,
+    &quot;source_id&quot;: 119,
+    &quot;keyword&quot;: &quot;키 관리&quot;,
+    &quot;subject&quot;: &quot;정보보안 일반&quot;,
+    &quot;frequency&quot;: 11,
+    &quot;priority&quot;: 3,
+    &quot;question&quot;: &quot;키 관리란?&quot;,
+    &quot;answer&quot;: &quot;암호키의 생성·분배·저장·사용·교체·폐기를 안전하게 관리하는 과정.&quot;,
+    &quot;definition&quot;: &quot;암호키의 생성·분배·저장·사용·교체·폐기를 안전하게 관리하는 과정.&quot;,
+    &quot;memory&quot;: &quot;키 생명주기 관리.&quot;,
+    &quot;trap&quot;: &quot;암호 알고리즘만 안전하면 되는 것이 아님.&quot;,
+    &quot;compare&quot;: &quot;HSM / KMS&quot;
+  },
+  {
+    &quot;id&quot;: 120,
+    &quot;source_id&quot;: 120,
+    &quot;keyword&quot;: &quot;엘라스틱서치&quot;,
+    &quot;subject&quot;: &quot;애플리케이션 보안&quot;,
+    &quot;frequency&quot;: 11,
+    &quot;priority&quot;: 3,
+    &quot;question&quot;: &quot;엘라스틱서치란?&quot;,
+    &quot;answer&quot;: &quot;분산형 검색·분석 엔진으로 대규모 로그 검색과 분석에 많이 사용된다.&quot;,
+    &quot;definition&quot;: &quot;분산형 검색·분석 엔진으로 대규모 로그 검색과 분석에 많이 사용된다.&quot;,
+    &quot;memory&quot;: &quot;ELK의 E.&quot;,
+    &quot;trap&quot;: &quot;Logstash는 수집·변환 파이프라인.&quot;,
+    &quot;compare&quot;: &quot;Logstash / Kibana&quot;
+  },
+  {
+    &quot;id&quot;: 121,
+    &quot;source_id&quot;: 121,
+    &quot;keyword&quot;: &quot;집합성&quot;,
+    &quot;subject&quot;: &quot;애플리케이션 보안&quot;,
+    &quot;frequency&quot;: 11,
+    &quot;priority&quot;: 3,
+    &quot;question&quot;: &quot;집합성란?&quot;,
+    &quot;answer&quot;: &quot;개별적으로 민감하지 않은 여러 정보를 결합해 민감한 정보를 추론할 수 있는 문제.&quot;,
+    &quot;definition&quot;: &quot;개별적으로 민감하지 않은 여러 정보를 결합해 민감한 정보를 추론할 수 있는 문제.&quot;,
+    &quot;memory&quot;: &quot;DB 추론 공격과 연결.&quot;,
+    &quot;trap&quot;: &quot;단일 레코드 노출만을 의미하지 않음.&quot;,
+    &quot;compare&quot;: &quot;Inference&quot;
+  },
+  {
+    &quot;id&quot;: 122,
+    &quot;source_id&quot;: 122,
+    &quot;keyword&quot;: &quot;모바일&quot;,
+    &quot;subject&quot;: &quot;시스템 보안&quot;,
+    &quot;frequency&quot;: 11,
+    &quot;priority&quot;: 3,
+    &quot;question&quot;: &quot;모바일란?&quot;,
+    &quot;answer&quot;: &quot;스마트폰·태블릿 등 이동형 단말 환경.&quot;,
+    &quot;definition&quot;: &quot;스마트폰·태블릿 등 이동형 단말 환경.&quot;,
+    &quot;memory&quot;: &quot;앱 권한·루팅/탈옥·악성앱·무선보안.&quot;,
+    &quot;trap&quot;: &quot;데스크톱 OS와 보안모델이 다름.&quot;,
+    &quot;compare&quot;: &quot;Android / iOS&quot;
+  },
+  {
+    &quot;id&quot;: 123,
+    &quot;source_id&quot;: 123,
+    &quot;keyword&quot;: &quot;안드로이드&quot;,
+    &quot;subject&quot;: &quot;시스템 보안&quot;,
+    &quot;frequency&quot;: 11,
+    &quot;priority&quot;: 3,
+    &quot;question&quot;: &quot;안드로이드란?&quot;,
+    &quot;answer&quot;: &quot;Linux 커널 기반 모바일 운영체제.&quot;,
+    &quot;definition&quot;: &quot;Linux 커널 기반 모바일 운영체제.&quot;,
+    &quot;memory&quot;: &quot;APK·DEX·Manifest·ADB·권한모델.&quot;,
+    &quot;trap&quot;: &quot;iOS와 앱 패키지 구조가 다름.&quot;,
+    &quot;compare&quot;: &quot;iOS&quot;
+  },
+  {
+    &quot;id&quot;: 124,
+    &quot;source_id&quot;: 124,
+    &quot;keyword&quot;: &quot;iOS&quot;,
+    &quot;subject&quot;: &quot;시스템 보안&quot;,
+    &quot;frequency&quot;: 11,
+    &quot;priority&quot;: 3,
+    &quot;question&quot;: &quot;iOS란?&quot;,
+    &quot;answer&quot;: &quot;Apple의 iPhone 계열 모바일 운영체제.&quot;,
+    &quot;definition&quot;: &quot;Apple의 iPhone 계열 모바일 운영체제.&quot;,
+    &quot;memory&quot;: &quot;코드서명·Sandbox·앱 권한.&quot;,
+    &quot;trap&quot;: &quot;Android의 APK/DEX 구조와 다름.&quot;,
+    &quot;compare&quot;: &quot;Android&quot;
+  },
+  {
+    &quot;id&quot;: 125,
+    &quot;source_id&quot;: 125,
+    &quot;keyword&quot;: &quot;APKTool&quot;,
+    &quot;subject&quot;: &quot;애플리케이션 보안&quot;,
+    &quot;frequency&quot;: 11,
+    &quot;priority&quot;: 3,
+    &quot;question&quot;: &quot;APKTool란?&quot;,
+    &quot;answer&quot;: &quot;Android APK 파일을 디코딩하고 다시 빌드할 수 있는 분석 도구.&quot;,
+    &quot;definition&quot;: &quot;Android APK 파일을 디코딩하고 다시 빌드할 수 있는 분석 도구.&quot;,
+    &quot;memory&quot;: &quot;리소스·smali 분석.&quot;,
+    &quot;trap&quot;: &quot;ADB는 기기 통신/디버깅 도구.&quot;,
+    &quot;compare&quot;: &quot;ADB&quot;
+  },
+  {
+    &quot;id&quot;: 126,
+    &quot;source_id&quot;: 126,
+    &quot;keyword&quot;: &quot;ADB&quot;,
+    &quot;subject&quot;: &quot;시스템 보안&quot;,
+    &quot;frequency&quot;: 11,
+    &quot;priority&quot;: 3,
+    &quot;question&quot;: &quot;ADB란?&quot;,
+    &quot;answer&quot;: &quot;Android Debug Bridge. PC와 Android 기기 사이에서 쉘·파일전송·디버깅을 수행하는 도구.&quot;,
+    &quot;definition&quot;: &quot;Android Debug Bridge. PC와 Android 기기 사이에서 쉘·파일전송·디버깅을 수행하는 도구.&quot;,
+    &quot;memory&quot;: &quot;adb shell / push / pull 등.&quot;,
+    &quot;trap&quot;: &quot;APKTool과 역할이 다름.&quot;,
+    &quot;compare&quot;: &quot;APKTool&quot;
+  },
+  {
+    &quot;id&quot;: 127,
+    &quot;source_id&quot;: 127,
+    &quot;keyword&quot;: &quot;classes.dex&quot;,
+    &quot;subject&quot;: &quot;애플리케이션 보안&quot;,
+    &quot;frequency&quot;: 11,
+    &quot;priority&quot;: 3,
+    &quot;question&quot;: &quot;classes.dex란?&quot;,
+    &quot;answer&quot;: &quot;Android 앱의 실행 코드가 DEX 형식으로 저장된 파일.&quot;,
+    &quot;definition&quot;: &quot;Android 앱의 실행 코드가 DEX 형식으로 저장된 파일.&quot;,
+    &quot;memory&quot;: &quot;Dalvik/ART용 바이트코드.&quot;,
+    &quot;trap&quot;: &quot;AndroidManifest.xml과 역할이 다름.&quot;,
+    &quot;compare&quot;: &quot;APK&quot;
+  },
+  {
+    &quot;id&quot;: 128,
+    &quot;source_id&quot;: 128,
+    &quot;keyword&quot;: &quot;OTP&quot;,
+    &quot;subject&quot;: &quot;정보보안 일반&quot;,
+    &quot;frequency&quot;: 11,
+    &quot;priority&quot;: 3,
+    &quot;question&quot;: &quot;OTP란?&quot;,
+    &quot;answer&quot;: &quot;한 번만 사용할 수 있는 일회용 비밀번호.&quot;,
+    &quot;definition&quot;: &quot;한 번만 사용할 수 있는 일회용 비밀번호.&quot;,
+    &quot;memory&quot;: &quot;시간 기반·이벤트 기반 방식.&quot;,
+    &quot;trap&quot;: &quot;재사용 공격 완화와 피싱 저항성은 같은 의미가 아님.&quot;,
+    &quot;compare&quot;: &quot;MFA&quot;
+  },
+  {
+    &quot;id&quot;: 129,
+    &quot;source_id&quot;: 129,
+    &quot;keyword&quot;: &quot;AAA&quot;,
+    &quot;subject&quot;: &quot;정보보안 일반&quot;,
+    &quot;frequency&quot;: 11,
+    &quot;priority&quot;: 3,
+    &quot;question&quot;: &quot;AAA란?&quot;,
+    &quot;answer&quot;: &quot;Authentication·Authorization·Accounting의 약자.&quot;,
+    &quot;definition&quot;: &quot;Authentication·Authorization·Accounting의 약자.&quot;,
+    &quot;memory&quot;: &quot;인증 / 권한부여 / 기록·과금.&quot;,
+    &quot;trap&quot;: &quot;세 용어 순서를 바꾸지 않기.&quot;,
+    &quot;compare&quot;: &quot;RADIUS&quot;
+  },
+  {
+    &quot;id&quot;: 130,
+    &quot;source_id&quot;: 130,
+    &quot;keyword&quot;: &quot;RADIUS&quot;,
+    &quot;subject&quot;: &quot;네트워크 보안&quot;,
+    &quot;frequency&quot;: 11,
+    &quot;priority&quot;: 3,
+    &quot;question&quot;: &quot;RADIUS란?&quot;,
+    &quot;answer&quot;: &quot;네트워크 접근에 대한 인증·권한부여·회계 기능을 제공하는 대표 AAA 프로토콜.&quot;,
+    &quot;definition&quot;: &quot;네트워크 접근에 대한 인증·권한부여·회계 기능을 제공하는 대표 AAA 프로토콜.&quot;,
+    &quot;memory&quot;: &quot;AAA 서버 구조.&quot;,
+    &quot;trap&quot;: &quot;Kerberos와 목적·구조가 다름.&quot;,
+    &quot;compare&quot;: &quot;TACACS+ / AAA&quot;
+  },
+  {
+    &quot;id&quot;: 131,
+    &quot;source_id&quot;: 131,
+    &quot;keyword&quot;: &quot;OAuth&quot;,
+    &quot;subject&quot;: &quot;애플리케이션 보안&quot;,
+    &quot;frequency&quot;: 11,
+    &quot;priority&quot;: 3,
+    &quot;question&quot;: &quot;OAuth란?&quot;,
+    &quot;answer&quot;: &quot;사용자의 비밀번호를 제3자 서비스에 넘기지 않고 자원 접근 권한을 위임하는 표준.&quot;,
+    &quot;definition&quot;: &quot;사용자의 비밀번호를 제3자 서비스에 넘기지 않고 자원 접근 권한을 위임하는 표준.&quot;,
+    &quot;memory&quot;: &quot;Authorization 위임.&quot;,
+    &quot;trap&quot;: &quot;OAuth 자체를 사용자 인증 프로토콜이라고 단정하지 않기.&quot;,
+    &quot;compare&quot;: &quot;OpenID Connect&quot;
+  },
+  {
+    &quot;id&quot;: 132,
+    &quot;source_id&quot;: 132,
+    &quot;keyword&quot;: &quot;인증방식&quot;,
+    &quot;subject&quot;: &quot;정보보안 일반&quot;,
+    &quot;frequency&quot;: 11,
+    &quot;priority&quot;: 3,
+    &quot;question&quot;: &quot;인증방식란?&quot;,
+    &quot;answer&quot;: &quot;사용자의 신원을 확인하는 지식·소유·생체 등의 요소.&quot;,
+    &quot;definition&quot;: &quot;사용자의 신원을 확인하는 지식·소유·생체 등의 요소.&quot;,
+    &quot;memory&quot;: &quot;Know / Have / Are.&quot;,
+    &quot;trap&quot;: &quot;두 요소를 쓰면 다중요소 인증과 연결.&quot;,
+    &quot;compare&quot;: &quot;MFA&quot;
+  },
+  {
+    &quot;id&quot;: 133,
+    &quot;source_id&quot;: 133,
+    &quot;keyword&quot;: &quot;KDC&quot;,
+    &quot;subject&quot;: &quot;정보보안 일반&quot;,
+    &quot;frequency&quot;: 11,
+    &quot;priority&quot;: 3,
+    &quot;question&quot;: &quot;KDC란?&quot;,
+    &quot;answer&quot;: &quot;Kerberos의 Key Distribution Center. 보통 AS와 TGS 기능을 포함해 티켓과 세션키를 발급한다.&quot;,
+    &quot;definition&quot;: &quot;Kerberos의 Key Distribution Center. 보통 AS와 TGS 기능을 포함해 티켓과 세션키를 발급한다.&quot;,
+    &quot;memory&quot;: &quot;KDC = AS + TGS.&quot;,
+    &quot;trap&quot;: &quot;서비스 서버 자체와 다름.&quot;,
+    &quot;compare&quot;: &quot;Kerberos&quot;
+  },
+  {
+    &quot;id&quot;: 134,
+    &quot;source_id&quot;: 134,
+    &quot;keyword&quot;: &quot;버퍼오버플로우&quot;,
+    &quot;subject&quot;: &quot;시스템 보안&quot;,
+    &quot;frequency&quot;: 10,
+    &quot;priority&quot;: 3,
+    &quot;question&quot;: &quot;버퍼오버플로우란?&quot;,
+    &quot;answer&quot;: &quot;할당된 버퍼 크기보다 많은 데이터를 기록해 인접 메모리를 덮어쓰는 취약점.&quot;,
+    &quot;definition&quot;: &quot;할당된 버퍼 크기보다 많은 데이터를 기록해 인접 메모리를 덮어쓰는 취약점.&quot;,
+    &quot;memory&quot;: &quot;Return Address 변조·임의코드 실행.&quot;,
+    &quot;trap&quot;: &quot;포맷스트링과 발생 원리가 다름.&quot;,
+    &quot;compare&quot;: &quot;NX / ASLR / Canary&quot;
+  },
+  {
+    &quot;id&quot;: 135,
+    &quot;source_id&quot;: 135,
+    &quot;keyword&quot;: &quot;NX bit&quot;,
+    &quot;subject&quot;: &quot;시스템 보안&quot;,
+    &quot;frequency&quot;: 10,
+    &quot;priority&quot;: 3,
+    &quot;question&quot;: &quot;NX bit란?&quot;,
+    &quot;answer&quot;: &quot;스택·힙 등 데이터 영역에서 코드 실행을 금지하는 메모리 보호 기능.&quot;,
+    &quot;definition&quot;: &quot;스택·힙 등 데이터 영역에서 코드 실행을 금지하는 메모리 보호 기능.&quot;,
+    &quot;memory&quot;: &quot;Execute 금지, DEP와 유사.&quot;,
+    &quot;trap&quot;: &quot;주소 무작위화는 ASLR.&quot;,
+    &quot;compare&quot;: &quot;ASLR / DEP&quot;
+  },
+  {
+    &quot;id&quot;: 136,
+    &quot;source_id&quot;: 136,
+    &quot;keyword&quot;: &quot;포맷스트링&quot;,
+    &quot;subject&quot;: &quot;시스템 보안&quot;,
+    &quot;frequency&quot;: 10,
+    &quot;priority&quot;: 3,
+    &quot;question&quot;: &quot;포맷스트링란?&quot;,
+    &quot;answer&quot;: &quot;printf 계열 함수 등에 사용자 입력이 포맷 문자열로 직접 들어가 메모리를 읽거나 쓸 수 있는 취약점.&quot;,
+    &quot;definition&quot;: &quot;printf 계열 함수 등에 사용자 입력이 포맷 문자열로 직접 들어가 메모리를 읽거나 쓸 수 있는 취약점.&quot;,
+    &quot;memory&quot;: &quot;%x·%n 등과 연결.&quot;,
+    &quot;trap&quot;: &quot;버퍼 크기 초과가 핵심인 Buffer Overflow와 다름.&quot;,
+    &quot;compare&quot;: &quot;Buffer Overflow&quot;
+  },
+  {
+    &quot;id&quot;: 137,
+    &quot;source_id&quot;: 137,
+    &quot;keyword&quot;: &quot;보호기법&quot;,
+    &quot;subject&quot;: &quot;시스템 보안&quot;,
+    &quot;frequency&quot;: 10,
+    &quot;priority&quot;: 3,
+    &quot;question&quot;: &quot;보호기법란?&quot;,
+    &quot;answer&quot;: &quot;소프트웨어 취약점 악용을 예방·완화하는 보안 메커니즘.&quot;,
+    &quot;definition&quot;: &quot;소프트웨어 취약점 악용을 예방·완화하는 보안 메커니즘.&quot;,
+    &quot;memory&quot;: &quot;ASLR·Stack Canary·NX/DEP.&quot;,
+    &quot;trap&quot;: &quot;각 기법의 방어 대상이 다름.&quot;,
+    &quot;compare&quot;: &quot;ASLR / Canary / NX&quot;
+  },
+  {
+    &quot;id&quot;: 138,
+    &quot;source_id&quot;: 138,
+    &quot;keyword&quot;: &quot;클라우드&quot;,
+    &quot;subject&quot;: &quot;정보보안 일반&quot;,
+    &quot;frequency&quot;: 10,
+    &quot;priority&quot;: 3,
+    &quot;question&quot;: &quot;클라우드란?&quot;,
+    &quot;answer&quot;: &quot;컴퓨팅 자원을 네트워크를 통해 필요에 따라 제공받는 서비스 환경.&quot;,
+    &quot;definition&quot;: &quot;컴퓨팅 자원을 네트워크를 통해 필요에 따라 제공받는 서비스 환경.&quot;,
+    &quot;memory&quot;: &quot;IaaS/PaaS/SaaS, 배치모델 구분.&quot;,
+    &quot;trap&quot;: &quot;서비스 모델별 책임 범위가 다름.&quot;,
+    &quot;compare&quot;: &quot;IaaS / PaaS / SaaS&quot;
+  },
+  {
+    &quot;id&quot;: 139,
+    &quot;source_id&quot;: 139,
+    &quot;keyword&quot;: &quot;PaaS&quot;,
+    &quot;subject&quot;: &quot;정보보안 일반&quot;,
+    &quot;frequency&quot;: 10,
+    &quot;priority&quot;: 3,
+    &quot;question&quot;: &quot;PaaS란?&quot;,
+    &quot;answer&quot;: &quot;애플리케이션 개발·실행 플랫폼을 서비스로 제공하는 모델.&quot;,
+    &quot;definition&quot;: &quot;애플리케이션 개발·실행 플랫폼을 서비스로 제공하는 모델.&quot;,
+    &quot;memory&quot;: &quot;사용자는 주로 앱과 데이터 관리.&quot;,
+    &quot;trap&quot;: &quot;IaaS보다 사용자 관리 범위가 작음.&quot;,
+    &quot;compare&quot;: &quot;IaaS / SaaS&quot;
+  },
+  {
+    &quot;id&quot;: 140,
+    &quot;source_id&quot;: 140,
+    &quot;keyword&quot;: &quot;SaaS&quot;,
+    &quot;subject&quot;: &quot;정보보안 일반&quot;,
+    &quot;frequency&quot;: 10,
+    &quot;priority&quot;: 3,
+    &quot;question&quot;: &quot;SaaS란?&quot;,
+    &quot;answer&quot;: &quot;완성된 소프트웨어를 인터넷을 통해 서비스 형태로 제공하는 모델.&quot;,
+    &quot;definition&quot;: &quot;완성된 소프트웨어를 인터넷을 통해 서비스 형태로 제공하는 모델.&quot;,
+    &quot;memory&quot;: &quot;사용자 관리 범위가 가장 작음.&quot;,
+    &quot;trap&quot;: &quot;PaaS는 개발 플랫폼.&quot;,
+    &quot;compare&quot;: &quot;PaaS&quot;
+  },
+  {
+    &quot;id&quot;: 141,
+    &quot;source_id&quot;: 141,
+    &quot;keyword&quot;: &quot;IaaS&quot;,
+    &quot;subject&quot;: &quot;정보보안 일반&quot;,
+    &quot;frequency&quot;: 10,
+    &quot;priority&quot;: 3,
+    &quot;question&quot;: &quot;IaaS란?&quot;,
+    &quot;answer&quot;: &quot;가상서버·스토리지·네트워크 등 인프라 자원을 서비스로 제공하는 모델.&quot;,
+    &quot;definition&quot;: &quot;가상서버·스토리지·네트워크 등 인프라 자원을 서비스로 제공하는 모델.&quot;,
+    &quot;memory&quot;: &quot;사용자가 OS 이상을 주로 관리.&quot;,
+    &quot;trap&quot;: &quot;SaaS보다 사용자 책임 범위가 큼.&quot;,
+    &quot;compare&quot;: &quot;PaaS / SaaS&quot;
+  },
+  {
+    &quot;id&quot;: 142,
+    &quot;source_id&quot;: 142,
+    &quot;keyword&quot;: &quot;DaaS&quot;,
+    &quot;subject&quot;: &quot;정보보안 일반&quot;,
+    &quot;frequency&quot;: 10,
+    &quot;priority&quot;: 3,
+    &quot;question&quot;: &quot;DaaS란?&quot;,
+    &quot;answer&quot;: &quot;문맥에 따라 Desktop as a Service 또는 Data as a Service를 의미할 수 있는 약어.&quot;,
+    &quot;definition&quot;: &quot;문맥에 따라 Desktop as a Service 또는 Data as a Service를 의미할 수 있는 약어.&quot;,
+    &quot;memory&quot;: &quot;문제의 정의와 문맥으로 판별.&quot;,
+    &quot;trap&quot;: &quot;약어만 보고 하나의 뜻으로 단정하면 위험.&quot;,
+    &quot;compare&quot;: &quot;VDI / Cloud&quot;
+  },
+  {
+    &quot;id&quot;: 143,
+    &quot;source_id&quot;: 143,
+    &quot;keyword&quot;: &quot;SecaaS&quot;,
+    &quot;subject&quot;: &quot;정보보안 일반&quot;,
+    &quot;frequency&quot;: 10,
+    &quot;priority&quot;: 3,
+    &quot;question&quot;: &quot;SecaaS란?&quot;,
+    &quot;answer&quot;: &quot;보안기능을 클라우드 서비스 형태로 제공하는 모델.&quot;,
+    &quot;definition&quot;: &quot;보안기능을 클라우드 서비스 형태로 제공하는 모델.&quot;,
+    &quot;memory&quot;: &quot;Security as a Service.&quot;,
+    &quot;trap&quot;: &quot;SaaS 전체와 동일 개념이 아님.&quot;,
+    &quot;compare&quot;: &quot;SaaS&quot;
+  },
+  {
+    &quot;id&quot;: 144,
+    &quot;source_id&quot;: 144,
+    &quot;keyword&quot;: &quot;클라우드 법령&quot;,
+    &quot;subject&quot;: &quot;정보보안 관리·법규&quot;,
+    &quot;frequency&quot;: 10,
+    &quot;priority&quot;: 3,
+    &quot;question&quot;: &quot;클라우드 법령란?&quot;,
+    &quot;answer&quot;: &quot;클라우드 서비스의 개인정보·정보보호 책임과 이용에 적용되는 법적 규정 영역.&quot;,
+    &quot;definition&quot;: &quot;클라우드 서비스의 개인정보·정보보호 책임과 이용에 적용되는 법적 규정 영역.&quot;,
+    &quot;memory&quot;: &quot;위탁·국외이전·보호조치 등을 확인.&quot;,
+    &quot;trap&quot;: &quot;법령은 개정될 수 있어 최신 기준 필요.&quot;,
+    &quot;compare&quot;: &quot;개인정보 보호법&quot;
+  },
+  {
+    &quot;id&quot;: 145,
+    &quot;source_id&quot;: 145,
+    &quot;keyword&quot;: &quot;악성코드&quot;,
+    &quot;subject&quot;: &quot;시스템 보안&quot;,
+    &quot;frequency&quot;: 10,
+    &quot;priority&quot;: 3,
+    &quot;question&quot;: &quot;악성코드란?&quot;,
+    &quot;answer&quot;: &quot;정보탈취·파괴·권한획득 등 악의적 목적을 가진 소프트웨어의 총칭.&quot;,
+    &quot;definition&quot;: &quot;정보탈취·파괴·권한획득 등 악의적 목적을 가진 소프트웨어의 총칭.&quot;,
+    &quot;memory&quot;: &quot;Virus/Worm/Trojan/Rootkit 등.&quot;,
+    &quot;trap&quot;: &quot;모든 악성코드가 자기복제하는 것은 아님.&quot;,
+    &quot;compare&quot;: &quot;바이러스 / 웜 / 트로이목마&quot;
+  },
+  {
+    &quot;id&quot;: 146,
+    &quot;source_id&quot;: 146,
+    &quot;keyword&quot;: &quot;루트킷&quot;,
+    &quot;subject&quot;: &quot;시스템 보안&quot;,
+    &quot;frequency&quot;: 10,
+    &quot;priority&quot;: 3,
+    &quot;question&quot;: &quot;루트킷란?&quot;,
+    &quot;answer&quot;: &quot;높은 권한을 유지하면서 공격자의 존재나 악성 행위를 숨기는 악성코드·기술.&quot;,
+    &quot;definition&quot;: &quot;높은 권한을 유지하면서 공격자의 존재나 악성 행위를 숨기는 악성코드·기술.&quot;,
+    &quot;memory&quot;: &quot;권한 유지 + 은폐.&quot;,
+    &quot;trap&quot;: &quot;Trojan과 역할이 다름.&quot;,
+    &quot;compare&quot;: &quot;트로이목마&quot;
+  },
+  {
+    &quot;id&quot;: 147,
+    &quot;source_id&quot;: 147,
+    &quot;keyword&quot;: &quot;트로이목마&quot;,
+    &quot;subject&quot;: &quot;시스템 보안&quot;,
+    &quot;frequency&quot;: 10,
+    &quot;priority&quot;: 3,
+    &quot;question&quot;: &quot;트로이목마란?&quot;,
+    &quot;answer&quot;: &quot;정상 프로그램처럼 위장해 악성 기능을 수행하는 악성코드.&quot;,
+    &quot;definition&quot;: &quot;정상 프로그램처럼 위장해 악성 기능을 수행하는 악성코드.&quot;,
+    &quot;memory&quot;: &quot;위장, 자기복제 필수 아님.&quot;,
+    &quot;trap&quot;: &quot;웜은 자체복제·자동전파.&quot;,
+    &quot;compare&quot;: &quot;웜 / 바이러스&quot;
+  },
+  {
+    &quot;id&quot;: 148,
+    &quot;source_id&quot;: 148,
+    &quot;keyword&quot;: &quot;웜&quot;,
+    &quot;subject&quot;: &quot;네트워크 보안&quot;,
+    &quot;frequency&quot;: 10,
+    &quot;priority&quot;: 3,
+    &quot;question&quot;: &quot;웜란?&quot;,
+    &quot;answer&quot;: &quot;다른 프로그램에 기생하지 않고 스스로 복제하며 네트워크를 통해 전파하는 악성코드.&quot;,
+    &quot;definition&quot;: &quot;다른 프로그램에 기생하지 않고 스스로 복제하며 네트워크를 통해 전파하는 악성코드.&quot;,
+    &quot;memory&quot;: &quot;자기복제 + 자동전파.&quot;,
+    &quot;trap&quot;: &quot;바이러스는 보통 숙주가 필요.&quot;,
+    &quot;compare&quot;: &quot;바이러스&quot;
+  },
+  {
+    &quot;id&quot;: 149,
+    &quot;source_id&quot;: 149,
+    &quot;keyword&quot;: &quot;트랩도어&quot;,
+    &quot;subject&quot;: &quot;시스템 보안&quot;,
+    &quot;frequency&quot;: 10,
+    &quot;priority&quot;: 3,
+    &quot;question&quot;: &quot;트랩도어란?&quot;,
+    &quot;answer&quot;: &quot;정상 인증 절차를 우회해 시스템에 접근할 수 있도록 만든 숨겨진 진입점.&quot;,
+    &quot;definition&quot;: &quot;정상 인증 절차를 우회해 시스템에 접근할 수 있도록 만든 숨겨진 진입점.&quot;,
+    &quot;memory&quot;: &quot;Backdoor와 유사.&quot;,
+    &quot;trap&quot;: &quot;Trojan 자체와 동일 개념은 아님.&quot;,
+    &quot;compare&quot;: &quot;Backdoor&quot;
+  },
+  {
+    &quot;id&quot;: 150,
+    &quot;source_id&quot;: 150,
+    &quot;keyword&quot;: &quot;바이러스 유형&quot;,
+    &quot;subject&quot;: &quot;시스템 보안&quot;,
+    &quot;frequency&quot;: 10,
+    &quot;priority&quot;: 3,
+    &quot;question&quot;: &quot;바이러스 유형란?&quot;,
+    &quot;answer&quot;: &quot;다른 파일이나 부트 영역 등에 기생해 실행 시 감염·복제되는 악성코드의 분류.&quot;,
+    &quot;definition&quot;: &quot;다른 파일이나 부트 영역 등에 기생해 실행 시 감염·복제되는 악성코드의 분류.&quot;,
+    &quot;memory&quot;: &quot;숙주 필요 관점.&quot;,
+    &quot;trap&quot;: &quot;웜은 독립적으로 전파 가능.&quot;,
+    &quot;compare&quot;: &quot;웜&quot;
+  },
+  {
+    &quot;id&quot;: 151,
+    &quot;source_id&quot;: 151,
+    &quot;keyword&quot;: &quot;DoS&quot;,
+    &quot;subject&quot;: &quot;네트워크 보안&quot;,
+    &quot;frequency&quot;: 9,
+    &quot;priority&quot;: 2,
+    &quot;question&quot;: &quot;DoS란?&quot;,
+    &quot;answer&quot;: &quot;서비스 자원을 고갈시켜 정상 사용자가 이용하지 못하게 하는 가용성 공격.&quot;,
+    &quot;definition&quot;: &quot;서비스 자원을 고갈시켜 정상 사용자가 이용하지 못하게 하는 가용성 공격.&quot;,
+    &quot;memory&quot;: &quot;가용성 침해.&quot;,
+    &quot;trap&quot;: &quot;DDoS는 다수 공격원.&quot;,
+    &quot;compare&quot;: &quot;DDoS&quot;
+  },
+  {
+    &quot;id&quot;: 152,
+    &quot;source_id&quot;: 152,
+    &quot;keyword&quot;: &quot;DDoS&quot;,
+    &quot;subject&quot;: &quot;네트워크 보안&quot;,
+    &quot;frequency&quot;: 9,
+    &quot;priority&quot;: 2,
+    &quot;question&quot;: &quot;DDoS란?&quot;,
+    &quot;answer&quot;: &quot;다수의 감염 호스트가 동시에 대상을 공격하는 분산 서비스 거부 공격.&quot;,
+    &quot;definition&quot;: &quot;다수의 감염 호스트가 동시에 대상을 공격하는 분산 서비스 거부 공격.&quot;,
+    &quot;memory&quot;: &quot;Botnet과 연결.&quot;,
+    &quot;trap&quot;: &quot;단일 출발지 공격과 구분.&quot;,
+    &quot;compare&quot;: &quot;DoS&quot;
+  },
+  {
+    &quot;id&quot;: 153,
+    &quot;source_id&quot;: 153,
+    &quot;keyword&quot;: &quot;SYN Flooding&quot;,
+    &quot;subject&quot;: &quot;네트워크 보안&quot;,
+    &quot;frequency&quot;: 9,
+    &quot;priority&quot;: 2,
+    &quot;question&quot;: &quot;SYN Flooding란?&quot;,
+    &quot;answer&quot;: &quot;TCP SYN 요청을 대량 전송해 Half-open Connection을 누적시키는 DoS 공격.&quot;,
+    &quot;definition&quot;: &quot;TCP SYN 요청을 대량 전송해 Half-open Connection을 누적시키는 DoS 공격.&quot;,
+    &quot;memory&quot;: &quot;SYN Cookie가 대표 대응.&quot;,
+    &quot;trap&quot;: &quot;UDP Flood와 구분.&quot;,
+    &quot;compare&quot;: &quot;SYN Cookie&quot;
+  },
+  {
+    &quot;id&quot;: 154,
+    &quot;source_id&quot;: 154,
+    &quot;keyword&quot;: &quot;LAND&quot;,
+    &quot;subject&quot;: &quot;네트워크 보안&quot;,
+    &quot;frequency&quot;: 9,
+    &quot;priority&quot;: 2,
+    &quot;question&quot;: &quot;LAND란?&quot;,
+    &quot;answer&quot;: &quot;출발지와 목적지 IP·포트를 동일하게 위조한 패킷으로 장애를 유발하는 고전적 DoS 공격.&quot;,
+    &quot;definition&quot;: &quot;출발지와 목적지 IP·포트를 동일하게 위조한 패킷으로 장애를 유발하는 고전적 DoS 공격.&quot;,
+    &quot;memory&quot;: &quot;Src=Dst.&quot;,
+    &quot;trap&quot;: &quot;Smurf와 원리가 다름.&quot;,
+    &quot;compare&quot;: &quot;DoS&quot;
+  },
+  {
+    &quot;id&quot;: 155,
+    &quot;source_id&quot;: 155,
+    &quot;keyword&quot;: &quot;Bonk&quot;,
+    &quot;subject&quot;: &quot;네트워크 보안&quot;,
+    &quot;frequency&quot;: 9,
+    &quot;priority&quot;: 2,
+    &quot;question&quot;: &quot;Bonk란?&quot;,
+    &quot;answer&quot;: &quot;비정상적인 UDP 단편화 정보를 이용해 재조립 과정의 취약점을 악용한 고전적 DoS 공격.&quot;,
+    &quot;definition&quot;: &quot;비정상적인 UDP 단편화 정보를 이용해 재조립 과정의 취약점을 악용한 고전적 DoS 공격.&quot;,
+    &quot;memory&quot;: &quot;UDP Fragment 이상.&quot;,
+    &quot;trap&quot;: &quot;Teardrop과 세부 패턴이 다름.&quot;,
+    &quot;compare&quot;: &quot;Boink / Teardrop&quot;
+  },
+  {
+    &quot;id&quot;: 156,
+    &quot;source_id&quot;: 156,
+    &quot;keyword&quot;: &quot;Boink&quot;,
+    &quot;subject&quot;: &quot;네트워크 보안&quot;,
+    &quot;frequency&quot;: 9,
+    &quot;priority&quot;: 2,
+    &quot;question&quot;: &quot;Boink란?&quot;,
+    &quot;answer&quot;: &quot;잘못된 UDP 단편화·시퀀스 정보를 반복 전송해 장애를 유발하는 고전적 DoS 공격.&quot;,
+    &quot;definition&quot;: &quot;잘못된 UDP 단편화·시퀀스 정보를 반복 전송해 장애를 유발하는 고전적 DoS 공격.&quot;,
+    &quot;memory&quot;: &quot;UDP Fragment 계열.&quot;,
+    &quot;trap&quot;: &quot;정확한 패턴은 교재 정의에 따름.&quot;,
+    &quot;compare&quot;: &quot;Bonk&quot;
+  },
+  {
+    &quot;id&quot;: 157,
+    &quot;source_id&quot;: 157,
+    &quot;keyword&quot;: &quot;Teardrop&quot;,
+    &quot;subject&quot;: &quot;네트워크 보안&quot;,
+    &quot;frequency&quot;: 9,
+    &quot;priority&quot;: 2,
+    &quot;question&quot;: &quot;Teardrop란?&quot;,
+    &quot;answer&quot;: &quot;서로 겹치거나 비정상적인 IP Fragment를 보내 재조립 오류를 유발하는 DoS 공격.&quot;,
+    &quot;definition&quot;: &quot;서로 겹치거나 비정상적인 IP Fragment를 보내 재조립 오류를 유발하는 DoS 공격.&quot;,
+    &quot;memory&quot;: &quot;Overlapping Fragment.&quot;,
+    &quot;trap&quot;: &quot;SYN Flooding과 계층·원리가 다름.&quot;,
+    &quot;compare&quot;: &quot;Bonk / Boink&quot;
+  },
+  {
+    &quot;id&quot;: 158,
+    &quot;source_id&quot;: 158,
+    &quot;keyword&quot;: &quot;방화벽&quot;,
+    &quot;subject&quot;: &quot;네트워크 보안&quot;,
+    &quot;frequency&quot;: 8,
+    &quot;priority&quot;: 2,
+    &quot;question&quot;: &quot;방화벽란?&quot;,
+    &quot;answer&quot;: &quot;보안정책에 따라 네트워크 트래픽을 허용하거나 차단하는 시스템.&quot;,
+    &quot;definition&quot;: &quot;보안정책에 따라 네트워크 트래픽을 허용하거나 차단하는 시스템.&quot;,
+    &quot;memory&quot;: &quot;Packet Filtering / Stateful / Proxy.&quot;,
+    &quot;trap&quot;: &quot;WAF는 웹 애플리케이션 계층 보호에 특화.&quot;,
+    &quot;compare&quot;: &quot;WAF&quot;
+  },
+  {
+    &quot;id&quot;: 159,
+    &quot;source_id&quot;: 159,
+    &quot;keyword&quot;: &quot;WAF&quot;,
+    &quot;subject&quot;: &quot;애플리케이션 보안&quot;,
+    &quot;frequency&quot;: 8,
+    &quot;priority&quot;: 2,
+    &quot;question&quot;: &quot;WAF란?&quot;,
+    &quot;answer&quot;: &quot;HTTP/HTTPS 요청을 분석해 SQLi·XSS 등 웹 공격을 탐지·차단하는 방화벽.&quot;,
+    &quot;definition&quot;: &quot;HTTP/HTTPS 요청을 분석해 SQLi·XSS 등 웹 공격을 탐지·차단하는 방화벽.&quot;,
+    &quot;memory&quot;: &quot;웹 공격 특화.&quot;,
+    &quot;trap&quot;: &quot;일반 네트워크 방화벽과 동일하지 않음.&quot;,
+    &quot;compare&quot;: &quot;Firewall&quot;
+  },
+  {
+    &quot;id&quot;: 160,
+    &quot;source_id&quot;: 160,
+    &quot;keyword&quot;: &quot;iptables&quot;,
+    &quot;subject&quot;: &quot;네트워크 보안&quot;,
+    &quot;frequency&quot;: 8,
+    &quot;priority&quot;: 2,
+    &quot;question&quot;: &quot;iptables란?&quot;,
+    &quot;answer&quot;: &quot;Linux Netfilter의 패킷 필터링·NAT 규칙을 설정하는 전통적 도구.&quot;,
+    &quot;definition&quot;: &quot;Linux Netfilter의 패킷 필터링·NAT 규칙을 설정하는 전통적 도구.&quot;,
+    &quot;memory&quot;: &quot;INPUT/OUTPUT/FORWARD, NAT.&quot;,
+    &quot;trap&quot;: &quot;Windows 방화벽 도구가 아님.&quot;,
+    &quot;compare&quot;: &quot;nftables&quot;
+  },
+  {
+    &quot;id&quot;: 161,
+    &quot;source_id&quot;: 161,
+    &quot;keyword&quot;: &quot;스크리닝 라우터&quot;,
+    &quot;subject&quot;: &quot;네트워크 보안&quot;,
+    &quot;frequency&quot;: 8,
+    &quot;priority&quot;: 2,
+    &quot;question&quot;: &quot;스크리닝 라우터란?&quot;,
+    &quot;answer&quot;: &quot;라우터의 패킷 필터링 기능으로 트래픽을 통제하는 방화벽 구성.&quot;,
+    &quot;definition&quot;: &quot;라우터의 패킷 필터링 기능으로 트래픽을 통제하는 방화벽 구성.&quot;,
+    &quot;memory&quot;: &quot;패킷필터 기반.&quot;,
+    &quot;trap&quot;: &quot;응용계층 Proxy와 다름.&quot;,
+    &quot;compare&quot;: &quot;Bastion Host&quot;
+  },
+  {
+    &quot;id&quot;: 162,
+    &quot;source_id&quot;: 162,
+    &quot;keyword&quot;: &quot;스크린드 서브넷&quot;,
+    &quot;subject&quot;: &quot;네트워크 보안&quot;,
+    &quot;frequency&quot;: 8,
+    &quot;priority&quot;: 2,
+    &quot;question&quot;: &quot;스크린드 서브넷란?&quot;,
+    &quot;answer&quot;: &quot;외부망과 내부망 사이에 DMZ를 두어 여러 방어계층을 구성하는 방화벽 구조.&quot;,
+    &quot;definition&quot;: &quot;외부망과 내부망 사이에 DMZ를 두어 여러 방어계층을 구성하는 방화벽 구조.&quot;,
+    &quot;memory&quot;: &quot;DMZ.&quot;,
+    &quot;trap&quot;: &quot;단일 패킷필터보다 분리된 보호영역 제공.&quot;,
+    &quot;compare&quot;: &quot;DMZ&quot;
+  },
+  {
+    &quot;id&quot;: 163,
+    &quot;source_id&quot;: 163,
+    &quot;keyword&quot;: &quot;상태기반&quot;,
+    &quot;subject&quot;: &quot;네트워크 보안&quot;,
+    &quot;frequency&quot;: 8,
+    &quot;priority&quot;: 2,
+    &quot;question&quot;: &quot;상태기반란?&quot;,
+    &quot;answer&quot;: &quot;연결의 상태정보를 추적하면서 패킷 허용 여부를 판단하는 Stateful Inspection 방식.&quot;,
+    &quot;definition&quot;: &quot;연결의 상태정보를 추적하면서 패킷 허용 여부를 판단하는 Stateful Inspection 방식.&quot;,
+    &quot;memory&quot;: &quot;세션 상태 유지.&quot;,
+    &quot;trap&quot;: &quot;단순 Stateless Packet Filtering과 다름.&quot;,
+    &quot;compare&quot;: &quot;Packet Filtering&quot;
+  },
+  {
+    &quot;id&quot;: 164,
+    &quot;source_id&quot;: 164,
+    &quot;keyword&quot;: &quot;보안도구&quot;,
+    &quot;subject&quot;: &quot;정보보안 일반&quot;,
+    &quot;frequency&quot;: 8,
+    &quot;priority&quot;: 2,
+    &quot;question&quot;: &quot;보안도구란?&quot;,
+    &quot;answer&quot;: &quot;취약점 스캔·패킷분석·디버깅·침투테스트 등에 사용하는 도구들의 총칭.&quot;,
+    &quot;definition&quot;: &quot;취약점 스캔·패킷분석·디버깅·침투테스트 등에 사용하는 도구들의 총칭.&quot;,
+    &quot;memory&quot;: &quot;도구명 ↔ 용도 매칭.&quot;,
+    &quot;trap&quot;: &quot;도구마다 목적이 다름.&quot;,
+    &quot;compare&quot;: &quot;Nessus / Nmap / Snort&quot;
+  },
+  {
+    &quot;id&quot;: 165,
+    &quot;source_id&quot;: 165,
+    &quot;keyword&quot;: &quot;Nessus&quot;,
+    &quot;subject&quot;: &quot;정보보안 일반&quot;,
+    &quot;frequency&quot;: 8,
+    &quot;priority&quot;: 2,
+    &quot;question&quot;: &quot;Nessus란?&quot;,
+    &quot;answer&quot;: &quot;시스템과 네트워크의 알려진 취약점을 검사하는 대표 취약점 스캐너.&quot;,
+    &quot;definition&quot;: &quot;시스템과 네트워크의 알려진 취약점을 검사하는 대표 취약점 스캐너.&quot;,
+    &quot;memory&quot;: &quot;취약점 스캔.&quot;,
+    &quot;trap&quot;: &quot;Nmap은 주로 호스트·포트 탐색.&quot;,
+    &quot;compare&quot;: &quot;Nmap&quot;
+  },
+  {
+    &quot;id&quot;: 166,
+    &quot;source_id&quot;: 166,
+    &quot;keyword&quot;: &quot;COPS&quot;,
+    &quot;subject&quot;: &quot;시스템 보안&quot;,
+    &quot;frequency&quot;: 8,
+    &quot;priority&quot;: 2,
+    &quot;question&quot;: &quot;COPS란?&quot;,
+    &quot;answer&quot;: &quot;Unix 시스템의 보안설정과 알려진 취약점을 점검하던 고전적 보안 도구.&quot;,
+    &quot;definition&quot;: &quot;Unix 시스템의 보안설정과 알려진 취약점을 점검하던 고전적 보안 도구.&quot;,
+    &quot;memory&quot;: &quot;Host Security 점검.&quot;,
+    &quot;trap&quot;: &quot;SATAN은 네트워크 취약점 분석 쪽.&quot;,
+    &quot;compare&quot;: &quot;SATAN&quot;
+  },
+  {
+    &quot;id&quot;: 167,
+    &quot;source_id&quot;: 167,
+    &quot;keyword&quot;: &quot;SATAN&quot;,
+    &quot;subject&quot;: &quot;네트워크 보안&quot;,
+    &quot;frequency&quot;: 8,
+    &quot;priority&quot;: 2,
+    &quot;question&quot;: &quot;SATAN란?&quot;,
+    &quot;answer&quot;: &quot;네트워크 호스트의 알려진 취약점을 탐색하던 초기 보안 분석 도구.&quot;,
+    &quot;definition&quot;: &quot;네트워크 호스트의 알려진 취약점을 탐색하던 초기 보안 분석 도구.&quot;,
+    &quot;memory&quot;: &quot;Network Vulnerability 분석.&quot;,
+    &quot;trap&quot;: &quot;COPS와 대상 관점이 다름.&quot;,
+    &quot;compare&quot;: &quot;COPS&quot;
+  },
+  {
+    &quot;id&quot;: 168,
+    &quot;source_id&quot;: 168,
+    &quot;keyword&quot;: &quot;OllyDbg&quot;,
+    &quot;subject&quot;: &quot;시스템 보안&quot;,
+    &quot;frequency&quot;: 8,
+    &quot;priority&quot;: 2,
+    &quot;question&quot;: &quot;OllyDbg란?&quot;,
+    &quot;answer&quot;: &quot;Windows 사용자 모드 실행파일 분석에 사용되는 디버거.&quot;,
+    &quot;definition&quot;: &quot;Windows 사용자 모드 실행파일 분석에 사용되는 디버거.&quot;,
+    &quot;memory&quot;: &quot;역공학·악성코드 분석.&quot;,
+    &quot;trap&quot;: &quot;취약점 스캐너가 아님.&quot;,
+    &quot;compare&quot;: &quot;Debugger&quot;
+  },
+  {
+    &quot;id&quot;: 169,
+    &quot;source_id&quot;: 169,
+    &quot;keyword&quot;: &quot;Kali 도구&quot;,
+    &quot;subject&quot;: &quot;정보보안 일반&quot;,
+    &quot;frequency&quot;: 8,
+    &quot;priority&quot;: 2,
+    &quot;question&quot;: &quot;Kali 도구란?&quot;,
+    &quot;answer&quot;: &quot;Kali Linux에 포함된 다양한 침투테스트·보안분석 도구군.&quot;,
+    &quot;definition&quot;: &quot;Kali Linux에 포함된 다양한 침투테스트·보안분석 도구군.&quot;,
+    &quot;memory&quot;: &quot;Nmap·Metasploit·Wireshark 등.&quot;,
+    &quot;trap&quot;: &quot;Kali 자체가 단일 스캐너는 아님.&quot;,
+    &quot;compare&quot;: &quot;Penetration Testing&quot;
+  },
+  {
+    &quot;id&quot;: 170,
+    &quot;source_id&quot;: 170,
+    &quot;keyword&quot;: &quot;FTP&quot;,
+    &quot;subject&quot;: &quot;네트워크 보안&quot;,
+    &quot;frequency&quot;: 8,
+    &quot;priority&quot;: 2,
+    &quot;question&quot;: &quot;FTP란?&quot;,
+    &quot;answer&quot;: &quot;파일 전송 프로토콜. 기본적으로 인증정보와 데이터가 평문이다.&quot;,
+    &quot;definition&quot;: &quot;파일 전송 프로토콜. 기본적으로 인증정보와 데이터가 평문이다.&quot;,
+    &quot;memory&quot;: &quot;Control 21/TCP, Active Data 20/TCP.&quot;,
+    &quot;trap&quot;: &quot;SFTP와 이름은 비슷하지만 구조가 다름.&quot;,
+    &quot;compare&quot;: &quot;FTPS / SFTP&quot;
+  },
+  {
+    &quot;id&quot;: 171,
+    &quot;source_id&quot;: 171,
+    &quot;keyword&quot;: &quot;SFTP&quot;,
+    &quot;subject&quot;: &quot;네트워크 보안&quot;,
+    &quot;frequency&quot;: 8,
+    &quot;priority&quot;: 2,
+    &quot;question&quot;: &quot;SFTP란?&quot;,
+    &quot;answer&quot;: &quot;SSH 위에서 안전한 파일전송을 제공하는 프로토콜.&quot;,
+    &quot;definition&quot;: &quot;SSH 위에서 안전한 파일전송을 제공하는 프로토콜.&quot;,
+    &quot;memory&quot;: &quot;보통 TCP 22.&quot;,
+    &quot;trap&quot;: &quot;FTP에 TLS를 붙인 것은 FTPS.&quot;,
+    &quot;compare&quot;: &quot;FTPS&quot;
+  },
+  {
+    &quot;id&quot;: 172,
+    &quot;source_id&quot;: 172,
+    &quot;keyword&quot;: &quot;TFTP&quot;,
+    &quot;subject&quot;: &quot;네트워크 보안&quot;,
+    &quot;frequency&quot;: 8,
+    &quot;priority&quot;: 2,
+    &quot;question&quot;: &quot;TFTP란?&quot;,
+    &quot;answer&quot;: &quot;인증기능이 거의 없는 단순 UDP 기반 파일전송 프로토콜.&quot;,
+    &quot;definition&quot;: &quot;인증기능이 거의 없는 단순 UDP 기반 파일전송 프로토콜.&quot;,
+    &quot;memory&quot;: &quot;UDP 69.&quot;,
+    &quot;trap&quot;: &quot;FTP의 축소판이지만 TCP가 아님.&quot;,
+    &quot;compare&quot;: &quot;FTP&quot;
+  },
+  {
+    &quot;id&quot;: 173,
+    &quot;source_id&quot;: 173,
+    &quot;keyword&quot;: &quot;FTPS&quot;,
+    &quot;subject&quot;: &quot;네트워크 보안&quot;,
+    &quot;frequency&quot;: 8,
+    &quot;priority&quot;: 2,
+    &quot;question&quot;: &quot;FTPS란?&quot;,
+    &quot;answer&quot;: &quot;FTP에 TLS를 적용해 통신을 암호화한 방식.&quot;,
+    &quot;definition&quot;: &quot;FTP에 TLS를 적용해 통신을 암호화한 방식.&quot;,
+    &quot;memory&quot;: &quot;FTP + TLS.&quot;,
+    &quot;trap&quot;: &quot;SFTP는 SSH 기반.&quot;,
+    &quot;compare&quot;: &quot;SFTP&quot;
+  },
+  {
+    &quot;id&quot;: 174,
+    &quot;source_id&quot;: 174,
+    &quot;keyword&quot;: &quot;Anonymous&quot;,
+    &quot;subject&quot;: &quot;네트워크 보안&quot;,
+    &quot;frequency&quot;: 8,
+    &quot;priority&quot;: 2,
+    &quot;question&quot;: &quot;Anonymous란?&quot;,
+    &quot;answer&quot;: &quot;FTP에서 일반 사용자 계정 없이 anonymous 계정으로 접속하는 방식.&quot;,
+    &quot;definition&quot;: &quot;FTP에서 일반 사용자 계정 없이 anonymous 계정으로 접속하는 방식.&quot;,
+    &quot;memory&quot;: &quot;공개 파일 배포에 사용.&quot;,
+    &quot;trap&quot;: &quot;익명 접속은 보안이 강화된 인증 방식이 아님.&quot;,
+    &quot;compare&quot;: &quot;FTP&quot;
+  },
+  {
+    &quot;id&quot;: 175,
+    &quot;source_id&quot;: 175,
+    &quot;keyword&quot;: &quot;ftpusers&quot;,
+    &quot;subject&quot;: &quot;시스템 보안&quot;,
+    &quot;frequency&quot;: 8,
+    &quot;priority&quot;: 2,
+    &quot;question&quot;: &quot;ftpusers란?&quot;,
+    &quot;answer&quot;: &quot;FTP 로그인을 제한할 사용자 계정을 지정하는 설정과 관련된 파일.&quot;,
+    &quot;definition&quot;: &quot;FTP 로그인을 제한할 사용자 계정을 지정하는 설정과 관련된 파일.&quot;,
+    &quot;memory&quot;: &quot;root 등 중요 계정의 FTP 접속 제한.&quot;,
+    &quot;trap&quot;: &quot;시스템에 따라 실제 FTP 데몬의 설정 파일 위치·의미가 다를 수 있음.&quot;,
+    &quot;compare&quot;: &quot;FTP 설정&quot;
+  },
+  {
+    &quot;id&quot;: 176,
+    &quot;source_id&quot;: 176,
+    &quot;keyword&quot;: &quot;VPN&quot;,
+    &quot;subject&quot;: &quot;네트워크 보안&quot;,
+    &quot;frequency&quot;: 5,
+    &quot;priority&quot;: 2,
+    &quot;question&quot;: &quot;VPN란?&quot;,
+    &quot;answer&quot;: &quot;공용망 위에 암호화·터널링을 적용해 논리적인 사설망을 만드는 기술.&quot;,
+    &quot;definition&quot;: &quot;공용망 위에 암호화·터널링을 적용해 논리적인 사설망을 만드는 기술.&quot;,
+    &quot;memory&quot;: &quot;IPSec VPN / SSL VPN.&quot;,
+    &quot;trap&quot;: &quot;NAT와 목적이 다름.&quot;,
+    &quot;compare&quot;: &quot;IPSec&quot;
+  },
+  {
+    &quot;id&quot;: 177,
+    &quot;source_id&quot;: 177,
+    &quot;keyword&quot;: &quot;대칭키 운용모드 CBC&quot;,
+    &quot;subject&quot;: &quot;정보보안 일반&quot;,
+    &quot;frequency&quot;: 5,
+    &quot;priority&quot;: 2,
+    &quot;question&quot;: &quot;대칭키 운용모드 CBC란?&quot;,
+    &quot;answer&quot;: &quot;대칭키 블록암호 운용모드 중 CBC는 현재 평문을 이전 암호문과 XOR한 뒤 암호화한다.&quot;,
+    &quot;definition&quot;: &quot;대칭키 블록암호 운용모드 중 CBC는 현재 평문을 이전 암호문과 XOR한 뒤 암호화한다.&quot;,
+    &quot;memory&quot;: &quot;첫 블록에 IV 필요.&quot;,
+    &quot;trap&quot;: &quot;ECB와 달리 동일 평문 블록도 앞 블록에 따라 달라짐.&quot;,
+    &quot;compare&quot;: &quot;ECB / CFB / OFB&quot;
+  },
+  {
+    &quot;id&quot;: 178,
+    &quot;source_id&quot;: 178,
+    &quot;keyword&quot;: &quot;CFB&quot;,
+    &quot;subject&quot;: &quot;정보보안 일반&quot;,
+    &quot;frequency&quot;: 5,
+    &quot;priority&quot;: 2,
+    &quot;question&quot;: &quot;CFB란?&quot;,
+    &quot;answer&quot;: &quot;이전 암호문을 암호화한 결과를 평문과 XOR하여 블록암호를 스트림처럼 사용하는 운용모드.&quot;,
+    &quot;definition&quot;: &quot;이전 암호문을 암호화한 결과를 평문과 XOR하여 블록암호를 스트림처럼 사용하는 운용모드.&quot;,
+    &quot;memory&quot;: &quot;Cipher Feedback.&quot;,
+    &quot;trap&quot;: &quot;OFB는 출력값을 다시 입력.&quot;,
+    &quot;compare&quot;: &quot;OFB&quot;
+  },
+  {
+    &quot;id&quot;: 179,
+    &quot;source_id&quot;: 179,
+    &quot;keyword&quot;: &quot;OFB&quot;,
+    &quot;subject&quot;: &quot;정보보안 일반&quot;,
+    &quot;frequency&quot;: 5,
+    &quot;priority&quot;: 2,
+    &quot;question&quot;: &quot;OFB란?&quot;,
+    &quot;answer&quot;: &quot;암호 알고리즘의 출력값을 다시 입력해 키스트림을 생성하는 운용모드.&quot;,
+    &quot;definition&quot;: &quot;암호 알고리즘의 출력값을 다시 입력해 키스트림을 생성하는 운용모드.&quot;,
+    &quot;memory&quot;: &quot;Output Feedback.&quot;,
+    &quot;trap&quot;: &quot;CFB처럼 암호문을 피드백하지 않음.&quot;,
+    &quot;compare&quot;: &quot;CFB&quot;
+  },
+  {
+    &quot;id&quot;: 180,
+    &quot;source_id&quot;: 180,
+    &quot;keyword&quot;: &quot;초기화 벡터&quot;,
+    &quot;subject&quot;: &quot;정보보안 일반&quot;,
+    &quot;frequency&quot;: 5,
+    &quot;priority&quot;: 2,
+    &quot;question&quot;: &quot;초기화 벡터란?&quot;,
+    &quot;answer&quot;: &quot;암호화 시작 상태를 다양화하기 위해 사용하는 초기값 IV.&quot;,
+    &quot;definition&quot;: &quot;암호화 시작 상태를 다양화하기 위해 사용하는 초기값 IV.&quot;,
+    &quot;memory&quot;: &quot;같은 키·평문에서 반복 패턴 노출 완화.&quot;,
+    &quot;trap&quot;: &quot;모드에 따라 고유성·예측불가능성 요구가 다름.&quot;,
+    &quot;compare&quot;: &quot;Nonce&quot;
+  },
+  {
+    &quot;id&quot;: 181,
+    &quot;source_id&quot;: 181,
+    &quot;keyword&quot;: &quot;디지털포렌식&quot;,
+    &quot;subject&quot;: &quot;시스템 보안&quot;,
+    &quot;frequency&quot;: 5,
+    &quot;priority&quot;: 2,
+    &quot;question&quot;: &quot;디지털포렌식란?&quot;,
+    &quot;answer&quot;: &quot;디지털 증거를 식별·수집·보존·분석·보고하는 절차와 기술.&quot;,
+    &quot;definition&quot;: &quot;디지털 증거를 식별·수집·보존·분석·보고하는 절차와 기술.&quot;,
+    &quot;memory&quot;: &quot;무결성·적법성·연계보관성.&quot;,
+    &quot;trap&quot;: &quot;일반 백업과 목적이 다름.&quot;,
+    &quot;compare&quot;: &quot;Chain of Custody&quot;
+  },
+  {
+    &quot;id&quot;: 182,
+    &quot;source_id&quot;: 182,
+    &quot;keyword&quot;: &quot;증거수집&quot;,
+    &quot;subject&quot;: &quot;시스템 보안&quot;,
+    &quot;frequency&quot;: 5,
+    &quot;priority&quot;: 2,
+    &quot;question&quot;: &quot;증거수집란?&quot;,
+    &quot;answer&quot;: &quot;사건 분석에 필요한 디지털 자료를 원본 훼손 없이 확보하는 과정.&quot;,
+    &quot;definition&quot;: &quot;사건 분석에 필요한 디지털 자료를 원본 훼손 없이 확보하는 과정.&quot;,
+    &quot;memory&quot;: &quot;휘발성 데이터 우선, 무결성 검증.&quot;,
+    &quot;trap&quot;: &quot;수집 후 원본을 직접 분석하지 않는 것이 원칙적 관점.&quot;,
+    &quot;compare&quot;: &quot;Write Blocker&quot;
+  },
+  {
+    &quot;id&quot;: 183,
+    &quot;source_id&quot;: 183,
+    &quot;keyword&quot;: &quot;디스크 미러링&quot;,
+    &quot;subject&quot;: &quot;시스템 보안&quot;,
+    &quot;frequency&quot;: 5,
+    &quot;priority&quot;: 2,
+    &quot;question&quot;: &quot;디스크 미러링란?&quot;,
+    &quot;answer&quot;: &quot;원본 저장장치 전체를 비트 단위로 복제해 분석용 사본을 만드는 것.&quot;,
+    &quot;definition&quot;: &quot;원본 저장장치 전체를 비트 단위로 복제해 분석용 사본을 만드는 것.&quot;,
+    &quot;memory&quot;: &quot;원본 보존 + 해시 검증.&quot;,
+    &quot;trap&quot;: &quot;파일 몇 개 복사하는 것과 다름.&quot;,
+    &quot;compare&quot;: &quot;Forensic Image&quot;
+  },
+  {
+    &quot;id&quot;: 184,
+    &quot;source_id&quot;: 184,
+    &quot;keyword&quot;: &quot;5 단계 절차&quot;,
+    &quot;subject&quot;: &quot;시스템 보안&quot;,
+    &quot;frequency&quot;: 5,
+    &quot;priority&quot;: 2,
+    &quot;question&quot;: &quot;5 단계 절차란?&quot;,
+    &quot;answer&quot;: &quot;디지털포렌식의 일반적 흐름을 준비·수집/획득·검사·분석·보고 등으로 단계화한 것.&quot;,
+    &quot;definition&quot;: &quot;디지털포렌식의 일반적 흐름을 준비·수집/획득·검사·분석·보고 등으로 단계화한 것.&quot;,
+    &quot;memory&quot;: &quot;절차적 무결성 기억.&quot;,
+    &quot;trap&quot;: &quot;단계 명칭은 교재·기관에 따라 다를 수 있음.&quot;,
+    &quot;compare&quot;: &quot;디지털포렌식&quot;
+  },
+  {
+    &quot;id&quot;: 185,
+    &quot;source_id&quot;: 185,
+    &quot;keyword&quot;: &quot;Snort&quot;,
+    &quot;subject&quot;: &quot;네트워크 보안&quot;,
+    &quot;frequency&quot;: 4,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;Snort란?&quot;,
+    &quot;answer&quot;: &quot;패킷을 규칙과 비교해 침입을 탐지·차단할 수 있는 오픈소스 NIDS/NIPS.&quot;,
+    &quot;definition&quot;: &quot;패킷을 규칙과 비교해 침입을 탐지·차단할 수 있는 오픈소스 NIDS/NIPS.&quot;,
+    &quot;memory&quot;: &quot;Rule 기반 탐지.&quot;,
+    &quot;trap&quot;: &quot;Nessus는 취약점 스캐너.&quot;,
+    &quot;compare&quot;: &quot;Nessus&quot;
+  },
+  {
+    &quot;id&quot;: 186,
+    &quot;source_id&quot;: 186,
+    &quot;keyword&quot;: &quot;룰 옵션&quot;,
+    &quot;subject&quot;: &quot;네트워크 보안&quot;,
+    &quot;frequency&quot;: 4,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;룰 옵션란?&quot;,
+    &quot;answer&quot;: &quot;Snort Rule에서 메시지·콘텐츠·플래그·SID 등 세부 탐지조건을 지정하는 부분.&quot;,
+    &quot;definition&quot;: &quot;Snort Rule에서 메시지·콘텐츠·플래그·SID 등 세부 탐지조건을 지정하는 부분.&quot;,
+    &quot;memory&quot;: &quot;Rule = Header + Options.&quot;,
+    &quot;trap&quot;: &quot;iptables 옵션과 혼동 주의.&quot;,
+    &quot;compare&quot;: &quot;Snort Rule&quot;
+  },
+  {
+    &quot;id&quot;: 187,
+    &quot;source_id&quot;: 187,
+    &quot;keyword&quot;: &quot;Telnet 명령어&quot;,
+    &quot;subject&quot;: &quot;네트워크 보안&quot;,
+    &quot;frequency&quot;: 4,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;Telnet 명령어란?&quot;,
+    &quot;answer&quot;: &quot;Telnet은 원격 터미널용 평문 프로토콜이며 특정 TCP 포트 연결 확인에도 쓰일 수 있다.&quot;,
+    &quot;definition&quot;: &quot;Telnet은 원격 터미널용 평문 프로토콜이며 특정 TCP 포트 연결 확인에도 쓰일 수 있다.&quot;,
+    &quot;memory&quot;: &quot;TCP 23.&quot;,
+    &quot;trap&quot;: &quot;보안 원격접속은 SSH가 대안.&quot;,
+    &quot;compare&quot;: &quot;SSH&quot;
+  },
+  {
+    &quot;id&quot;: 188,
+    &quot;source_id&quot;: 188,
+    &quot;keyword&quot;: &quot;NAC&quot;,
+    &quot;subject&quot;: &quot;네트워크 보안&quot;,
+    &quot;frequency&quot;: 4,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;NAC란?&quot;,
+    &quot;answer&quot;: &quot;Network Access Control. 사용자·단말 인증과 보안상태를 확인한 뒤 네트워크 접근을 제어한다.&quot;,
+    &quot;definition&quot;: &quot;Network Access Control. 사용자·단말 인증과 보안상태를 확인한 뒤 네트워크 접근을 제어한다.&quot;,
+    &quot;memory&quot;: &quot;접속 전/후 통제.&quot;,
+    &quot;trap&quot;: &quot;Firewall은 주로 트래픽 정책 제어.&quot;,
+    &quot;compare&quot;: &quot;802.1X&quot;
+  },
+  {
+    &quot;id&quot;: 189,
+    &quot;source_id&quot;: 189,
+    &quot;keyword&quot;: &quot;DHCP&quot;,
+    &quot;subject&quot;: &quot;네트워크 보안&quot;,
+    &quot;frequency&quot;: 4,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;DHCP란?&quot;,
+    &quot;answer&quot;: &quot;IP 주소·서브넷마스크·게이트웨이·DNS 등을 자동 할당하는 프로토콜.&quot;,
+    &quot;definition&quot;: &quot;IP 주소·서브넷마스크·게이트웨이·DNS 등을 자동 할당하는 프로토콜.&quot;,
+    &quot;memory&quot;: &quot;DORA = Discover→Offer→Request→ACK.&quot;,
+    &quot;trap&quot;: &quot;DNS는 이름해석.&quot;,
+    &quot;compare&quot;: &quot;DNS&quot;
+  },
+  {
+    &quot;id&quot;: 190,
+    &quot;source_id&quot;: 190,
+    &quot;keyword&quot;: &quot;Kerberos&quot;,
+    &quot;subject&quot;: &quot;정보보안 일반&quot;,
+    &quot;frequency&quot;: 4,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;Kerberos란?&quot;,
+    &quot;answer&quot;: &quot;대칭키와 티켓을 사용하는 중앙집중식 네트워크 인증 프로토콜.&quot;,
+    &quot;definition&quot;: &quot;대칭키와 티켓을 사용하는 중앙집중식 네트워크 인증 프로토콜.&quot;,
+    &quot;memory&quot;: &quot;사용자→AS→TGT→TGS→Service Ticket→서버.&quot;,
+    &quot;trap&quot;: &quot;공개키 기반 인증 프로토콜로만 보면 오류.&quot;,
+    &quot;compare&quot;: &quot;KDC / Ticket&quot;
+  },
+  {
+    &quot;id&quot;: 191,
+    &quot;source_id&quot;: 191,
+    &quot;keyword&quot;: &quot;커버로스&quot;,
+    &quot;subject&quot;: &quot;정보보안 일반&quot;,
+    &quot;frequency&quot;: 4,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;커버로스란?&quot;,
+    &quot;answer&quot;: &quot;Kerberos의 한글 표기이며 동일한 인증 프로토콜이다.&quot;,
+    &quot;definition&quot;: &quot;Kerberos의 한글 표기이며 동일한 인증 프로토콜이다.&quot;,
+    &quot;memory&quot;: &quot;Kerberos와 동일 개념.&quot;,
+    &quot;trap&quot;: &quot;별도 기술로 외우지 않기.&quot;,
+    &quot;compare&quot;: &quot;Kerberos&quot;,
+    &quot;alias_of&quot;: 190
+  },
+  {
+    &quot;id&quot;: 192,
+    &quot;source_id&quot;: 192,
+    &quot;keyword&quot;: &quot;티켓&quot;,
+    &quot;subject&quot;: &quot;정보보안 일반&quot;,
+    &quot;frequency&quot;: 4,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;티켓란?&quot;,
+    &quot;answer&quot;: &quot;Kerberos에서 인증 사실과 서비스 접근권한을 증명하는 데이터.&quot;,
+    &quot;definition&quot;: &quot;Kerberos에서 인증 사실과 서비스 접근권한을 증명하는 데이터.&quot;,
+    &quot;memory&quot;: &quot;TGT / Service Ticket 구분.&quot;,
+    &quot;trap&quot;: &quot;일반 OTP와 무관.&quot;,
+    &quot;compare&quot;: &quot;Kerberos&quot;
+  },
+  {
+    &quot;id&quot;: 193,
+    &quot;source_id&quot;: 193,
+    &quot;keyword&quot;: &quot;정보보호 조직&quot;,
+    &quot;subject&quot;: &quot;정보보안 관리·법규&quot;,
+    &quot;frequency&quot;: 4,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;정보보호 조직란?&quot;,
+    &quot;answer&quot;: &quot;조직 내 정보보호 정책·운영·교육·점검·사고대응을 담당하는 조직 체계.&quot;,
+    &quot;definition&quot;: &quot;조직 내 정보보호 정책·운영·교육·점검·사고대응을 담당하는 조직 체계.&quot;,
+    &quot;memory&quot;: &quot;역할·책임·독립성.&quot;,
+    &quot;trap&quot;: &quot;법적 지정요건은 최신 기준 확인.&quot;,
+    &quot;compare&quot;: &quot;CISO / CERT&quot;
+  },
+  {
+    &quot;id&quot;: 194,
+    &quot;source_id&quot;: 194,
+    &quot;keyword&quot;: &quot;CISO&quot;,
+    &quot;subject&quot;: &quot;정보보안 관리·법규&quot;,
+    &quot;frequency&quot;: 4,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;CISO란?&quot;,
+    &quot;answer&quot;: &quot;Chief Information Security Officer. 조직의 정보보호 업무를 총괄하는 책임자.&quot;,
+    &quot;definition&quot;: &quot;Chief Information Security Officer. 조직의 정보보호 업무를 총괄하는 책임자.&quot;,
+    &quot;memory&quot;: &quot;정보보호 최고책임자.&quot;,
+    &quot;trap&quot;: &quot;CIO와 역할이 다름.&quot;,
+    &quot;compare&quot;: &quot;CIO&quot;
+  },
+  {
+    &quot;id&quot;: 195,
+    &quot;source_id&quot;: 195,
+    &quot;keyword&quot;: &quot;전담부서&quot;,
+    &quot;subject&quot;: &quot;정보보안 관리·법규&quot;,
+    &quot;frequency&quot;: 4,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;전담부서란?&quot;,
+    &quot;answer&quot;: &quot;특정 정보보호 업무를 전문적으로 수행하도록 구성된 조직.&quot;,
+    &quot;definition&quot;: &quot;특정 정보보호 업무를 전문적으로 수행하도록 구성된 조직.&quot;,
+    &quot;memory&quot;: &quot;책임과 역할 분리.&quot;,
+    &quot;trap&quot;: &quot;구체적 설치 요건은 최신 법령 확인.&quot;,
+    &quot;compare&quot;: &quot;정보보호 조직&quot;
+  },
+  {
+    &quot;id&quot;: 196,
+    &quot;source_id&quot;: 196,
+    &quot;keyword&quot;: &quot;CERT 역할&quot;,
+    &quot;subject&quot;: &quot;정보보안 관리·법규&quot;,
+    &quot;frequency&quot;: 4,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;CERT 역할란?&quot;,
+    &quot;answer&quot;: &quot;침해사고 예방·접수·분석·대응·복구·정보공유를 수행하는 역할.&quot;,
+    &quot;definition&quot;: &quot;침해사고 예방·접수·분석·대응·복구·정보공유를 수행하는 역할.&quot;,
+    &quot;memory&quot;: &quot;Incident Response.&quot;,
+    &quot;trap&quot;: &quot;CISO와 달리 사고대응 실무 조직 성격.&quot;,
+    &quot;compare&quot;: &quot;CERT&quot;
+  },
+  {
+    &quot;id&quot;: 197,
+    &quot;source_id&quot;: 197,
+    &quot;keyword&quot;: &quot;재해복구&quot;,
+    &quot;subject&quot;: &quot;정보보안 관리·법규&quot;,
+    &quot;frequency&quot;: 3,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;재해복구란?&quot;,
+    &quot;answer&quot;: &quot;재해나 장애 발생 후 IT 시스템과 서비스를 정상 수준으로 복구하는 활동.&quot;,
+    &quot;definition&quot;: &quot;재해나 장애 발생 후 IT 시스템과 서비스를 정상 수준으로 복구하는 활동.&quot;,
+    &quot;memory&quot;: &quot;DRP·BCP와 연결.&quot;,
+    &quot;trap&quot;: &quot;백업만으로 재해복구가 완성되지 않음.&quot;,
+    &quot;compare&quot;: &quot;BCP / DRP&quot;
+  },
+  {
+    &quot;id&quot;: 198,
+    &quot;source_id&quot;: 198,
+    &quot;keyword&quot;: &quot;RTO&quot;,
+    &quot;subject&quot;: &quot;정보보안 관리·법규&quot;,
+    &quot;frequency&quot;: 3,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;RTO란?&quot;,
+    &quot;answer&quot;: &quot;Recovery Time Objective. 장애 발생 후 서비스를 복구해야 하는 목표 시간.&quot;,
+    &quot;definition&quot;: &quot;Recovery Time Objective. 장애 발생 후 서비스를 복구해야 하는 목표 시간.&quot;,
+    &quot;memory&quot;: &quot;얼마나 빨리 복구?&quot;,
+    &quot;trap&quot;: &quot;RPO는 어느 시점까지 데이터 복구?&quot;,
+    &quot;compare&quot;: &quot;RPO&quot;
+  },
+  {
+    &quot;id&quot;: 199,
+    &quot;source_id&quot;: 199,
+    &quot;keyword&quot;: &quot;RAID&quot;,
+    &quot;subject&quot;: &quot;시스템 보안&quot;,
+    &quot;frequency&quot;: 3,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;RAID란?&quot;,
+    &quot;answer&quot;: &quot;여러 디스크를 묶어 성능이나 장애내성을 높이는 기술.&quot;,
+    &quot;definition&quot;: &quot;여러 디스크를 묶어 성능이나 장애내성을 높이는 기술.&quot;,
+    &quot;memory&quot;: &quot;0=Striping, 1=Mirroring, 5=1 parity, 6=2 parity.&quot;,
+    &quot;trap&quot;: &quot;RAID는 백업 자체가 아니다.&quot;,
+    &quot;compare&quot;: &quot;RAID 0/1/5/6/10&quot;
+  },
+  {
+    &quot;id&quot;: 200,
+    &quot;source_id&quot;: 200,
+    &quot;keyword&quot;: &quot;소프트웨어 보안약점&quot;,
+    &quot;subject&quot;: &quot;애플리케이션 보안&quot;,
+    &quot;frequency&quot;: 3,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;소프트웨어 보안약점란?&quot;,
+    &quot;answer&quot;: &quot;설계·구현 오류 때문에 공격에 악용될 수 있는 소프트웨어 결함.&quot;,
+    &quot;definition&quot;: &quot;설계·구현 오류 때문에 공격에 악용될 수 있는 소프트웨어 결함.&quot;,
+    &quot;memory&quot;: &quot;입력검증·인증·메모리 오류 등.&quot;,
+    &quot;trap&quot;: &quot;취약점과 위협은 같은 뜻이 아님.&quot;,
+    &quot;compare&quot;: &quot;보안취약점&quot;
+  },
+  {
+    &quot;id&quot;: 201,
+    &quot;source_id&quot;: 201,
+    &quot;keyword&quot;: &quot;입력값 검증&quot;,
+    &quot;subject&quot;: &quot;애플리케이션 보안&quot;,
+    &quot;frequency&quot;: 3,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;입력값 검증란?&quot;,
+    &quot;answer&quot;: &quot;외부 입력의 길이·형식·범위·허용값을 확인하는 보안 처리.&quot;,
+    &quot;definition&quot;: &quot;외부 입력의 길이·형식·범위·허용값을 확인하는 보안 처리.&quot;,
+    &quot;memory&quot;: &quot;SQLi·XSS·Buffer Overflow 완화.&quot;,
+    &quot;trap&quot;: &quot;검증만으로 모든 공격을 막을 수 있는 것은 아님.&quot;,
+    &quot;compare&quot;: &quot;출력 인코딩&quot;
+  },
+  {
+    &quot;id&quot;: 202,
+    &quot;source_id&quot;: 202,
+    &quot;keyword&quot;: &quot;API 오용&quot;,
+    &quot;subject&quot;: &quot;애플리케이션 보안&quot;,
+    &quot;frequency&quot;: 3,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;API 오용란?&quot;,
+    &quot;answer&quot;: &quot;API를 보안상 잘못된 방식으로 사용해 취약점을 만드는 유형.&quot;,
+    &quot;definition&quot;: &quot;API를 보안상 잘못된 방식으로 사용해 취약점을 만드는 유형.&quot;,
+    &quot;memory&quot;: &quot;위험 API·반환값 무시·잘못된 호출.&quot;,
+    &quot;trap&quot;: &quot;API 자체가 취약하다는 뜻과 다름.&quot;,
+    &quot;compare&quot;: &quot;Secure Coding&quot;
+  },
+  {
+    &quot;id&quot;: 203,
+    &quot;source_id&quot;: 203,
+    &quot;keyword&quot;: &quot;코드 오류&quot;,
+    &quot;subject&quot;: &quot;애플리케이션 보안&quot;,
+    &quot;frequency&quot;: 3,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;코드 오류란?&quot;,
+    &quot;answer&quot;: &quot;잘못된 비교·계산·초기화·예외처리 등 구현 실수로 발생하는 보안약점.&quot;,
+    &quot;definition&quot;: &quot;잘못된 비교·계산·초기화·예외처리 등 구현 실수로 발생하는 보안약점.&quot;,
+    &quot;memory&quot;: &quot;구현 결함.&quot;,
+    &quot;trap&quot;: &quot;설계 오류와 구분 가능.&quot;,
+    &quot;compare&quot;: &quot;Secure Coding&quot;
+  },
+  {
+    &quot;id&quot;: 204,
+    &quot;source_id&quot;: 204,
+    &quot;keyword&quot;: &quot;UTM&quot;,
+    &quot;subject&quot;: &quot;네트워크 보안&quot;,
+    &quot;frequency&quot;: 2,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;UTM란?&quot;,
+    &quot;answer&quot;: &quot;Unified Threat Management. Firewall·IDS/IPS·VPN·Anti-malware 등을 하나의 장비에 통합한다.&quot;,
+    &quot;definition&quot;: &quot;Unified Threat Management. Firewall·IDS/IPS·VPN·Anti-malware 등을 하나의 장비에 통합한다.&quot;,
+    &quot;memory&quot;: &quot;여러 보안기능 통합.&quot;,
+    &quot;trap&quot;: &quot;ESM은 이벤트 통합관리 성격.&quot;,
+    &quot;compare&quot;: &quot;ESM&quot;
+  },
+  {
+    &quot;id&quot;: 205,
+    &quot;source_id&quot;: 205,
+    &quot;keyword&quot;: &quot;통합보안솔루션&quot;,
+    &quot;subject&quot;: &quot;정보보안 일반&quot;,
+    &quot;frequency&quot;: 2,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;통합보안솔루션란?&quot;,
+    &quot;answer&quot;: &quot;여러 보안 기능을 한 시스템이나 관리체계에서 통합 제공하는 솔루션의 일반 개념.&quot;,
+    &quot;definition&quot;: &quot;여러 보안 기능을 한 시스템이나 관리체계에서 통합 제공하는 솔루션의 일반 개념.&quot;,
+    &quot;memory&quot;: &quot;통합 운영.&quot;,
+    &quot;trap&quot;: &quot;UTM·ESM은 목적과 계층이 다름.&quot;,
+    &quot;compare&quot;: &quot;UTM / ESM&quot;
+  },
+  {
+    &quot;id&quot;: 206,
+    &quot;source_id&quot;: 206,
+    &quot;keyword&quot;: &quot;워터링홀&quot;,
+    &quot;subject&quot;: &quot;애플리케이션 보안&quot;,
+    &quot;frequency&quot;: 2,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;워터링홀란?&quot;,
+    &quot;answer&quot;: &quot;특정 조직 구성원이 자주 방문하는 웹사이트를 감염시켜 표적이 접속하도록 유도하는 공격.&quot;,
+    &quot;definition&quot;: &quot;특정 조직 구성원이 자주 방문하는 웹사이트를 감염시켜 표적이 접속하도록 유도하는 공격.&quot;,
+    &quot;memory&quot;: &quot;표적이 자주 가는 사이트 오염.&quot;,
+    &quot;trap&quot;: &quot;피싱 메일과 전달방식이 다름.&quot;,
+    &quot;compare&quot;: &quot;Spear Phishing&quot;
+  },
+  {
+    &quot;id&quot;: 207,
+    &quot;source_id&quot;: 207,
+    &quot;keyword&quot;: &quot;비즈니스 이메일 침해&quot;,
+    &quot;subject&quot;: &quot;정보보안 관리·법규&quot;,
+    &quot;frequency&quot;: 2,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;비즈니스 이메일 침해란?&quot;,
+    &quot;answer&quot;: &quot;임원·거래처 등을 사칭해 송금·계좌변경·정보제공을 요구하는 표적형 이메일 사기.&quot;,
+    &quot;definition&quot;: &quot;임원·거래처 등을 사칭해 송금·계좌변경·정보제공을 요구하는 표적형 이메일 사기.&quot;,
+    &quot;memory&quot;: &quot;거래관계 사칭.&quot;,
+    &quot;trap&quot;: &quot;일반 스팸보다 표적성이 강함.&quot;,
+    &quot;compare&quot;: &quot;BEC&quot;
+  },
+  {
+    &quot;id&quot;: 208,
+    &quot;source_id&quot;: 208,
+    &quot;keyword&quot;: &quot;BEC&quot;,
+    &quot;subject&quot;: &quot;정보보안 관리·법규&quot;,
+    &quot;frequency&quot;: 2,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;BEC란?&quot;,
+    &quot;answer&quot;: &quot;Business Email Compromise. 비즈니스 이메일 침해의 영문 약어.&quot;,
+    &quot;definition&quot;: &quot;Business Email Compromise. 비즈니스 이메일 침해의 영문 약어.&quot;,
+    &quot;memory&quot;: &quot;임원·거래처 사칭.&quot;,
+    &quot;trap&quot;: &quot;별도 공격종류로 중복 암기할 필요 없음.&quot;,
+    &quot;compare&quot;: &quot;비즈니스 이메일 침해&quot;,
+    &quot;alias_of&quot;: 207
+  },
+  {
+    &quot;id&quot;: 209,
+    &quot;source_id&quot;: 209,
+    &quot;keyword&quot;: &quot;APT 계열 공격&quot;,
+    &quot;subject&quot;: &quot;정보보안 일반&quot;,
+    &quot;frequency&quot;: 2,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;APT 계열 공격란?&quot;,
+    &quot;answer&quot;: &quot;특정 조직을 대상으로 장기간 은밀하게 지속되는 지능형 표적 공격.&quot;,
+    &quot;definition&quot;: &quot;특정 조직을 대상으로 장기간 은밀하게 지속되는 지능형 표적 공격.&quot;,
+    &quot;memory&quot;: &quot;Advanced + Persistent + Targeted.&quot;,
+    &quot;trap&quot;: &quot;단일 취약점 공격 하나만 의미하지 않음.&quot;,
+    &quot;compare&quot;: &quot;Cyber Kill Chain&quot;
+  },
+  {
+    &quot;id&quot;: 210,
+    &quot;source_id&quot;: 210,
+    &quot;keyword&quot;: &quot;스펙터&quot;,
+    &quot;subject&quot;: &quot;시스템 보안&quot;,
+    &quot;frequency&quot;: 1,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;스펙터란?&quot;,
+    &quot;answer&quot;: &quot;CPU의 추측실행·분기예측과 캐시 부채널을 악용해 메모리 정보를 추론하는 취약점 계열.&quot;,
+    &quot;definition&quot;: &quot;CPU의 추측실행·분기예측과 캐시 부채널을 악용해 메모리 정보를 추론하는 취약점 계열.&quot;,
+    &quot;memory&quot;: &quot;Speculative Execution + Side Channel.&quot;,
+    &quot;trap&quot;: &quot;Spectre와 같은 개념.&quot;,
+    &quot;compare&quot;: &quot;Spectre&quot;
+  },
+  {
+    &quot;id&quot;: 211,
+    &quot;source_id&quot;: 211,
+    &quot;keyword&quot;: &quot;Spectre&quot;,
+    &quot;subject&quot;: &quot;시스템 보안&quot;,
+    &quot;frequency&quot;: 1,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;Spectre란?&quot;,
+    &quot;answer&quot;: &quot;스펙터의 영문명으로 CPU 추측실행 계열 취약점을 의미한다.&quot;,
+    &quot;definition&quot;: &quot;스펙터의 영문명으로 CPU 추측실행 계열 취약점을 의미한다.&quot;,
+    &quot;memory&quot;: &quot;210번과 동일 개념.&quot;,
+    &quot;trap&quot;: &quot;별도 기술로 외우지 않기.&quot;,
+    &quot;compare&quot;: &quot;스펙터&quot;,
+    &quot;alias_of&quot;: 210
+  },
+  {
+    &quot;id&quot;: 212,
+    &quot;source_id&quot;: 212,
+    &quot;keyword&quot;: &quot;분기예측&quot;,
+    &quot;subject&quot;: &quot;시스템 보안&quot;,
+    &quot;frequency&quot;: 1,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;분기예측란?&quot;,
+    &quot;answer&quot;: &quot;CPU가 조건분기의 실행 방향을 미리 예측해 성능을 높이는 기술.&quot;,
+    &quot;definition&quot;: &quot;CPU가 조건분기의 실행 방향을 미리 예측해 성능을 높이는 기술.&quot;,
+    &quot;memory&quot;: &quot;성능 최적화.&quot;,
+    &quot;trap&quot;: &quot;Spectre에서 악용될 수 있음.&quot;,
+    &quot;compare&quot;: &quot;추측실행&quot;
+  },
+  {
+    &quot;id&quot;: 213,
+    &quot;source_id&quot;: 213,
+    &quot;keyword&quot;: &quot;추측실행&quot;,
+    &quot;subject&quot;: &quot;시스템 보안&quot;,
+    &quot;frequency&quot;: 1,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;추측실행란?&quot;,
+    &quot;answer&quot;: &quot;조건이 확정되기 전에 예상 경로의 명령을 미리 실행하는 CPU 성능 최적화 기술.&quot;,
+    &quot;definition&quot;: &quot;조건이 확정되기 전에 예상 경로의 명령을 미리 실행하는 CPU 성능 최적화 기술.&quot;,
+    &quot;memory&quot;: &quot;결과 취소 후에도 미세구조 흔적이 남을 수 있음.&quot;,
+    &quot;trap&quot;: &quot;분기예측과 연계되지만 동일 개념은 아님.&quot;,
+    &quot;compare&quot;: &quot;Spectre&quot;
+  },
+  {
+    &quot;id&quot;: 214,
+    &quot;source_id&quot;: 214,
+    &quot;keyword&quot;: &quot;DMA&quot;,
+    &quot;subject&quot;: &quot;시스템 보안&quot;,
+    &quot;frequency&quot;: 1,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;DMA란?&quot;,
+    &quot;answer&quot;: &quot;Direct Memory Access. 주변장치가 CPU 개입을 최소화하며 메모리와 직접 데이터를 전송하는 방식.&quot;,
+    &quot;definition&quot;: &quot;Direct Memory Access. 주변장치가 CPU 개입을 최소화하며 메모리와 직접 데이터를 전송하는 방식.&quot;,
+    &quot;memory&quot;: &quot;CPU 부하 감소.&quot;,
+    &quot;trap&quot;: &quot;Programmed I/O와 다름.&quot;,
+    &quot;compare&quot;: &quot;Cycle Stealing&quot;
+  },
+  {
+    &quot;id&quot;: 215,
+    &quot;source_id&quot;: 215,
+    &quot;keyword&quot;: &quot;Bus 제어권&quot;,
+    &quot;subject&quot;: &quot;시스템 보안&quot;,
+    &quot;frequency&quot;: 1,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;Bus 제어권란?&quot;,
+    &quot;answer&quot;: &quot;여러 장치 중 어느 장치가 시스템 버스를 사용할지 결정하는 권한.&quot;,
+    &quot;definition&quot;: &quot;여러 장치 중 어느 장치가 시스템 버스를 사용할지 결정하는 권한.&quot;,
+    &quot;memory&quot;: &quot;DMA Controller가 버스 제어권을 얻을 수 있음.&quot;,
+    &quot;trap&quot;: &quot;메모리 접근권한 자체와 동일하지 않음.&quot;,
+    &quot;compare&quot;: &quot;DMA&quot;
+  },
+  {
+    &quot;id&quot;: 216,
+    &quot;source_id&quot;: 216,
+    &quot;keyword&quot;: &quot;Cycle stealing&quot;,
+    &quot;subject&quot;: &quot;시스템 보안&quot;,
+    &quot;frequency&quot;: 1,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;Cycle stealing란?&quot;,
+    &quot;answer&quot;: &quot;DMA 장치가 CPU의 메모리 버스 사용 주기 중 일부를 가져와 데이터를 전송하는 방식.&quot;,
+    &quot;definition&quot;: &quot;DMA 장치가 CPU의 메모리 버스 사용 주기 중 일부를 가져와 데이터를 전송하는 방식.&quot;,
+    &quot;memory&quot;: &quot;CPU와 DMA가 주기를 나눠 사용.&quot;,
+    &quot;trap&quot;: &quot;Burst Mode와 구분.&quot;,
+    &quot;compare&quot;: &quot;DMA&quot;
+  },
+  {
+    &quot;id&quot;: 217,
+    &quot;source_id&quot;: 217,
+    &quot;keyword&quot;: &quot;Logstash&quot;,
+    &quot;subject&quot;: &quot;애플리케이션 보안&quot;,
+    &quot;frequency&quot;: 1,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;Logstash란?&quot;,
+    &quot;answer&quot;: &quot;다양한 소스의 데이터를 수집·변환해 Elasticsearch 등으로 전달하는 데이터 처리 파이프라인.&quot;,
+    &quot;definition&quot;: &quot;다양한 소스의 데이터를 수집·변환해 Elasticsearch 등으로 전달하는 데이터 처리 파이프라인.&quot;,
+    &quot;memory&quot;: &quot;수집 → 변환 → 전송.&quot;,
+    &quot;trap&quot;: &quot;Elasticsearch는 검색·저장 엔진.&quot;,
+    &quot;compare&quot;: &quot;Elasticsearch&quot;
+  },
+  {
+    &quot;id&quot;: 218,
+    &quot;source_id&quot;: 218,
+    &quot;keyword&quot;: &quot;ERROR&quot;,
+    &quot;subject&quot;: &quot;시스템 보안&quot;,
+    &quot;frequency&quot;: 1,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;ERROR란?&quot;,
+    &quot;answer&quot;: &quot;정상 처리가 불가능한 오류 상황을 나타내는 일반적인 로그 레벨.&quot;,
+    &quot;definition&quot;: &quot;정상 처리가 불가능한 오류 상황을 나타내는 일반적인 로그 레벨.&quot;,
+    &quot;memory&quot;: &quot;오류.&quot;,
+    &quot;trap&quot;: &quot;프레임워크마다 세부 레벨 체계는 다를 수 있음.&quot;,
+    &quot;compare&quot;: &quot;WARN&quot;
+  },
+  {
+    &quot;id&quot;: 219,
+    &quot;source_id&quot;: 219,
+    &quot;keyword&quot;: &quot;WARN&quot;,
+    &quot;subject&quot;: &quot;시스템 보안&quot;,
+    &quot;frequency&quot;: 1,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;WARN란?&quot;,
+    &quot;answer&quot;: &quot;현재 동작은 가능하지만 주의가 필요한 상태를 나타내는 일반적인 로그 레벨.&quot;,
+    &quot;definition&quot;: &quot;현재 동작은 가능하지만 주의가 필요한 상태를 나타내는 일반적인 로그 레벨.&quot;,
+    &quot;memory&quot;: &quot;경고.&quot;,
+    &quot;trap&quot;: &quot;ERROR보다 심각도가 낮은 경우가 일반적.&quot;,
+    &quot;compare&quot;: &quot;ERROR / INFO&quot;
+  },
+  {
+    &quot;id&quot;: 220,
+    &quot;source_id&quot;: 220,
+    &quot;keyword&quot;: &quot;INFO&quot;,
+    &quot;subject&quot;: &quot;시스템 보안&quot;,
+    &quot;frequency&quot;: 1,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;INFO란?&quot;,
+    &quot;answer&quot;: &quot;서비스 시작·종료·일반 처리 등 정상 운영정보를 기록하는 로그 레벨.&quot;,
+    &quot;definition&quot;: &quot;서비스 시작·종료·일반 처리 등 정상 운영정보를 기록하는 로그 레벨.&quot;,
+    &quot;memory&quot;: &quot;일반 정보.&quot;,
+    &quot;trap&quot;: &quot;DEBUG/TRACE보다 상세도가 낮음.&quot;,
+    &quot;compare&quot;: &quot;DEBUG / TRACE&quot;
+  },
+  {
+    &quot;id&quot;: 221,
+    &quot;source_id&quot;: 221,
+    &quot;keyword&quot;: &quot;TRACE&quot;,
+    &quot;subject&quot;: &quot;시스템 보안&quot;,
+    &quot;frequency&quot;: 1,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;TRACE란?&quot;,
+    &quot;answer&quot;: &quot;프로그램의 매우 상세한 실행 흐름을 기록하는 로그 레벨.&quot;,
+    &quot;definition&quot;: &quot;프로그램의 매우 상세한 실행 흐름을 기록하는 로그 레벨.&quot;,
+    &quot;memory&quot;: &quot;매우 상세.&quot;,
+    &quot;trap&quot;: &quot;정확한 레벨 순서는 프레임워크에 따라 다를 수 있음.&quot;,
+    &quot;compare&quot;: &quot;DEBUG&quot;
+  },
+  {
+    &quot;id&quot;: 222,
+    &quot;source_id&quot;: 222,
+    &quot;keyword&quot;: &quot;CERT&quot;,
+    &quot;subject&quot;: &quot;정보보안 관리·법규&quot;,
+    &quot;frequency&quot;: 1,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;CERT란?&quot;,
+    &quot;answer&quot;: &quot;Computer Emergency Response Team. 컴퓨터 침해사고 대응 조직.&quot;,
+    &quot;definition&quot;: &quot;Computer Emergency Response Team. 컴퓨터 침해사고 대응 조직.&quot;,
+    &quot;memory&quot;: &quot;Incident Response Team.&quot;,
+    &quot;trap&quot;: &quot;인증서 Certificate의 약어로 착각 주의.&quot;,
+    &quot;compare&quot;: &quot;CSIRT&quot;
+  },
+  {
+    &quot;id&quot;: 223,
+    &quot;source_id&quot;: 223,
+    &quot;keyword&quot;: &quot;침해사고 대응기관&quot;,
+    &quot;subject&quot;: &quot;정보보안 관리·법규&quot;,
+    &quot;frequency&quot;: 1,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;침해사고 대응기관란?&quot;,
+    &quot;answer&quot;: &quot;사이버 침해사고의 신고·분석·대응·지원·정보공유를 담당하는 기관 또는 조직.&quot;,
+    &quot;definition&quot;: &quot;사이버 침해사고의 신고·분석·대응·지원·정보공유를 담당하는 기관 또는 조직.&quot;,
+    &quot;memory&quot;: &quot;사고 대응체계.&quot;,
+    &quot;trap&quot;: &quot;국내 기관의 세부 역할은 최신 기준 확인.&quot;,
+    &quot;compare&quot;: &quot;CERT / CSIRT&quot;
+  },
+  {
+    &quot;id&quot;: 224,
+    &quot;source_id&quot;: 224,
+    &quot;keyword&quot;: &quot;C-TAS&quot;,
+    &quot;subject&quot;: &quot;정보보안 관리·법규&quot;,
+    &quot;frequency&quot;: 1,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;C-TAS란?&quot;,
+    &quot;answer&quot;: &quot;국내 사이버 위협정보를 수집·공유·분석하는 체계와 관련된 개념.&quot;,
+    &quot;definition&quot;: &quot;국내 사이버 위협정보를 수집·공유·분석하는 체계와 관련된 개념.&quot;,
+    &quot;memory&quot;: &quot;위협정보 공유.&quot;,
+    &quot;trap&quot;: &quot;세부 운영 주체·기능은 최신 자료로 확인.&quot;,
+    &quot;compare&quot;: &quot;Threat Intelligence&quot;
+  },
+  {
+    &quot;id&quot;: 225,
+    &quot;source_id&quot;: 225,
+    &quot;keyword&quot;: &quot;CVE&quot;,
+    &quot;subject&quot;: &quot;정보보안 일반&quot;,
+    &quot;frequency&quot;: 1,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;CVE란?&quot;,
+    &quot;answer&quot;: &quot;Common Vulnerabilities and Exposures. 공개된 취약점에 고유 식별번호를 부여하는 체계.&quot;,
+    &quot;definition&quot;: &quot;Common Vulnerabilities and Exposures. 공개된 취약점에 고유 식별번호를 부여하는 체계.&quot;,
+    &quot;memory&quot;: &quot;CVE-연도-번호.&quot;,
+    &quot;trap&quot;: &quot;심각도 점수는 CVSS.&quot;,
+    &quot;compare&quot;: &quot;CVSS&quot;
+  },
+  {
+    &quot;id&quot;: 226,
+    &quot;source_id&quot;: 226,
+    &quot;keyword&quot;: &quot;CVSS&quot;,
+    &quot;subject&quot;: &quot;정보보안 일반&quot;,
+    &quot;frequency&quot;: 1,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;CVSS란?&quot;,
+    &quot;answer&quot;: &quot;Common Vulnerability Scoring System. 취약점의 심각도를 수치로 평가하는 체계.&quot;,
+    &quot;definition&quot;: &quot;Common Vulnerability Scoring System. 취약점의 심각도를 수치로 평가하는 체계.&quot;,
+    &quot;memory&quot;: &quot;CVE=ID, CVSS=Score.&quot;,
+    &quot;trap&quot;: &quot;취약점 식별번호 자체가 아니다.&quot;,
+    &quot;compare&quot;: &quot;CVE&quot;
+  },
+  {
+    &quot;id&quot;: 227,
+    &quot;source_id&quot;: 227,
+    &quot;keyword&quot;: &quot;사이버위협정보 공유&quot;,
+    &quot;subject&quot;: &quot;정보보안 관리·법규&quot;,
+    &quot;frequency&quot;: 1,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;사이버위협정보 공유란?&quot;,
+    &quot;answer&quot;: &quot;공격 IP·도메인·파일 해시·취약점·TTP 같은 위협정보를 조직 간 공유하는 활동.&quot;,
+    &quot;definition&quot;: &quot;공격 IP·도메인·파일 해시·취약점·TTP 같은 위협정보를 조직 간 공유하는 활동.&quot;,
+    &quot;memory&quot;: &quot;공동 탐지·대응력 향상.&quot;,
+    &quot;trap&quot;: &quot;개인정보 공유와 다른 목적·법적 고려가 있음.&quot;,
+    &quot;compare&quot;: &quot;CTI&quot;
+  },
+  {
+    &quot;id&quot;: 228,
+    &quot;source_id&quot;: 228,
+    &quot;keyword&quot;: &quot;OSCP&quot;,
+    &quot;subject&quot;: &quot;정보보안 일반&quot;,
+    &quot;frequency&quot;: 1,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;OSCP란?&quot;,
+    &quot;answer&quot;: &quot;OffSec의 실습 중심 침투테스트 자격으로 취약점 분석·악용·권한상승·보고 역량을 평가한다.&quot;,
+    &quot;definition&quot;: &quot;OffSec의 실습 중심 침투테스트 자격으로 취약점 분석·악용·권한상승·보고 역량을 평가한다.&quot;,
+    &quot;memory&quot;: &quot;실습형 모의해킹 자격.&quot;,
+    &quot;trap&quot;: &quot;정보보안기사와 같은 국가기술자격이 아님.&quot;,
+    &quot;compare&quot;: &quot;Penetration Testing&quot;
+  },
+  {
+    &quot;id&quot;: 229,
+    &quot;source_id&quot;: 229,
+    &quot;keyword&quot;: &quot;모의해킹 자격·실시간성 관련&quot;,
+    &quot;subject&quot;: &quot;정보보안 일반&quot;,
+    &quot;frequency&quot;: 1,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;모의해킹 자격·실시간성 관련란?&quot;,
+    &quot;answer&quot;: &quot;원본 키워드만으로 하나의 표준 개념을 특정하기 어렵다. 카드에서는 관련 원 기출문제를 확인해 의미를 확정하는 것이 안전하다.&quot;,
+    &quot;definition&quot;: &quot;원본 키워드만으로 하나의 표준 개념을 특정하기 어렵다. 카드에서는 관련 원 기출문제를 확인해 의미를 확정하는 것이 안전하다.&quot;,
+    &quot;memory&quot;: &quot;확실하지 않음: 원문 기출 확인 필요.&quot;,
+    &quot;trap&quot;: &quot;임의로 특정 자격이나 기술로 단정하지 말 것.&quot;,
+    &quot;compare&quot;: &quot;OSCP&quot;
+  },
+  {
+    &quot;id&quot;: 230,
+    &quot;source_id&quot;: 230,
+    &quot;keyword&quot;: &quot;Lockheed Martin Cyber Kill Chain 계열&quot;,
+    &quot;subject&quot;: &quot;정보보안 일반&quot;,
+    &quot;frequency&quot;: 1,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;Lockheed Martin Cyber Kill Chain 계열란?&quot;,
+    &quot;answer&quot;: &quot;공격자의 침투 과정을 정찰부터 목적 달성까지 단계화한 공격 생명주기 모델.&quot;,
+    &quot;definition&quot;: &quot;공격자의 침투 과정을 정찰부터 목적 달성까지 단계화한 공격 생명주기 모델.&quot;,
+    &quot;memory&quot;: &quot;Recon→Weaponization→Delivery→Exploitation→Installation→C2→Actions on Objectives.&quot;,
+    &quot;trap&quot;: &quot;MITRE ATT&amp;CK과 목적·구조가 다름.&quot;,
+    &quot;compare&quot;: &quot;APT / MITRE ATT&amp;CK&quot;
+  }
+]
+</script>
+<script>
+const DATA = JSON.parse(
+  document.getElementById('cardData').textContent
+    .replaceAll('&quot;', '"').replaceAll('&#x27;', "'").replaceAll('&amp;', '&')
+    .replaceAll('&lt;', '<').replaceAll('&gt;', '>')
+);
+
+const $ = s => document.querySelector(s);
+const state = {
+  list:[...DATA], idx:0, flipped:false,
+  grades: JSON.parse(localStorage.getItem('isec-grades') || '{}'),
+  quiz:null, quizAnswered:false
+};
+
+const subjectSel = $('#subject');
+const subjects = [...new Set(DATA.map(x=>x.subject))];
+subjectSel.innerHTML = '<option value="">전체 과목</option>' + subjects.map(s=>`<option>${s}</option>`).join('');
+
+function stars(n){ return '★'.repeat(n) + '☆'.repeat(5-n); }
+function saveGrades(){ localStorage.setItem('isec-grades', JSON.stringify(state.grades)); }
+function current(){ return state.list[state.idx]; }
+
+function applyFilters(){
+  const q = $('#search').value.trim().toLowerCase();
+  const s = $('#subject').value;
+  const p = $('#priority').value;
+  state.list = DATA.filter(x =>
+    (!q || x.keyword.toLowerCase().includes(q) || x.definition.toLowerCase().includes(q)) &&
+    (!s || x.subject===s) &&
+    (!p || String(x.priority)===p)
+  );
+  state.idx = 0; state.flipped=false;
+  render();
+}
+
+function render(){
+  $('#totalBadge').textContent = `전체 ${DATA.length}`;
+  $('#filteredBadge').textContent = `필터 ${state.list.length}`;
+  $('#learnedBadge').textContent = `학습 ${Object.keys(state.grades).length}`;
+  if(!state.list.length){
+    $('#keyword').textContent='조건에 맞는 카드가 없습니다';
+    $('#definition').textContent='';
+    $('#memory').textContent='';
+    $('#trap').textContent='';
+    $('#compare').textContent='';
+    $('#position').textContent='0 / 0';
+    $('#bar').style.width='0%';
+    return;
+  }
+  const x=current();
+  $('#cardMeta').textContent = `#${x.id} · ${x.subject}`;
+  $('#backMeta').textContent = `#${x.id} · ${x.subject}`;
+  $('#stars').textContent=stars(x.priority);
+  $('#frequency').textContent=`반복도 ${x.frequency}`;
+  $('#keyword').textContent=x.keyword;
+  $('#backKeyword').textContent=x.keyword;
+  $('#definition').textContent=x.definition;
+  $('#memory').textContent=x.memory;
+  $('#trap').textContent=x.trap;
+  $('#compare').textContent=x.compare || '-';
+  $('#position').textContent=`${state.idx+1} / ${state.list.length}`;
+  $('#bar').style.width=`${((state.idx+1)/state.list.length)*100}%`;
+  $('#flashcard').classList.toggle('flipped', state.flipped);
+}
+
+function move(d){
+  if(!state.list.length) return;
+  state.idx=(state.idx+d+state.list.length)%state.list.length;
+  state.flipped=false; render();
+}
+function grade(g){
+  if(!state.list.length) return;
+  state.grades[current().id]=g; saveGrades(); move(1);
+}
+
+$('#flashcard').onclick=()=>{state.flipped=!state.flipped;render()};
+$('#prevBtn').onclick=()=>move(-1);
+$('#nextBtn').onclick=()=>move(1);
+$('#search').oninput=applyFilters;
+$('#subject').onchange=applyFilters;
+$('#priority').onchange=applyFilters;
+document.querySelectorAll('[data-grade]').forEach(b=>b.onclick=()=>grade(b.dataset.grade));
+
+$('#shuffleBtn').onclick=()=>{
+  for(let i=state.list.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[state.list[i],state.list[j]]=[state.list[j],state.list[i]]}
+  state.idx=0; state.flipped=false; render();
+};
+
+$('#mistakeBtn').onclick=()=>{
+  state.list = DATA.filter(x=>state.grades[x.id]==='again' || state.grades[x.id]==='hard');
+  state.idx=0; state.flipped=false; render();
+};
+$('#allBtn').onclick=()=>{
+  $('#search').value=''; $('#subject').value=''; $('#priority').value='';
+  state.list=[...DATA]; state.idx=0; state.flipped=false; render();
+};
+$('#resetBtn').onclick=()=>{
+  if(confirm('학습기록을 모두 초기화할까요?')){state.grades={};saveGrades();render();}
+};
+
+$('#exportBtn').onclick=()=>{
+  const blob=new Blob([JSON.stringify(DATA,null,2)],{type:'application/json'});
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(blob); a.download='information_security_230_cards.json'; a.click();
+  setTimeout(()=>URL.revokeObjectURL(a.href),500);
+};
+
+function makeQuiz(){
+  const pool=state.list.length>=4?state.list:DATA;
+  const q=pool[Math.floor(Math.random()*pool.length)];
+  let distractors=pool.filter(x=>x.id!==q.id && x.subject===q.subject);
+  if(distractors.length<3) distractors=DATA.filter(x=>x.id!==q.id);
+  distractors.sort(()=>Math.random()-.5);
+  const opts=[q,...distractors.slice(0,3)].sort(()=>Math.random()-.5);
+  state.quiz={q,opts}; state.quizAnswered=false;
+  $('#quizMeta').textContent=`#${q.id} · ${q.subject} · ${stars(q.priority)}`;
+  $('#quizQ').textContent=`다음 설명에 해당하는 키워드는?\n\n${q.definition}`;
+  const box=$('#quizOptions'); box.innerHTML='';
+  opts.forEach(o=>{
+    const b=document.createElement('button');
+    b.className='option'; b.textContent=o.keyword;
+    b.onclick=()=>answerQuiz(o.id,b);
+    box.appendChild(b);
+  });
+  $('#quizFeedback').classList.add('hidden');
+  $('#nextQuiz').classList.add('hidden');
+}
+
+function answerQuiz(id,btn){
+  if(state.quizAnswered) return;
+  state.quizAnswered=true;
+  const q=state.quiz.q;
+  [...$('#quizOptions').children].forEach((b,i)=>{
+    const oid=state.quiz.opts[i].id;
+    if(oid===q.id) b.classList.add('correct');
+    else if(oid===id) b.classList.add('wrong');
+    b.disabled=true;
+  });
+  const ok=id===q.id;
+  $('#quizFeedback').innerHTML =
+    `<b>${ok?'정답':'오답'}</b><br>${q.keyword} — ${q.memory}<br><span class="small">함정: ${q.trap}</span>`;
+  $('#quizFeedback').classList.remove('hidden');
+  $('#nextQuiz').classList.remove('hidden');
+  state.grades[q.id]=ok?'good':'again'; saveGrades();
+  render();
+}
+
+$('#quizBtn').onclick=()=>{ $('#cardMode').classList.add('hidden');$('#quizMode').classList.remove('hidden');makeQuiz(); };
+$('#closeQuiz').onclick=()=>{ $('#quizMode').classList.add('hidden');$('#cardMode').classList.remove('hidden'); };
+$('#nextQuiz').onclick=makeQuiz;
+
+document.addEventListener('keydown',e=>{
+  if(!$('#quizMode').classList.contains('hidden')) return;
+  if(e.code==='Space'){e.preventDefault();state.flipped=!state.flipped;render()}
+  if(e.key==='ArrowLeft') move(-1);
+  if(e.key==='ArrowRight') move(1);
+  if(e.key==='1') grade('again');
+  if(e.key==='2') grade('hard');
+  if(e.key==='3') grade('good');
+});
+
+render();
+</script>
+</body>
+</html>
