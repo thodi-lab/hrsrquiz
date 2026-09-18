@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>26.09.18 기준 정보보안기사 키워드 암기카드 1~439</title>
+<title>26.09.18 기준 정보보안기사 키워드 암기카드 1~433</title>
 <style>
 :root {
   --bg:#f5f7fb; --card:#ffffff; --ink:#172033; --muted:#687386;
@@ -110,11 +110,11 @@ body.locked{overflow:hidden}
   <div class="header">
     <div>
       <h1>정보보안기사 키워드 암기카드</h1>
-      <div class="sub">1~394 · 기출 키워드 반복도 기반 · 카드 + 4지선다 + 오답복습</div>
+      <div class="sub">1~433 · 기출 키워드 반복도 기반 · 카드 + 4지선다 + 오답복습</div>
     </div>
     <div class="stats">
-      <span class="badge" id="totalBadge">전체 394</span>
-      <span class="badge" id="filteredBadge">필터 394</span>
+      <span class="badge" id="totalBadge">전체 433</span>
+      <span class="badge" id="filteredBadge">필터 433</span>
       <span class="badge" id="learnedBadge">학습 0</span>
     </div>
   </div>
@@ -280,7 +280,7 @@ body.locked{overflow:hidden}
     &quot;source_id&quot;: 5,
     &quot;keyword&quot;: &quot;AES&quot;,
     &quot;subject&quot;: &quot;정보보안 일반&quot;,
-    &quot;frequency&quot;: 37,
+    &quot;frequency&quot;: 38,
     &quot;priority&quot;: 5,
     &quot;question&quot;: &quot;AES란?&quot;,
     &quot;answer&quot;: &quot;Rijndael 기반 국제표준 블록 대칭키 암호.&quot;,
@@ -392,13 +392,13 @@ body.locked{overflow:hidden}
     &quot;source_id&quot;: 13,
     &quot;keyword&quot;: &quot;PAM&quot;,
     &quot;subject&quot;: &quot;시스템 보안&quot;,
-    &quot;frequency&quot;: 32,
+    &quot;frequency&quot;: 33,
     &quot;priority&quot;: 5,
     &quot;question&quot;: &quot;PAM란?&quot;,
     &quot;answer&quot;: &quot;Pluggable Authentication Modules. Linux 인증 기능을 모듈화한 프레임워크.&quot;,
     &quot;definition&quot;: &quot;Pluggable Authentication Modules. Linux 인증 기능을 모듈화한 프레임워크.&quot;,
-    &quot;memory&quot;: &quot;auth / account / password / session.&quot;,
-    &quot;trap&quot;: &quot;방화벽 모듈이 아니다.&quot;,
+    &quot;memory&quot;: &quot;auth / account / password / session. PAM 설정은 보통 /etc/pam.d/ 아래 서비스별 파일에 두며 모듈 유형 auth/account/password/session과 제어 플래그 required, requisite, sufficient, optional 등을 구분한다.&quot;,
+    &quot;trap&quot;: &quot;방화벽 모듈이 아니다. requisite는 실패 시 즉시 종료하는 성격이고 sufficient는 성공 시 조건에 따라 이후 모듈을 생략할 수 있어 required와 다르다.&quot;,
     &quot;compare&quot;: &quot;Linux 인증&quot;
   },
   {
@@ -518,7 +518,7 @@ body.locked{overflow:hidden}
     &quot;source_id&quot;: 22,
     &quot;keyword&quot;: &quot;포트&quot;,
     &quot;subject&quot;: &quot;네트워크 보안&quot;,
-    &quot;frequency&quot;: 24,
+    &quot;frequency&quot;: 25,
     &quot;priority&quot;: 5,
     &quot;question&quot;: &quot;포트란?&quot;,
     &quot;answer&quot;: &quot;TCP/UDP에서 애플리케이션 서비스를 구분하는 번호.&quot;,
@@ -546,7 +546,7 @@ body.locked{overflow:hidden}
     &quot;source_id&quot;: 24,
     &quot;keyword&quot;: &quot;해시함수&quot;,
     &quot;subject&quot;: &quot;정보보안 일반&quot;,
-    &quot;frequency&quot;: 23,
+    &quot;frequency&quot;: 24,
     &quot;priority&quot;: 5,
     &quot;question&quot;: &quot;해시함수란?&quot;,
     &quot;answer&quot;: &quot;임의 길이 입력을 고정 길이 해시값으로 바꾸는 일방향 함수.&quot;,
@@ -630,13 +630,13 @@ body.locked{overflow:hidden}
     &quot;source_id&quot;: 30,
     &quot;keyword&quot;: &quot;MAC&quot;,
     &quot;subject&quot;: &quot;정보보안 일반&quot;,
-    &quot;frequency&quot;: 23,
+    &quot;frequency&quot;: 24,
     &quot;priority&quot;: 5,
     &quot;question&quot;: &quot;MAC란?&quot;,
     &quot;answer&quot;: &quot;Message Authentication Code. 비밀키를 이용해 메시지의 무결성과 인증을 확인하는 값.&quot;,
     &quot;definition&quot;: &quot;Message Authentication Code. 비밀키를 이용해 메시지의 무결성과 인증을 확인하는 값.&quot;,
-    &quot;memory&quot;: &quot;무결성 + 송신자 인증.&quot;,
-    &quot;trap&quot;: &quot;Mandatory Access Control의 MAC과 약어가 같음.&quot;,
+    &quot;memory&quot;: &quot;무결성 + 송신자 인증. MAC은 송수신자가 공유 비밀키를 사용하므로 키 분배·공유 문제가 존재한다.&quot;,
+    &quot;trap&quot;: &quot;Mandatory Access Control의 MAC과 약어가 같음. 공유 비밀키가 필요 없다고 하면 일반적인 MAC 설명과 맞지 않는다.&quot;,
     &quot;compare&quot;: &quot;해시 / 전자서명 / 강제적 접근통제&quot;
   },
   {
@@ -658,7 +658,7 @@ body.locked{overflow:hidden}
     &quot;source_id&quot;: 32,
     &quot;keyword&quot;: &quot;XSS&quot;,
     &quot;subject&quot;: &quot;애플리케이션 보안&quot;,
-    &quot;frequency&quot;: 20,
+    &quot;frequency&quot;: 21,
     &quot;priority&quot;: 5,
     &quot;question&quot;: &quot;XSS란?&quot;,
     &quot;answer&quot;: &quot;악성 스크립트를 피해자 브라우저에서 실행시키는 웹 공격.&quot;,
@@ -826,12 +826,12 @@ body.locked{overflow:hidden}
     &quot;source_id&quot;: 44,
     &quot;keyword&quot;: &quot;CRL&quot;,
     &quot;subject&quot;: &quot;정보보안 일반&quot;,
-    &quot;frequency&quot;: 17,
+    &quot;frequency&quot;: 18,
     &quot;priority&quot;: 4,
     &quot;question&quot;: &quot;CRL란?&quot;,
     &quot;answer&quot;: &quot;CA가 발행하는 폐기 인증서 목록.&quot;,
     &quot;definition&quot;: &quot;CA가 발행하는 폐기 인증서 목록.&quot;,
-    &quot;memory&quot;: &quot;목록 전체를 배포해 폐기 여부 확인.&quot;,
+    &quot;memory&quot;: &quot;목록 전체를 배포해 폐기 여부 확인. 인증서가 폐기되면 일련번호 등이 CRL에 올라가며 하위 인증서 체인의 신뢰성은 상위 CA 상태에 영향을 받는다.&quot;,
     &quot;trap&quot;: &quot;OCSP는 온라인 개별 조회.&quot;,
     &quot;compare&quot;: &quot;OCSP / Delta CRL&quot;
   },
@@ -1106,7 +1106,7 @@ body.locked{overflow:hidden}
     &quot;source_id&quot;: 64,
     &quot;keyword&quot;: &quot;전자서명&quot;,
     &quot;subject&quot;: &quot;정보보안 일반&quot;,
-    &quot;frequency&quot;: 15,
+    &quot;frequency&quot;: 16,
     &quot;priority&quot;: 4,
     &quot;question&quot;: &quot;전자서명란?&quot;,
     &quot;answer&quot;: &quot;전자문서에서 서명자 식별과 내용 변경 여부 확인에 쓰이는 전자적 정보.&quot;,
@@ -1232,12 +1232,12 @@ body.locked{overflow:hidden}
     &quot;source_id&quot;: 73,
     &quot;keyword&quot;: &quot;접근통제 DAC&quot;,
     &quot;subject&quot;: &quot;정보보안 일반&quot;,
-    &quot;frequency&quot;: 15,
+    &quot;frequency&quot;: 18,
     &quot;priority&quot;: 4,
     &quot;question&quot;: &quot;접근통제 DAC란?&quot;,
     &quot;answer&quot;: &quot;접근통제는 자원 사용을 제한하는 보안기법이며 DAC는 객체 소유자가 권한을 결정하는 임의적 접근통제다.&quot;,
     &quot;definition&quot;: &quot;접근통제는 자원 사용을 제한하는 보안기법이며 DAC는 객체 소유자가 권한을 결정하는 임의적 접근통제다.&quot;,
-    &quot;memory&quot;: &quot;DAC = 소유자 중심.&quot;,
+    &quot;memory&quot;: &quot;DAC = 소유자 중심. DAC는 신분(identity)과 소유자 재량을 중심으로 권한을 부여하며 ACL·접근통제 행렬과 연계해 이해할 수 있다.&quot;,
     &quot;trap&quot;: &quot;MAC의 보안등급·정책 강제와 구분.&quot;,
     &quot;compare&quot;: &quot;MAC / RBAC&quot;
   },
@@ -1246,7 +1246,7 @@ body.locked{overflow:hidden}
     &quot;source_id&quot;: 74,
     &quot;keyword&quot;: &quot;RBAC&quot;,
     &quot;subject&quot;: &quot;정보보안 일반&quot;,
-    &quot;frequency&quot;: 15,
+    &quot;frequency&quot;: 17,
     &quot;priority&quot;: 4,
     &quot;question&quot;: &quot;RBAC란?&quot;,
     &quot;answer&quot;: &quot;사용자의 역할(Role)에 따라 권한을 부여하는 접근통제 방식.&quot;,
@@ -1274,12 +1274,12 @@ body.locked{overflow:hidden}
     &quot;source_id&quot;: 76,
     &quot;keyword&quot;: &quot;ACM&quot;,
     &quot;subject&quot;: &quot;정보보안 일반&quot;,
-    &quot;frequency&quot;: 15,
+    &quot;frequency&quot;: 16,
     &quot;priority&quot;: 4,
     &quot;question&quot;: &quot;ACM란?&quot;,
     &quot;answer&quot;: &quot;Access Control Matrix. 주체와 객체의 권한 관계를 행렬로 표현한 모델.&quot;,
     &quot;definition&quot;: &quot;Access Control Matrix. 주체와 객체의 권한 관계를 행렬로 표현한 모델.&quot;,
-    &quot;memory&quot;: &quot;행=주체, 열=객체 관점으로 이해.&quot;,
+    &quot;memory&quot;: &quot;행=주체, 열=객체 관점으로 이해. 행렬의 행을 주체 기준으로 보면 Capability 관점, 열을 객체 기준으로 보면 ACL 관점으로 이해할 수 있다.&quot;,
     &quot;trap&quot;: &quot;ACL과 Capability는 ACM 구현 관점.&quot;,
     &quot;compare&quot;: &quot;ACL / Capability&quot;
   },
@@ -1470,12 +1470,12 @@ body.locked{overflow:hidden}
     &quot;source_id&quot;: 90,
     &quot;keyword&quot;: &quot;레지스트리&quot;,
     &quot;subject&quot;: &quot;시스템 보안&quot;,
-    &quot;frequency&quot;: 15,
+    &quot;frequency&quot;: 16,
     &quot;priority&quot;: 4,
     &quot;question&quot;: &quot;레지스트리란?&quot;,
     &quot;answer&quot;: &quot;Windows 시스템·사용자·프로그램 설정을 저장하는 계층형 데이터베이스.&quot;,
     &quot;definition&quot;: &quot;Windows 시스템·사용자·프로그램 설정을 저장하는 계층형 데이터베이스.&quot;,
-    &quot;memory&quot;: &quot;설정·자동실행·포렌식 분석.&quot;,
+    &quot;memory&quot;: &quot;설정·자동실행·포렌식 분석. 대표 루트 키: HKLM(컴퓨터 전체), HKCU(현재 사용자), HKU(사용자 프로파일), HKCR(클래스/파일연결), HKCC(현재 하드웨어 프로파일).&quot;,
     &quot;trap&quot;: &quot;일반 파일시스템과 별개.&quot;,
     &quot;compare&quot;: &quot;Windows Registry&quot;
   },
@@ -1582,7 +1582,7 @@ body.locked{overflow:hidden}
     &quot;source_id&quot;: 98,
     &quot;keyword&quot;: &quot;델파이&quot;,
     &quot;subject&quot;: &quot;정보보안 관리·법규&quot;,
-    &quot;frequency&quot;: 15,
+    &quot;frequency&quot;: 16,
     &quot;priority&quot;: 4,
     &quot;question&quot;: &quot;델파이란?&quot;,
     &quot;answer&quot;: &quot;전문가 의견을 반복적으로 수렴해 합의를 도출하는 정성적 분석 기법.&quot;,
@@ -1722,7 +1722,7 @@ body.locked{overflow:hidden}
     &quot;source_id&quot;: 108,
     &quot;keyword&quot;: &quot;TCSEC&quot;,
     &quot;subject&quot;: &quot;정보보안 일반&quot;,
-    &quot;frequency&quot;: 12,
+    &quot;frequency&quot;: 13,
     &quot;priority&quot;: 3,
     &quot;question&quot;: &quot;TCSEC란?&quot;,
     &quot;answer&quot;: &quot;미국 DoD의 Trusted Computer System Evaluation Criteria, 일명 Orange Book.&quot;,
@@ -1820,7 +1820,7 @@ body.locked{overflow:hidden}
     &quot;source_id&quot;: 115,
     &quot;keyword&quot;: &quot;캐시 포이즈닝&quot;,
     &quot;subject&quot;: &quot;네트워크 보안&quot;,
-    &quot;frequency&quot;: 12,
+    &quot;frequency&quot;: 13,
     &quot;priority&quot;: 3,
     &quot;question&quot;: &quot;캐시 포이즈닝란?&quot;,
     &quot;answer&quot;: &quot;DNS Resolver 캐시에 위조된 레코드를 저장시켜 이후 질의를 잘못된 주소로 유도하는 공격.&quot;,
@@ -1974,7 +1974,7 @@ body.locked{overflow:hidden}
     &quot;source_id&quot;: 126,
     &quot;keyword&quot;: &quot;ADB&quot;,
     &quot;subject&quot;: &quot;시스템 보안&quot;,
-    &quot;frequency&quot;: 11,
+    &quot;frequency&quot;: 12,
     &quot;priority&quot;: 3,
     &quot;question&quot;: &quot;ADB란?&quot;,
     &quot;answer&quot;: &quot;Android Debug Bridge. PC와 Android 기기 사이에서 쉘·파일전송·디버깅을 수행하는 도구.&quot;,
@@ -2201,10 +2201,10 @@ body.locked{overflow:hidden}
     &quot;frequency&quot;: 10,
     &quot;priority&quot;: 3,
     &quot;question&quot;: &quot;DaaS란?&quot;,
-    &quot;answer&quot;: &quot;문맥에 따라 Desktop as a Service 또는 Data as a Service를 의미할 수 있는 약어.&quot;,
-    &quot;definition&quot;: &quot;문맥에 따라 Desktop as a Service 또는 Data as a Service를 의미할 수 있는 약어.&quot;,
-    &quot;memory&quot;: &quot;문제의 정의와 문맥으로 판별.&quot;,
-    &quot;trap&quot;: &quot;약어만 보고 하나의 뜻으로 단정하면 위험.&quot;,
+    &quot;answer&quot;: &quot;DaaS는 문맥에 따라 Desktop as a Service 또는 Data as a Service를 뜻할 수 있는 약어다.&quot;,
+    &quot;definition&quot;: &quot;DaaS는 문맥에 따라 Desktop as a Service 또는 Data as a Service를 뜻할 수 있는 약어다.&quot;,
+    &quot;memory&quot;: &quot;시험에서는 지문 정의를 보고 Desktop인지 Data인지 구분.&quot;,
+    &quot;trap&quot;: &quot;DaaS라는 약어만 보고 한 가지 뜻으로 고정하지 않는다.&quot;,
     &quot;compare&quot;: &quot;VDI / Cloud&quot;
   },
   {
@@ -2450,13 +2450,13 @@ body.locked{overflow:hidden}
     &quot;source_id&quot;: 160,
     &quot;keyword&quot;: &quot;iptables&quot;,
     &quot;subject&quot;: &quot;네트워크 보안&quot;,
-    &quot;frequency&quot;: 8,
+    &quot;frequency&quot;: 9,
     &quot;priority&quot;: 2,
     &quot;question&quot;: &quot;iptables란?&quot;,
     &quot;answer&quot;: &quot;Linux Netfilter의 패킷 필터링·NAT 규칙을 설정하는 전통적 도구.&quot;,
     &quot;definition&quot;: &quot;Linux Netfilter의 패킷 필터링·NAT 규칙을 설정하는 전통적 도구.&quot;,
-    &quot;memory&quot;: &quot;INPUT/OUTPUT/FORWARD, NAT.&quot;,
-    &quot;trap&quot;: &quot;Windows 방화벽 도구가 아님.&quot;,
+    &quot;memory&quot;: &quot;INPUT/OUTPUT/FORWARD, NAT. -A=규칙 추가(append), -I=삽입, -D=삭제, -p=프로토콜 지정, -F=체인 규칙 비우기(flush).&quot;,
+    &quot;trap&quot;: &quot;Windows 방화벽 도구가 아님. -F는 특정 규칙 삭제가 아니라 지정 체인의 규칙을 비우는 옵션이다.&quot;,
     &quot;compare&quot;: &quot;nftables&quot;
   },
   {
@@ -2590,7 +2590,7 @@ body.locked{overflow:hidden}
     &quot;source_id&quot;: 170,
     &quot;keyword&quot;: &quot;FTP&quot;,
     &quot;subject&quot;: &quot;네트워크 보안&quot;,
-    &quot;frequency&quot;: 8,
+    &quot;frequency&quot;: 9,
     &quot;priority&quot;: 2,
     &quot;question&quot;: &quot;FTP란?&quot;,
     &quot;answer&quot;: &quot;파일 전송 프로토콜. 기본적으로 인증정보와 데이터가 평문이다.&quot;,
@@ -2604,7 +2604,7 @@ body.locked{overflow:hidden}
     &quot;source_id&quot;: 171,
     &quot;keyword&quot;: &quot;SFTP&quot;,
     &quot;subject&quot;: &quot;네트워크 보안&quot;,
-    &quot;frequency&quot;: 8,
+    &quot;frequency&quot;: 9,
     &quot;priority&quot;: 2,
     &quot;question&quot;: &quot;SFTP란?&quot;,
     &quot;answer&quot;: &quot;SSH 위에서 안전한 파일전송을 제공하는 프로토콜.&quot;,
@@ -2674,7 +2674,7 @@ body.locked{overflow:hidden}
     &quot;source_id&quot;: 176,
     &quot;keyword&quot;: &quot;VPN&quot;,
     &quot;subject&quot;: &quot;네트워크 보안&quot;,
-    &quot;frequency&quot;: 5,
+    &quot;frequency&quot;: 6,
     &quot;priority&quot;: 2,
     &quot;question&quot;: &quot;VPN란?&quot;,
     &quot;answer&quot;: &quot;공용망 위에 암호화·터널링을 적용해 논리적인 사설망을 만드는 기술.&quot;,
@@ -2870,13 +2870,13 @@ body.locked{overflow:hidden}
     &quot;source_id&quot;: 190,
     &quot;keyword&quot;: &quot;Kerberos&quot;,
     &quot;subject&quot;: &quot;정보보안 일반&quot;,
-    &quot;frequency&quot;: 4,
-    &quot;priority&quot;: 1,
+    &quot;frequency&quot;: 6,
+    &quot;priority&quot;: 2,
     &quot;question&quot;: &quot;Kerberos란?&quot;,
     &quot;answer&quot;: &quot;대칭키와 티켓을 사용하는 중앙집중식 네트워크 인증 프로토콜.&quot;,
     &quot;definition&quot;: &quot;대칭키와 티켓을 사용하는 중앙집중식 네트워크 인증 프로토콜.&quot;,
-    &quot;memory&quot;: &quot;사용자→AS→TGT→TGS→Service Ticket→서버.&quot;,
-    &quot;trap&quot;: &quot;공개키 기반 인증 프로토콜로만 보면 오류.&quot;,
+    &quot;memory&quot;: &quot;사용자→AS→TGT→TGS→Service Ticket→서버. 구성 관점: Client, KDC(AS+TGS), Service Server. AS가 TGT를 발급하고 TGS가 서비스 티켓을 발급한다.&quot;,
+    &quot;trap&quot;: &quot;공개키 기반 인증 프로토콜로만 보면 오류. AS·TGS·Service Server의 역할을 서로 바꿔 놓은 보기에 주의.&quot;,
     &quot;compare&quot;: &quot;KDC / Ticket&quot;
   },
   {
@@ -3067,7 +3067,7 @@ body.locked{overflow:hidden}
     &quot;source_id&quot;: 204,
     &quot;keyword&quot;: &quot;UTM&quot;,
     &quot;subject&quot;: &quot;네트워크 보안&quot;,
-    &quot;frequency&quot;: 2,
+    &quot;frequency&quot;: 3,
     &quot;priority&quot;: 1,
     &quot;question&quot;: &quot;UTM란?&quot;,
     &quot;answer&quot;: &quot;Unified Threat Management. Firewall·IDS/IPS·VPN·Anti-malware 등을 하나의 장비에 통합한다.&quot;,
@@ -3416,20 +3416,6 @@ body.locked{overflow:hidden}
   },
   {
     &quot;id&quot;: 229,
-    &quot;source_id&quot;: 229,
-    &quot;keyword&quot;: &quot;모의해킹 자격·실시간성 관련&quot;,
-    &quot;subject&quot;: &quot;정보보안 일반&quot;,
-    &quot;frequency&quot;: 1,
-    &quot;priority&quot;: 1,
-    &quot;question&quot;: &quot;모의해킹 자격·실시간성 관련란?&quot;,
-    &quot;answer&quot;: &quot;원본 키워드만으로 하나의 표준 개념을 특정하기 어렵다. 카드에서는 관련 원 기출문제를 확인해 의미를 확정하는 것이 안전하다.&quot;,
-    &quot;definition&quot;: &quot;원본 키워드만으로 하나의 표준 개념을 특정하기 어렵다. 카드에서는 관련 원 기출문제를 확인해 의미를 확정하는 것이 안전하다.&quot;,
-    &quot;memory&quot;: &quot;확실하지 않음: 원문 기출 확인 필요.&quot;,
-    &quot;trap&quot;: &quot;임의로 특정 자격이나 기술로 단정하지 말 것.&quot;,
-    &quot;compare&quot;: &quot;OSCP&quot;
-  },
-  {
-    &quot;id&quot;: 230,
     &quot;source_id&quot;: 230,
     &quot;keyword&quot;: &quot;Lockheed Martin Cyber Kill Chain 계열&quot;,
     &quot;subject&quot;: &quot;정보보안 일반&quot;,
@@ -3443,7 +3429,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;APT / MITRE ATT&amp;CK&quot;
   },
   {
-    &quot;id&quot;: 231,
+    &quot;id&quot;: 230,
     &quot;source_id&quot;: 231,
     &quot;keyword&quot;: &quot;다익스트라 알고리즘&quot;,
     &quot;subject&quot;: &quot;네트워크 보안&quot;,
@@ -3457,7 +3443,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;Dijkstra / Bellman-Ford / OSPF&quot;
   },
   {
-    &quot;id&quot;: 232,
+    &quot;id&quot;: 231,
     &quot;source_id&quot;: 232,
     &quot;keyword&quot;: &quot;RSA 키 생성 조건&quot;,
     &quot;subject&quot;: &quot;정보보안 일반&quot;,
@@ -3471,7 +3457,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;RSA / 소인수분해 / φ(n) / λ(n)&quot;
   },
   {
-    &quot;id&quot;: 233,
+    &quot;id&quot;: 232,
     &quot;source_id&quot;: 233,
     &quot;keyword&quot;: &quot;128비트 해시 공격난이도&quot;,
     &quot;subject&quot;: &quot;정보보안 일반&quot;,
@@ -3485,7 +3471,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;Preimage / Collision / Birthday Attack&quot;
   },
   {
-    &quot;id&quot;: 234,
+    &quot;id&quot;: 233,
     &quot;source_id&quot;: 234,
     &quot;keyword&quot;: &quot;SHA-3&quot;,
     &quot;subject&quot;: &quot;정보보안 일반&quot;,
@@ -3499,7 +3485,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;SHA-2 / Keccak / Sponge&quot;
   },
   {
-    &quot;id&quot;: 235,
+    &quot;id&quot;: 234,
     &quot;source_id&quot;: 235,
     &quot;keyword&quot;: &quot;전자서명 보안성&quot;,
     &quot;subject&quot;: &quot;정보보안 일반&quot;,
@@ -3513,7 +3499,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;전자서명 / 암호화 / MAC&quot;
   },
   {
-    &quot;id&quot;: 236,
+    &quot;id&quot;: 235,
     &quot;source_id&quot;: 236,
     &quot;keyword&quot;: &quot;PKC&quot;,
     &quot;subject&quot;: &quot;정보보안 일반&quot;,
@@ -3527,7 +3513,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;대칭키 / RSA / ECC&quot;
   },
   {
-    &quot;id&quot;: 237,
+    &quot;id&quot;: 236,
     &quot;source_id&quot;: 237,
     &quot;keyword&quot;: &quot;만리장성 모델 심화&quot;,
     &quot;subject&quot;: &quot;정보보안 일반&quot;,
@@ -3541,7 +3527,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;Chinese Wall / BLP / Clark-Wilson&quot;
   },
   {
-    &quot;id&quot;: 238,
+    &quot;id&quot;: 237,
     &quot;source_id&quot;: 238,
     &quot;keyword&quot;: &quot;생물학적 인증&quot;,
     &quot;subject&quot;: &quot;정보보안 일반&quot;,
@@ -3555,7 +3541,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;FAR / FRR / EER&quot;
   },
   {
-    &quot;id&quot;: 239,
+    &quot;id&quot;: 238,
     &quot;source_id&quot;: 239,
     &quot;keyword&quot;: &quot;Windows 공유폴더 권한&quot;,
     &quot;subject&quot;: &quot;시스템 보안&quot;,
@@ -3569,7 +3555,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;공유 권한 / NTFS 권한&quot;
   },
   {
-    &quot;id&quot;: 240,
+    &quot;id&quot;: 239,
     &quot;source_id&quot;: 240,
     &quot;keyword&quot;: &quot;HKEY_LOCAL_MACHINE&quot;,
     &quot;subject&quot;: &quot;시스템 보안&quot;,
@@ -3583,7 +3569,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;HKLM / HKCU / HKU&quot;
   },
   {
-    &quot;id&quot;: 241,
+    &quot;id&quot;: 240,
     &quot;source_id&quot;: 241,
     &quot;keyword&quot;: &quot;/etc/shadow 필드&quot;,
     &quot;subject&quot;: &quot;시스템 보안&quot;,
@@ -3597,7 +3583,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;/etc/passwd / /etc/shadow&quot;
   },
   {
-    &quot;id&quot;: 242,
+    &quot;id&quot;: 241,
     &quot;source_id&quot;: 242,
     &quot;keyword&quot;: &quot;Apache access_log 포맷&quot;,
     &quot;subject&quot;: &quot;시스템 보안&quot;,
@@ -3611,7 +3597,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;Common Log Format / Combined Log Format&quot;
   },
   {
-    &quot;id&quot;: 243,
+    &quot;id&quot;: 242,
     &quot;source_id&quot;: 243,
     &quot;keyword&quot;: &quot;스택(Stack)&quot;,
     &quot;subject&quot;: &quot;시스템 보안&quot;,
@@ -3625,7 +3611,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;Stack / Heap&quot;
   },
   {
-    &quot;id&quot;: 244,
+    &quot;id&quot;: 243,
     &quot;source_id&quot;: 244,
     &quot;keyword&quot;: &quot;클라우드 서비스 모델 책임범위&quot;,
     &quot;subject&quot;: &quot;정보보안 일반&quot;,
@@ -3639,7 +3625,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;IaaS / PaaS / SaaS / SecaaS&quot;
   },
   {
-    &quot;id&quot;: 245,
+    &quot;id&quot;: 244,
     &quot;source_id&quot;: 245,
     &quot;keyword&quot;: &quot;RSA 서명·암호화 스킴&quot;,
     &quot;subject&quot;: &quot;정보보안 일반&quot;,
@@ -3653,7 +3639,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;RSASSA-PSS / RSAES-OAEP&quot;
   },
   {
-    &quot;id&quot;: 246,
+    &quot;id&quot;: 245,
     &quot;source_id&quot;: 246,
     &quot;keyword&quot;: &quot;IP 서브네팅·슈퍼네팅 조건 문제&quot;,
     &quot;subject&quot;: &quot;네트워크 보안&quot;,
@@ -3667,7 +3653,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;Subnet Mask / Wildcard Mask / ACL&quot;
   },
   {
-    &quot;id&quot;: 247,
+    &quot;id&quot;: 246,
     &quot;source_id&quot;: 247,
     &quot;keyword&quot;: &quot;NAC 핵심기능&quot;,
     &quot;subject&quot;: &quot;네트워크 보안&quot;,
@@ -3681,7 +3667,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;NAC / Firewall / 802.1X&quot;
   },
   {
-    &quot;id&quot;: 248,
+    &quot;id&quot;: 247,
     &quot;source_id&quot;: 248,
     &quot;keyword&quot;: &quot;Nmap 핵심기능&quot;,
     &quot;subject&quot;: &quot;네트워크 보안&quot;,
@@ -3695,7 +3681,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;Nmap / Nessus&quot;
   },
   {
-    &quot;id&quot;: 249,
+    &quot;id&quot;: 248,
     &quot;source_id&quot;: 249,
     &quot;keyword&quot;: &quot;NULL 스캔&quot;,
     &quot;subject&quot;: &quot;네트워크 보안&quot;,
@@ -3709,7 +3695,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;NULL / Xmas / FIN / SYN Scan&quot;
   },
   {
-    &quot;id&quot;: 250,
+    &quot;id&quot;: 249,
     &quot;source_id&quot;: 250,
     &quot;keyword&quot;: &quot;워터링홀 공격 심화&quot;,
     &quot;subject&quot;: &quot;애플리케이션 보안&quot;,
@@ -3723,7 +3709,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;Spear Phishing / Drive-by Download&quot;
   },
   {
-    &quot;id&quot;: 251,
+    &quot;id&quot;: 250,
     &quot;source_id&quot;: 251,
     &quot;keyword&quot;: &quot;TCP Half-open&quot;,
     &quot;subject&quot;: &quot;네트워크 보안&quot;,
@@ -3737,7 +3723,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;3-way Handshake / SYN Flooding&quot;
   },
   {
-    &quot;id&quot;: 252,
+    &quot;id&quot;: 251,
     &quot;source_id&quot;: 252,
     &quot;keyword&quot;: &quot;ACL 규칙 해석&quot;,
     &quot;subject&quot;: &quot;네트워크 보안&quot;,
@@ -3751,7 +3737,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;Standard ACL / Extended ACL / Wildcard Mask&quot;
   },
   {
-    &quot;id&quot;: 253,
+    &quot;id&quot;: 252,
     &quot;source_id&quot;: 253,
     &quot;keyword&quot;: &quot;Anonymous FTP&quot;,
     &quot;subject&quot;: &quot;네트워크 보안&quot;,
@@ -3765,35 +3751,35 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;FTP / FTPS / SFTP&quot;
   },
   {
-    &quot;id&quot;: 254,
+    &quot;id&quot;: 253,
     &quot;source_id&quot;: 254,
     &quot;keyword&quot;: &quot;PGP 기능·알고리즘&quot;,
     &quot;subject&quot;: &quot;정보보안 일반&quot;,
-    &quot;frequency&quot;: 1,
+    &quot;frequency&quot;: 2,
     &quot;priority&quot;: 1,
     &quot;question&quot;: &quot;PGP 기능·알고리즘란?&quot;,
     &quot;answer&quot;: &quot;PGP는 공개키와 대칭키를 결합해 기밀성, 전자서명·무결성, 압축, 전자우편 전송 호환성 등을 제공하는 하이브리드 보안 방식이다.&quot;,
     &quot;definition&quot;: &quot;PGP는 공개키와 대칭키를 결합해 기밀성, 전자서명·무결성, 압축, 전자우편 전송 호환성 등을 제공하는 하이브리드 보안 방식이다.&quot;,
-    &quot;memory&quot;: &quot;공개키=세션키 보호, 대칭키=본문 암호화, Hash=무결성/서명, Radix-64=메일 전송 호환.&quot;,
-    &quot;trap&quot;: &quot;구체 알고리즘은 PGP 버전·구현에 따라 달라질 수 있으므로 &#x27;기능↔알고리즘&#x27; 문제는 보기의 조합을 확인해야 한다.&quot;,
+    &quot;memory&quot;: &quot;공개키=세션키 보호, 대칭키=본문 암호화, Hash=무결성/서명, Radix-64=메일 전송 호환. PGP는 구현·버전에 따라 RSA, ElGamal 계열 등 공개키 알고리즘을 사용할 수 있으므로 특정 두 알고리즘만 쓴다고 단정하지 않는다.&quot;,
+    &quot;trap&quot;: &quot;구체 알고리즘은 PGP 버전·구현에 따라 달라질 수 있으므로 &#x27;기능↔알고리즘&#x27; 문제는 보기의 조합을 확인해야 한다. ‘암호화 시 Diffie-Hellman과 RSA를 사용한다’처럼 알고리즘 조합을 고정적으로 단정한 보기는 버전·기능 문맥을 확인해야 한다.&quot;,
     &quot;compare&quot;: &quot;S/MIME / Hybrid Cryptosystem&quot;
   },
   {
-    &quot;id&quot;: 255,
+    &quot;id&quot;: 254,
     &quot;source_id&quot;: 255,
     &quot;keyword&quot;: &quot;스팸필터 솔루션 배치&quot;,
     &quot;subject&quot;: &quot;애플리케이션 보안&quot;,
-    &quot;frequency&quot;: 1,
+    &quot;frequency&quot;: 2,
     &quot;priority&quot;: 1,
     &quot;question&quot;: &quot;스팸필터 솔루션 배치란?&quot;,
     &quot;answer&quot;: &quot;스팸필터는 수신 메일을 분석해 스팸·피싱·악성메일을 차단하거나 격리하는 메일보안 솔루션이다.&quot;,
     &quot;definition&quot;: &quot;스팸필터는 수신 메일을 분석해 스팸·피싱·악성메일을 차단하거나 격리하는 메일보안 솔루션이다.&quot;,
-    &quot;memory&quot;: &quot;일반적인 게이트웨이 구성: Internet → Spam/Mail Security Gateway → Mail Server.&quot;,
-    &quot;trap&quot;: &quot;모든 구성에서 절대적으로 위치가 고정되는 것은 아니지만 기출 맥락에서 &#x27;메일서버 뒷단에만 위치한다&#x27;는 설명은 틀린 보기로 출제될 수 있다.&quot;,
+    &quot;memory&quot;: &quot;일반적인 게이트웨이 구성: Internet → Spam/Mail Security Gateway → Mail Server. Procmail, Inflex, Sanitizer 등은 메일 필터링·처리 맥락에서 출제될 수 있으므로 도구의 용도와 배치 위치를 구분한다.&quot;,
+    &quot;trap&quot;: &quot;모든 구성에서 절대적으로 위치가 고정되는 것은 아니지만 기출 맥락에서 &#x27;메일서버 뒷단에만 위치한다&#x27;는 설명은 틀린 보기로 출제될 수 있다. 스팸필터의 핵심을 IDS가 탐지한 뒤 &#x27;대응&#x27;하는 구조로 단정하거나, 무조건 메일서버 후단에만 둔다고 표현하면 문맥상 오답이 될 수 있다.&quot;,
     &quot;compare&quot;: &quot;Mail Gateway / Anti-spam&quot;
   },
   {
-    &quot;id&quot;: 256,
+    &quot;id&quot;: 255,
     &quot;source_id&quot;: 256,
     &quot;keyword&quot;: &quot;디렉터리 리스팅&quot;,
     &quot;subject&quot;: &quot;애플리케이션 보안&quot;,
@@ -3807,7 +3793,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;Directory Traversal / Options Indexes&quot;
   },
   {
-    &quot;id&quot;: 257,
+    &quot;id&quot;: 256,
     &quot;source_id&quot;: 257,
     &quot;keyword&quot;: &quot;SET 사용자 소프트웨어&quot;,
     &quot;subject&quot;: &quot;정보보안 일반&quot;,
@@ -3821,21 +3807,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;SET / SSL-TLS 전자상거래&quot;
   },
   {
-    &quot;id&quot;: 258,
-    &quot;source_id&quot;: 258,
-    &quot;keyword&quot;: &quot;정보보호 법정형 판별&quot;,
-    &quot;subject&quot;: &quot;정보보안 관리·법규&quot;,
-    &quot;frequency&quot;: 1,
-    &quot;priority&quot;: 1,
-    &quot;question&quot;: &quot;정보보호 법정형 판별란?&quot;,
-    &quot;answer&quot;: &quot;정보보호 법규의 처벌 문제는 위반행위별로 징역형·벌금형·과태료가 다르므로 행위와 법정형을 조문 단위로 매칭하는 유형이다.&quot;,
-    &quot;definition&quot;: &quot;정보보호 법규의 처벌 문제는 위반행위별로 징역형·벌금형·과태료가 다르므로 행위와 법정형을 조문 단위로 매칭하는 유형이다.&quot;,
-    &quot;memory&quot;: &quot;징역/벌금 = 형사처벌, 과태료 = 행정질서벌. 숫자는 반드시 최신 법령 기준.&quot;,
-    &quot;trap&quot;: &quot;사용자가 기억한 &#x27;5년 이하 또는 5천만원 이하&#x27;만으로 어떤 위반행위를 뜻하는지 확정할 수 없다. 원문 보기 없이 특정 조문을 임의로 단정하지 말 것.&quot;,
-    &quot;compare&quot;: &quot;징역 / 벌금 / 과태료&quot;
-  },
-  {
-    &quot;id&quot;: 259,
+    &quot;id&quot;: 257,
     &quot;source_id&quot;: 259,
     &quot;keyword&quot;: &quot;Syslog 심각도 레벨&quot;,
     &quot;subject&quot;: &quot;시스템 보안&quot;,
@@ -3849,7 +3821,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;Syslog Severity / Application Log Level&quot;
   },
   {
-    &quot;id&quot;: 260,
+    &quot;id&quot;: 258,
     &quot;source_id&quot;: 260,
     &quot;keyword&quot;: &quot;정보보안 3요소(CIA)&quot;,
     &quot;subject&quot;: &quot;정보보안 일반&quot;,
@@ -3863,7 +3835,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;CIA / 기밀성 / 무결성 / 가용성&quot;
   },
   {
-    &quot;id&quot;: 261,
+    &quot;id&quot;: 259,
     &quot;source_id&quot;: 261,
     &quot;keyword&quot;: &quot;허니팟(Honeypot)&quot;,
     &quot;subject&quot;: &quot;네트워크 보안&quot;,
@@ -3877,7 +3849,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;Honeynet / IDS&quot;
   },
   {
-    &quot;id&quot;: 262,
+    &quot;id&quot;: 260,
     &quot;source_id&quot;: 262,
     &quot;keyword&quot;: &quot;FTPS&quot;,
     &quot;subject&quot;: &quot;네트워크 보안&quot;,
@@ -3891,7 +3863,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;FTP / FTPS / SFTP&quot;
   },
   {
-    &quot;id&quot;: 263,
+    &quot;id&quot;: 261,
     &quot;source_id&quot;: 263,
     &quot;keyword&quot;: &quot;ISO/IEC 27000 시리즈&quot;,
     &quot;subject&quot;: &quot;정보보안 관리·법규&quot;,
@@ -3905,11 +3877,11 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;ISO/IEC 27001 / 27002 / ISMS&quot;
   },
   {
-    &quot;id&quot;: 264,
+    &quot;id&quot;: 262,
     &quot;source_id&quot;: 264,
     &quot;keyword&quot;: &quot;WTLS&quot;,
     &quot;subject&quot;: &quot;네트워크 보안&quot;,
-    &quot;frequency&quot;: 1,
+    &quot;frequency&quot;: 2,
     &quot;priority&quot;: 1,
     &quot;question&quot;: &quot;WTLS란?&quot;,
     &quot;answer&quot;: &quot;Wireless Transport Layer Security. WAP 환경에서 무선 구간의 기밀성·무결성·인증을 제공하기 위해 설계된 보안 프로토콜이다.&quot;,
@@ -3919,7 +3891,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;WAP / TLS / WEP&quot;
   },
   {
-    &quot;id&quot;: 265,
+    &quot;id&quot;: 263,
     &quot;source_id&quot;: 265,
     &quot;keyword&quot;: &quot;ElGamal 난수 재사용 취약점&quot;,
     &quot;subject&quot;: &quot;정보보안 일반&quot;,
@@ -3933,7 +3905,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;ElGamal / DSA / nonce&quot;
   },
   {
-    &quot;id&quot;: 266,
+    &quot;id&quot;: 264,
     &quot;source_id&quot;: 266,
     &quot;keyword&quot;: &quot;Ping of Death&quot;,
     &quot;subject&quot;: &quot;네트워크 보안&quot;,
@@ -3947,7 +3919,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;Teardrop / LAND / Smurf&quot;
   },
   {
-    &quot;id&quot;: 267,
+    &quot;id&quot;: 265,
     &quot;source_id&quot;: 267,
     &quot;keyword&quot;: &quot;IPv4 AH 전송모드&quot;,
     &quot;subject&quot;: &quot;네트워크 보안&quot;,
@@ -3961,7 +3933,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;AH / ESP / 전송모드&quot;
   },
   {
-    &quot;id&quot;: 268,
+    &quot;id&quot;: 266,
     &quot;source_id&quot;: 268,
     &quot;keyword&quot;: &quot;NetBIOS&quot;,
     &quot;subject&quot;: &quot;네트워크 보안&quot;,
@@ -3975,7 +3947,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;NetBIOS / SMB&quot;
   },
   {
-    &quot;id&quot;: 269,
+    &quot;id&quot;: 267,
     &quot;source_id&quot;: 269,
     &quot;keyword&quot;: &quot;주요 포트 번호&quot;,
     &quot;subject&quot;: &quot;네트워크 보안&quot;,
@@ -3989,21 +3961,21 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;Well-known Ports&quot;
   },
   {
-    &quot;id&quot;: 270,
+    &quot;id&quot;: 268,
     &quot;source_id&quot;: 270,
-    &quot;keyword&quot;: &quot;SQL Injection 유형&quot;,
+    &quot;keyword&quot;: &quot;SQL Injection&quot;,
     &quot;subject&quot;: &quot;애플리케이션 보안&quot;,
-    &quot;frequency&quot;: 1,
+    &quot;frequency&quot;: 2,
     &quot;priority&quot;: 1,
-    &quot;question&quot;: &quot;SQL Injection 유형란?&quot;,
-    &quot;answer&quot;: &quot;SQL Injection은 Error-based, Union-based, Boolean-based Blind, Time-based Blind 등 여러 방식으로 분류할 수 있다.&quot;,
-    &quot;definition&quot;: &quot;SQL Injection은 Error-based, Union-based, Boolean-based Blind, Time-based Blind 등 여러 방식으로 분류할 수 있다.&quot;,
-    &quot;memory&quot;: &quot;결과 노출 방식과 추론 방식으로 구분.&quot;,
+    &quot;question&quot;: &quot;SQL Injection이란?&quot;,
+    &quot;answer&quot;: &quot;사용자 입력이 SQL 문의 구조에 삽입되어 의도하지 않은 질의가 실행되도록 만드는 웹·DB 공격이다.&quot;,
+    &quot;definition&quot;: &quot;사용자 입력이 SQL 문의 구조에 삽입되어 의도하지 않은 질의가 실행되도록 만드는 웹·DB 공격이다.&quot;,
+    &quot;memory&quot;: &quot;결과 노출 방식과 추론 방식으로 구분. 유형: Error/Union/Boolean-based Blind/Time-based Blind. 대응: Prepared Statement, 입력 검증, 최소권한.&quot;,
     &quot;trap&quot;: &quot;XSS·CSRF는 SQL Injection의 하위 유형이 아니다.&quot;,
     &quot;compare&quot;: &quot;Error-based / Union / Blind SQLi&quot;
   },
   {
-    &quot;id&quot;: 271,
+    &quot;id&quot;: 269,
     &quot;source_id&quot;: 271,
     &quot;keyword&quot;: &quot;Diffie-Hellman 공격&quot;,
     &quot;subject&quot;: &quot;정보보안 일반&quot;,
@@ -4017,7 +3989,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;DH / MITM&quot;
   },
   {
-    &quot;id&quot;: 272,
+    &quot;id&quot;: 270,
     &quot;source_id&quot;: 272,
     &quot;keyword&quot;: &quot;공개키 기반 알고리즘&quot;,
     &quot;subject&quot;: &quot;정보보안 일반&quot;,
@@ -4031,7 +4003,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;RSA / ECC / DH / AES&quot;
   },
   {
-    &quot;id&quot;: 273,
+    &quot;id&quot;: 271,
     &quot;source_id&quot;: 273,
     &quot;keyword&quot;: &quot;MAC와 부인방지&quot;,
     &quot;subject&quot;: &quot;정보보안 일반&quot;,
@@ -4045,7 +4017,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;MAC / Digital Signature&quot;
   },
   {
-    &quot;id&quot;: 274,
+    &quot;id&quot;: 272,
     &quot;source_id&quot;: 274,
     &quot;keyword&quot;: &quot;PGP 부인방지&quot;,
     &quot;subject&quot;: &quot;정보보안 일반&quot;,
@@ -4059,7 +4031,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;PGP / Digital Signature&quot;
   },
   {
-    &quot;id&quot;: 275,
+    &quot;id&quot;: 273,
     &quot;source_id&quot;: 275,
     &quot;keyword&quot;: &quot;파밍(Pharming)&quot;,
     &quot;subject&quot;: &quot;애플리케이션 보안&quot;,
@@ -4073,11 +4045,11 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;Pharming / Phishing / Smishing&quot;
   },
   {
-    &quot;id&quot;: 276,
+    &quot;id&quot;: 274,
     &quot;source_id&quot;: 276,
     &quot;keyword&quot;: &quot;스니핑 탐지&quot;,
     &quot;subject&quot;: &quot;네트워크 보안&quot;,
-    &quot;frequency&quot;: 1,
+    &quot;frequency&quot;: 2,
     &quot;priority&quot;: 1,
     &quot;question&quot;: &quot;스니핑 탐지란?&quot;,
     &quot;answer&quot;: &quot;Promiscuous mode 동작이나 비정상 ARP/DNS 응답, RTT 변화 등을 이용해 스니퍼 존재를 탐지할 수 있다.&quot;,
@@ -4087,7 +4059,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;Sniffing / Promiscuous Mode&quot;
   },
   {
-    &quot;id&quot;: 277,
+    &quot;id&quot;: 275,
     &quot;source_id&quot;: 277,
     &quot;keyword&quot;: &quot;VPN 계층과 프로토콜&quot;,
     &quot;subject&quot;: &quot;네트워크 보안&quot;,
@@ -4101,7 +4073,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;IPSec / L2TP / TLS VPN&quot;
   },
   {
-    &quot;id&quot;: 278,
+    &quot;id&quot;: 276,
     &quot;source_id&quot;: 278,
     &quot;keyword&quot;: &quot;위험 대응 예시&quot;,
     &quot;subject&quot;: &quot;정보보안 관리·법규&quot;,
@@ -4115,7 +4087,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;회피 / 감소 / 전가 / 수용&quot;
   },
   {
-    &quot;id&quot;: 279,
+    &quot;id&quot;: 277,
     &quot;source_id&quot;: 279,
     &quot;keyword&quot;: &quot;Prepared Statement&quot;,
     &quot;subject&quot;: &quot;애플리케이션 보안&quot;,
@@ -4129,7 +4101,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;SQL Injection / Parameterized Query&quot;
   },
   {
-    &quot;id&quot;: 280,
+    &quot;id&quot;: 278,
     &quot;source_id&quot;: 280,
     &quot;keyword&quot;: &quot;lsof&quot;,
     &quot;subject&quot;: &quot;시스템 보안&quot;,
@@ -4143,7 +4115,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;lsof / ps / ls&quot;
   },
   {
-    &quot;id&quot;: 281,
+    &quot;id&quot;: 279,
     &quot;source_id&quot;: 281,
     &quot;keyword&quot;: &quot;메일 전송 흐름&quot;,
     &quot;subject&quot;: &quot;애플리케이션 보안&quot;,
@@ -4157,7 +4129,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;SMTP / POP3 / IMAP / MTA&quot;
   },
   {
-    &quot;id&quot;: 282,
+    &quot;id&quot;: 280,
     &quot;source_id&quot;: 282,
     &quot;keyword&quot;: &quot;레인보우 테이블&quot;,
     &quot;subject&quot;: &quot;정보보안 일반&quot;,
@@ -4171,7 +4143,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;Salt / Dictionary Attack&quot;
   },
   {
-    &quot;id&quot;: 283,
+    &quot;id&quot;: 281,
     &quot;source_id&quot;: 283,
     &quot;keyword&quot;: &quot;TCP 스캔 응답 패턴&quot;,
     &quot;subject&quot;: &quot;네트워크 보안&quot;,
@@ -4185,7 +4157,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;SYN Scan / Connect Scan&quot;
   },
   {
-    &quot;id&quot;: 284,
+    &quot;id&quot;: 282,
     &quot;source_id&quot;: 284,
     &quot;keyword&quot;: &quot;패스워드 크래킹 기법&quot;,
     &quot;subject&quot;: &quot;시스템 보안&quot;,
@@ -4199,7 +4171,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;Brute Force / Dictionary / Rainbow Table&quot;
   },
   {
-    &quot;id&quot;: 285,
+    &quot;id&quot;: 283,
     &quot;source_id&quot;: 285,
     &quot;keyword&quot;: &quot;사회공학과 역공학&quot;,
     &quot;subject&quot;: &quot;정보보안 일반&quot;,
@@ -4213,7 +4185,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;Social Engineering / Reverse Engineering&quot;
   },
   {
-    &quot;id&quot;: 286,
+    &quot;id&quot;: 284,
     &quot;source_id&quot;: 286,
     &quot;keyword&quot;: &quot;정적분석과 동적분석&quot;,
     &quot;subject&quot;: &quot;애플리케이션 보안&quot;,
@@ -4227,7 +4199,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;SAST / DAST&quot;
   },
   {
-    &quot;id&quot;: 287,
+    &quot;id&quot;: 285,
     &quot;source_id&quot;: 287,
     &quot;keyword&quot;: &quot;Dynamic DNS&quot;,
     &quot;subject&quot;: &quot;네트워크 보안&quot;,
@@ -4241,7 +4213,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;DDNS / DNS&quot;
   },
   {
-    &quot;id&quot;: 288,
+    &quot;id&quot;: 286,
     &quot;source_id&quot;: 288,
     &quot;keyword&quot;: &quot;스텔스 스캔 방어&quot;,
     &quot;subject&quot;: &quot;네트워크 보안&quot;,
@@ -4255,7 +4227,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;NULL / FIN / Xmas Scan&quot;
   },
   {
-    &quot;id&quot;: 289,
+    &quot;id&quot;: 287,
     &quot;source_id&quot;: 289,
     &quot;keyword&quot;: &quot;Hoax&quot;,
     &quot;subject&quot;: &quot;정보보안 일반&quot;,
@@ -4269,7 +4241,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;Hoax / Worm&quot;
   },
   {
-    &quot;id&quot;: 290,
+    &quot;id&quot;: 288,
     &quot;source_id&quot;: 290,
     &quot;keyword&quot;: &quot;/proc 파일시스템&quot;,
     &quot;subject&quot;: &quot;시스템 보안&quot;,
@@ -4283,7 +4255,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;procfs / sysfs&quot;
   },
   {
-    &quot;id&quot;: 291,
+    &quot;id&quot;: 289,
     &quot;source_id&quot;: 291,
     &quot;keyword&quot;: &quot;SHA-256&quot;,
     &quot;subject&quot;: &quot;정보보안 일반&quot;,
@@ -4297,7 +4269,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;SHA-1 / SHA-3&quot;
   },
   {
-    &quot;id&quot;: 292,
+    &quot;id&quot;: 290,
     &quot;source_id&quot;: 292,
     &quot;keyword&quot;: &quot;PowerShell 실행정책&quot;,
     &quot;subject&quot;: &quot;시스템 보안&quot;,
@@ -4311,7 +4283,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;Restricted / RemoteSigned / AllSigned&quot;
   },
   {
-    &quot;id&quot;: 293,
+    &quot;id&quot;: 291,
     &quot;source_id&quot;: 293,
     &quot;keyword&quot;: &quot;패킷 캡처&quot;,
     &quot;subject&quot;: &quot;네트워크 보안&quot;,
@@ -4325,7 +4297,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;Wireshark / tcpdump / SPAN&quot;
   },
   {
-    &quot;id&quot;: 294,
+    &quot;id&quot;: 292,
     &quot;source_id&quot;: 294,
     &quot;keyword&quot;: &quot;BlueBorne&quot;,
     &quot;subject&quot;: &quot;네트워크 보안&quot;,
@@ -4339,7 +4311,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;BlueBorne / Bluejacking / Bluesnarfing&quot;
   },
   {
-    &quot;id&quot;: 295,
+    &quot;id&quot;: 293,
     &quot;source_id&quot;: 295,
     &quot;keyword&quot;: &quot;HKEY_CURRENT_CONFIG&quot;,
     &quot;subject&quot;: &quot;시스템 보안&quot;,
@@ -4353,7 +4325,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;HKCC / HKLM / SAM&quot;
   },
   {
-    &quot;id&quot;: 296,
+    &quot;id&quot;: 294,
     &quot;source_id&quot;: 296,
     &quot;keyword&quot;: &quot;Kali Linux&quot;,
     &quot;subject&quot;: &quot;시스템 보안&quot;,
@@ -4367,7 +4339,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;Debian / Kali&quot;
   },
   {
-    &quot;id&quot;: 297,
+    &quot;id&quot;: 295,
     &quot;source_id&quot;: 297,
     &quot;keyword&quot;: &quot;chmod 640&quot;,
     &quot;subject&quot;: &quot;시스템 보안&quot;,
@@ -4381,7 +4353,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;chmod / rwx&quot;
   },
   {
-    &quot;id&quot;: 298,
+    &quot;id&quot;: 296,
     &quot;source_id&quot;: 298,
     &quot;keyword&quot;: &quot;특수권한 검색(find)&quot;,
     &quot;subject&quot;: &quot;시스템 보안&quot;,
@@ -4395,7 +4367,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;find / SetUID / SetGID&quot;
   },
   {
-    &quot;id&quot;: 299,
+    &quot;id&quot;: 297,
     &quot;source_id&quot;: 299,
     &quot;keyword&quot;: &quot;HAL&quot;,
     &quot;subject&quot;: &quot;시스템 보안&quot;,
@@ -4409,7 +4381,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;Kernel / HAL&quot;
   },
   {
-    &quot;id&quot;: 300,
+    &quot;id&quot;: 298,
     &quot;source_id&quot;: 300,
     &quot;keyword&quot;: &quot;Linux 로그 파일&quot;,
     &quot;subject&quot;: &quot;시스템 보안&quot;,
@@ -4423,7 +4395,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;/var/log / journalctl&quot;
   },
   {
-    &quot;id&quot;: 301,
+    &quot;id&quot;: 299,
     &quot;source_id&quot;: 301,
     &quot;keyword&quot;: &quot;무작위대입공격&quot;,
     &quot;subject&quot;: &quot;정보보안 일반&quot;,
@@ -4437,7 +4409,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;Brute Force / Dictionary Attack&quot;
   },
   {
-    &quot;id&quot;: 302,
+    &quot;id&quot;: 300,
     &quot;source_id&quot;: 302,
     &quot;keyword&quot;: &quot;SPAN&quot;,
     &quot;subject&quot;: &quot;네트워크 보안&quot;,
@@ -4451,7 +4423,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;Port Mirroring / TAP&quot;
   },
   {
-    &quot;id&quot;: 303,
+    &quot;id&quot;: 301,
     &quot;source_id&quot;: 303,
     &quot;keyword&quot;: &quot;Elasticsearch Analyzer&quot;,
     &quot;subject&quot;: &quot;애플리케이션 보안&quot;,
@@ -4465,7 +4437,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;Analyzer / Tokenizer / Token Filter&quot;
   },
   {
-    &quot;id&quot;: 304,
+    &quot;id&quot;: 302,
     &quot;source_id&quot;: 304,
     &quot;keyword&quot;: &quot;OSI 계층별 장비&quot;,
     &quot;subject&quot;: &quot;네트워크 보안&quot;,
@@ -4479,7 +4451,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;Hub / Switch / Router / Gateway&quot;
   },
   {
-    &quot;id&quot;: 305,
+    &quot;id&quot;: 303,
     &quot;source_id&quot;: 305,
     &quot;keyword&quot;: &quot;IoT 홈가전 보안&quot;,
     &quot;subject&quot;: &quot;네트워크 보안&quot;,
@@ -4493,7 +4465,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;IoT / Home Network&quot;
   },
   {
-    &quot;id&quot;: 306,
+    &quot;id&quot;: 304,
     &quot;source_id&quot;: 306,
     &quot;keyword&quot;: &quot;HTTP 상태코드&quot;,
     &quot;subject&quot;: &quot;애플리케이션 보안&quot;,
@@ -4507,7 +4479,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;HTTP 200 / 4xx / 5xx&quot;
   },
   {
-    &quot;id&quot;: 307,
+    &quot;id&quot;: 305,
     &quot;source_id&quot;: 307,
     &quot;keyword&quot;: &quot;OTP 질의응답 방식&quot;,
     &quot;subject&quot;: &quot;정보보안 일반&quot;,
@@ -4521,7 +4493,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;TOTP / Challenge-Response&quot;
   },
   {
-    &quot;id&quot;: 308,
+    &quot;id&quot;: 306,
     &quot;source_id&quot;: 308,
     &quot;keyword&quot;: &quot;디지털 봉투&quot;,
     &quot;subject&quot;: &quot;정보보안 일반&quot;,
@@ -4535,7 +4507,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;Digital Envelope / Hybrid Encryption&quot;
   },
   {
-    &quot;id&quot;: 309,
+    &quot;id&quot;: 307,
     &quot;source_id&quot;: 309,
     &quot;keyword&quot;: &quot;해시 충돌 조건&quot;,
     &quot;subject&quot;: &quot;정보보안 일반&quot;,
@@ -4549,7 +4521,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;Collision / Preimage&quot;
   },
   {
-    &quot;id&quot;: 310,
+    &quot;id&quot;: 308,
     &quot;source_id&quot;: 310,
     &quot;keyword&quot;: &quot;전통적 서명과 디지털서명&quot;,
     &quot;subject&quot;: &quot;정보보안 일반&quot;,
@@ -4563,7 +4535,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;Electronic Signature / Digital Signature&quot;
   },
   {
-    &quot;id&quot;: 311,
+    &quot;id&quot;: 309,
     &quot;source_id&quot;: 311,
     &quot;keyword&quot;: &quot;CC EAL&quot;,
     &quot;subject&quot;: &quot;정보보안 일반&quot;,
@@ -4577,11 +4549,11 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;CC / EAL&quot;
   },
   {
-    &quot;id&quot;: 312,
+    &quot;id&quot;: 310,
     &quot;source_id&quot;: 312,
     &quot;keyword&quot;: &quot;단일예상손실(SLE)&quot;,
     &quot;subject&quot;: &quot;정보보안 관리·법규&quot;,
-    &quot;frequency&quot;: 1,
+    &quot;frequency&quot;: 2,
     &quot;priority&quot;: 1,
     &quot;question&quot;: &quot;단일예상손실(SLE)란?&quot;,
     &quot;answer&quot;: &quot;SLE(Single Loss Expectancy)는 한 번의 사고로 예상되는 손실로 자산가치(AV)×노출계수(EF)로 계산한다.&quot;,
@@ -4591,7 +4563,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;SLE / ALE / ARO&quot;
   },
   {
-    &quot;id&quot;: 313,
+    &quot;id&quot;: 311,
     &quot;source_id&quot;: 313,
     &quot;keyword&quot;: &quot;ISO/IEC 27001 PDCA&quot;,
     &quot;subject&quot;: &quot;정보보안 관리·법규&quot;,
@@ -4605,7 +4577,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;ISO 27001 / PDCA&quot;
   },
   {
-    &quot;id&quot;: 314,
+    &quot;id&quot;: 312,
     &quot;source_id&quot;: 314,
     &quot;keyword&quot;: &quot;위험관리 절차&quot;,
     &quot;subject&quot;: &quot;정보보안 관리·법규&quot;,
@@ -4619,7 +4591,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;Risk Assessment / Risk Treatment&quot;
   },
   {
-    &quot;id&quot;: 315,
+    &quot;id&quot;: 313,
     &quot;source_id&quot;: 315,
     &quot;keyword&quot;: &quot;RAID 0&quot;,
     &quot;subject&quot;: &quot;시스템 보안&quot;,
@@ -4633,7 +4605,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;RAID 0 / RAID 1&quot;
   },
   {
-    &quot;id&quot;: 316,
+    &quot;id&quot;: 314,
     &quot;source_id&quot;: 316,
     &quot;keyword&quot;: &quot;SetUID 숫자권한&quot;,
     &quot;subject&quot;: &quot;시스템 보안&quot;,
@@ -4647,7 +4619,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;SetUID / SetGID / Sticky&quot;
   },
   {
-    &quot;id&quot;: 317,
+    &quot;id&quot;: 315,
     &quot;source_id&quot;: 317,
     &quot;keyword&quot;: &quot;안전한 문자열 함수&quot;,
     &quot;subject&quot;: &quot;시스템 보안&quot;,
@@ -4661,7 +4633,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;Buffer Overflow / Secure Coding&quot;
   },
   {
-    &quot;id&quot;: 318,
+    &quot;id&quot;: 316,
     &quot;source_id&quot;: 318,
     &quot;keyword&quot;: &quot;Classful IP 주소&quot;,
     &quot;subject&quot;: &quot;네트워크 보안&quot;,
@@ -4675,7 +4647,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;Class A/B/C / CIDR&quot;
   },
   {
-    &quot;id&quot;: 319,
+    &quot;id&quot;: 317,
     &quot;source_id&quot;: 319,
     &quot;keyword&quot;: &quot;디지털포렌식 원칙&quot;,
     &quot;subject&quot;: &quot;시스템 보안&quot;,
@@ -4689,7 +4661,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;Chain of Custody / Integrity&quot;
   },
   {
-    &quot;id&quot;: 320,
+    &quot;id&quot;: 318,
     &quot;source_id&quot;: 320,
     &quot;keyword&quot;: &quot;PowerShell 실행 인자&quot;,
     &quot;subject&quot;: &quot;시스템 보안&quot;,
@@ -4703,7 +4675,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;PowerShell / ExecutionPolicy&quot;
   },
   {
-    &quot;id&quot;: 321,
+    &quot;id&quot;: 319,
     &quot;source_id&quot;: 321,
     &quot;keyword&quot;: &quot;ARP 스푸핑 방어&quot;,
     &quot;subject&quot;: &quot;네트워크 보안&quot;,
@@ -4717,21 +4689,21 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;ARP Spoofing / DAI / DHCP Snooping&quot;
   },
   {
-    &quot;id&quot;: 322,
+    &quot;id&quot;: 320,
     &quot;source_id&quot;: 322,
     &quot;keyword&quot;: &quot;Rabin 암호&quot;,
     &quot;subject&quot;: &quot;정보보안 일반&quot;,
-    &quot;frequency&quot;: 1,
+    &quot;frequency&quot;: 2,
     &quot;priority&quot;: 1,
     &quot;question&quot;: &quot;Rabin 암호란?&quot;,
-    &quot;answer&quot;: &quot;Rabin 공개키 암호는 큰 합성수의 제곱근 계산과 소인수분해 문제의 어려움에 기반한다.&quot;,
-    &quot;definition&quot;: &quot;Rabin 공개키 암호는 큰 합성수의 제곱근 계산과 소인수분해 문제의 어려움에 기반한다.&quot;,
-    &quot;memory&quot;: &quot;암호화는 제곱 연산이 단순, 복호 시 여러 후보 평문이 생길 수 있음.&quot;,
-    &quot;trap&quot;: &quot;RSA와 수학적 기반이 완전히 동일한 것은 아니다.&quot;,
-    &quot;compare&quot;: &quot;Rabin / RSA&quot;
+    &quot;answer&quot;: &quot;Rabin 공개키 암호는 큰 합성수의 제곱근 계산과 소인수분해 문제의 어려움에 기반한다. 표준적인 Rabin 복호에서는 일반적으로 4개의 평문 후보가 나온다.&quot;,
+    &quot;definition&quot;: &quot;Rabin 공개키 암호는 큰 합성수의 제곱근 계산과 소인수분해 문제의 어려움에 기반한다. 표준적인 Rabin 복호에서는 일반적으로 4개의 평문 후보가 나온다.&quot;,
+    &quot;memory&quot;: &quot;Rabin 복호 → 일반적으로 평문 후보 4개. 올바른 평문을 고르기 위한 중복정보·형식 확인이 필요.&quot;,
+    &quot;trap&quot;: &quot;평문 후보 수를 6개로 외우지 않는다. 일반적인 Rabin 복호에서는 4개 후보가 핵심.&quot;,
+    &quot;compare&quot;: &quot;Rabin / RSA / 소인수분해&quot;
   },
   {
-    &quot;id&quot;: 323,
+    &quot;id&quot;: 321,
     &quot;source_id&quot;: 323,
     &quot;keyword&quot;: &quot;전체위험과 잔여위험&quot;,
     &quot;subject&quot;: &quot;정보보안 관리·법규&quot;,
@@ -4745,7 +4717,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;Inherent Risk / Residual Risk&quot;
   },
   {
-    &quot;id&quot;: 324,
+    &quot;id&quot;: 322,
     &quot;source_id&quot;: 324,
     &quot;keyword&quot;: &quot;RSA 계산&quot;,
     &quot;subject&quot;: &quot;정보보안 일반&quot;,
@@ -4759,7 +4731,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;RSA / Modular Arithmetic&quot;
   },
   {
-    &quot;id&quot;: 325,
+    &quot;id&quot;: 323,
     &quot;source_id&quot;: 325,
     &quot;keyword&quot;: &quot;부트 섹터 바이러스&quot;,
     &quot;subject&quot;: &quot;시스템 보안&quot;,
@@ -4773,7 +4745,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;MBR / Virus&quot;
   },
   {
-    &quot;id&quot;: 326,
+    &quot;id&quot;: 324,
     &quot;source_id&quot;: 326,
     &quot;keyword&quot;: &quot;모바일 데이터베이스 보안&quot;,
     &quot;subject&quot;: &quot;애플리케이션 보안&quot;,
@@ -4787,7 +4759,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;SQLite / Mobile Security&quot;
   },
   {
-    &quot;id&quot;: 327,
+    &quot;id&quot;: 325,
     &quot;source_id&quot;: 327,
     &quot;keyword&quot;: &quot;PKI CA·RA 역할&quot;,
     &quot;subject&quot;: &quot;정보보안 일반&quot;,
@@ -4801,7 +4773,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;CA / RA / CRL&quot;
   },
   {
-    &quot;id&quot;: 328,
+    &quot;id&quot;: 326,
     &quot;source_id&quot;: 328,
     &quot;keyword&quot;: &quot;ESP 처리&quot;,
     &quot;subject&quot;: &quot;네트워크 보안&quot;,
@@ -4815,7 +4787,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;ESP / AH&quot;
   },
   {
-    &quot;id&quot;: 329,
+    &quot;id&quot;: 327,
     &quot;source_id&quot;: 329,
     &quot;keyword&quot;: &quot;Stateful vs Stateless Firewall&quot;,
     &quot;subject&quot;: &quot;네트워크 보안&quot;,
@@ -4829,7 +4801,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;Stateful / Packet Filtering&quot;
   },
   {
-    &quot;id&quot;: 330,
+    &quot;id&quot;: 328,
     &quot;source_id&quot;: 330,
     &quot;keyword&quot;: &quot;SID&quot;,
     &quot;subject&quot;: &quot;시스템 보안&quot;,
@@ -4843,7 +4815,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;SAM / SID / Access Token&quot;
   },
   {
-    &quot;id&quot;: 331,
+    &quot;id&quot;: 329,
     &quot;source_id&quot;: 331,
     &quot;keyword&quot;: &quot;백도어 SetUID 권한&quot;,
     &quot;subject&quot;: &quot;시스템 보안&quot;,
@@ -4857,7 +4829,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;SetUID / 4755&quot;
   },
   {
-    &quot;id&quot;: 332,
+    &quot;id&quot;: 330,
     &quot;source_id&quot;: 332,
     &quot;keyword&quot;: &quot;utmp·wtmp·btmp&quot;,
     &quot;subject&quot;: &quot;시스템 보안&quot;,
@@ -4871,7 +4843,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;utmp / wtmp / btmp&quot;
   },
   {
-    &quot;id&quot;: 333,
+    &quot;id&quot;: 331,
     &quot;source_id&quot;: 333,
     &quot;keyword&quot;: &quot;일회용 디지털서명&quot;,
     &quot;subject&quot;: &quot;정보보안 일반&quot;,
@@ -4885,7 +4857,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;Lamport OTS / Hash-based Signature&quot;
   },
   {
-    &quot;id&quot;: 334,
+    &quot;id&quot;: 332,
     &quot;source_id&quot;: 334,
     &quot;keyword&quot;: &quot;해시함수 보안조건&quot;,
     &quot;subject&quot;: &quot;정보보안 일반&quot;,
@@ -4899,7 +4871,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;Hash / Collision&quot;
   },
   {
-    &quot;id&quot;: 335,
+    &quot;id&quot;: 333,
     &quot;source_id&quot;: 335,
     &quot;keyword&quot;: &quot;TCP Connect Scan&quot;,
     &quot;subject&quot;: &quot;네트워크 보안&quot;,
@@ -4913,7 +4885,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;SYN Scan / Connect Scan&quot;
   },
   {
-    &quot;id&quot;: 336,
+    &quot;id&quot;: 334,
     &quot;source_id&quot;: 336,
     &quot;keyword&quot;: &quot;SNMP 포트&quot;,
     &quot;subject&quot;: &quot;네트워크 보안&quot;,
@@ -4927,21 +4899,21 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;SNMP / SMTP&quot;
   },
   {
-    &quot;id&quot;: 337,
+    &quot;id&quot;: 335,
     &quot;source_id&quot;: 337,
     &quot;keyword&quot;: &quot;IPv4·IPv6 주소길이&quot;,
     &quot;subject&quot;: &quot;네트워크 보안&quot;,
-    &quot;frequency&quot;: 1,
+    &quot;frequency&quot;: 2,
     &quot;priority&quot;: 1,
     &quot;question&quot;: &quot;IPv4·IPv6 주소길이란?&quot;,
     &quot;answer&quot;: &quot;IPv4 주소는 32비트, IPv6 주소는 128비트다.&quot;,
     &quot;definition&quot;: &quot;IPv4 주소는 32비트, IPv6 주소는 128비트다.&quot;,
-    &quot;memory&quot;: &quot;IPv6는 비트 수 기준 IPv4의 4배.&quot;,
+    &quot;memory&quot;: &quot;IPv6는 비트 수 기준 IPv4의 4배. IPv6 주소 길이는 128비트이며 IPv4 32비트의 4배 길이다. 주소 공간의 개수는 단순 4배가 아니다.&quot;,
     &quot;trap&quot;: &quot;주소 공간 크기는 단순 4배가 아니라 2^96배 더 크다.&quot;,
     &quot;compare&quot;: &quot;IPv4 / IPv6&quot;
   },
   {
-    &quot;id&quot;: 338,
+    &quot;id&quot;: 336,
     &quot;source_id&quot;: 338,
     &quot;keyword&quot;: &quot;umask&quot;,
     &quot;subject&quot;: &quot;시스템 보안&quot;,
@@ -4955,7 +4927,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;chmod / umask&quot;
   },
   {
-    &quot;id&quot;: 339,
+    &quot;id&quot;: 337,
     &quot;source_id&quot;: 339,
     &quot;keyword&quot;: &quot;ESM과 SIEM&quot;,
     &quot;subject&quot;: &quot;정보보안 일반&quot;,
@@ -4969,7 +4941,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;ESM / SIEM&quot;
   },
   {
-    &quot;id&quot;: 340,
+    &quot;id&quot;: 338,
     &quot;source_id&quot;: 340,
     &quot;keyword&quot;: &quot;iptables·ipchains·ipfwadm&quot;,
     &quot;subject&quot;: &quot;시스템 보안&quot;,
@@ -4983,7 +4955,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;nftables&quot;
   },
   {
-    &quot;id&quot;: 341,
+    &quot;id&quot;: 339,
     &quot;source_id&quot;: 341,
     &quot;keyword&quot;: &quot;ipconfig와 ifconfig&quot;,
     &quot;subject&quot;: &quot;시스템 보안&quot;,
@@ -4997,7 +4969,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;ip / ipconfig / ifconfig&quot;
   },
   {
-    &quot;id&quot;: 342,
+    &quot;id&quot;: 340,
     &quot;source_id&quot;: 342,
     &quot;keyword&quot;: &quot;SPN(Service Principal Name)&quot;,
     &quot;subject&quot;: &quot;시스템 보안&quot;,
@@ -5011,7 +4983,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;Kerberos / SPN&quot;
   },
   {
-    &quot;id&quot;: 343,
+    &quot;id&quot;: 341,
     &quot;source_id&quot;: 343,
     &quot;keyword&quot;: &quot;pwquality 크레딧&quot;,
     &quot;subject&quot;: &quot;시스템 보안&quot;,
@@ -5025,7 +4997,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;pwquality / password complexity&quot;
   },
   {
-    &quot;id&quot;: 344,
+    &quot;id&quot;: 342,
     &quot;source_id&quot;: 344,
     &quot;keyword&quot;: &quot;SSL/TLS 특징&quot;,
     &quot;subject&quot;: &quot;네트워크 보안&quot;,
@@ -5039,7 +5011,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;SSL / TLS&quot;
   },
   {
-    &quot;id&quot;: 345,
+    &quot;id&quot;: 343,
     &quot;source_id&quot;: 345,
     &quot;keyword&quot;: &quot;패킷필터링 방화벽&quot;,
     &quot;subject&quot;: &quot;네트워크 보안&quot;,
@@ -5053,7 +5025,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;Packet Filter / Stateful Firewall&quot;
   },
   {
-    &quot;id&quot;: 346,
+    &quot;id&quot;: 344,
     &quot;source_id&quot;: 346,
     &quot;keyword&quot;: &quot;Two-Factor Authentication&quot;,
     &quot;subject&quot;: &quot;정보보안 일반&quot;,
@@ -5067,7 +5039,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;MFA / OTP&quot;
   },
   {
-    &quot;id&quot;: 347,
+    &quot;id&quot;: 345,
     &quot;source_id&quot;: 347,
     &quot;keyword&quot;: &quot;PCB&quot;,
     &quot;subject&quot;: &quot;시스템 보안&quot;,
@@ -5081,7 +5053,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;Process / Context Switch&quot;
   },
   {
-    &quot;id&quot;: 348,
+    &quot;id&quot;: 346,
     &quot;source_id&quot;: 348,
     &quot;keyword&quot;: &quot;재귀 DNS 질의&quot;,
     &quot;subject&quot;: &quot;네트워크 보안&quot;,
@@ -5095,7 +5067,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;Recursive / Iterative DNS&quot;
   },
   {
-    &quot;id&quot;: 349,
+    &quot;id&quot;: 347,
     &quot;source_id&quot;: 349,
     &quot;keyword&quot;: &quot;OSPF와 다익스트라&quot;,
     &quot;subject&quot;: &quot;네트워크 보안&quot;,
@@ -5109,7 +5081,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;OSPF / RIP / Dijkstra&quot;
   },
   {
-    &quot;id&quot;: 350,
+    &quot;id&quot;: 348,
     &quot;source_id&quot;: 350,
     &quot;keyword&quot;: &quot;SMTP VRFY&quot;,
     &quot;subject&quot;: &quot;애플리케이션 보안&quot;,
@@ -5123,7 +5095,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;SMTP / EXPN / VRFY&quot;
   },
   {
-    &quot;id&quot;: 351,
+    &quot;id&quot;: 349,
     &quot;source_id&quot;: 351,
     &quot;keyword&quot;: &quot;SET 풀네임&quot;,
     &quot;subject&quot;: &quot;정보보안 일반&quot;,
@@ -5137,7 +5109,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;SET / Dual Signature&quot;
   },
   {
-    &quot;id&quot;: 352,
+    &quot;id&quot;: 350,
     &quot;source_id&quot;: 352,
     &quot;keyword&quot;: &quot;DNS MX 레코드&quot;,
     &quot;subject&quot;: &quot;네트워크 보안&quot;,
@@ -5151,7 +5123,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;MX / A / CNAME&quot;
   },
   {
-    &quot;id&quot;: 353,
+    &quot;id&quot;: 351,
     &quot;source_id&quot;: 353,
     &quot;keyword&quot;: &quot;WSDL&quot;,
     &quot;subject&quot;: &quot;애플리케이션 보안&quot;,
@@ -5165,7 +5137,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;WSDL / SOAP&quot;
   },
   {
-    &quot;id&quot;: 354,
+    &quot;id&quot;: 352,
     &quot;source_id&quot;: 354,
     &quot;keyword&quot;: &quot;안전하지 않은 암호 알고리즘&quot;,
     &quot;subject&quot;: &quot;정보보안 일반&quot;,
@@ -5179,7 +5151,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;AES / SHA-2 / SHA-3&quot;
   },
   {
-    &quot;id&quot;: 355,
+    &quot;id&quot;: 353,
     &quot;source_id&quot;: 355,
     &quot;keyword&quot;: &quot;Windows 기본 공유폴더 보안&quot;,
     &quot;subject&quot;: &quot;시스템 보안&quot;,
@@ -5193,7 +5165,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;Administrative Share / SMB&quot;
   },
   {
-    &quot;id&quot;: 356,
+    &quot;id&quot;: 354,
     &quot;source_id&quot;: 356,
     &quot;keyword&quot;: &quot;WPA2 Personal vs Enterprise&quot;,
     &quot;subject&quot;: &quot;네트워크 보안&quot;,
@@ -5207,7 +5179,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;WPA2 / 802.1X / RADIUS&quot;
   },
   {
-    &quot;id&quot;: 357,
+    &quot;id&quot;: 355,
     &quot;source_id&quot;: 357,
     &quot;keyword&quot;: &quot;무선 LAN 표준 속도&quot;,
     &quot;subject&quot;: &quot;네트워크 보안&quot;,
@@ -5221,7 +5193,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;802.11a/b/g/n/ac/ax&quot;
   },
   {
-    &quot;id&quot;: 358,
+    &quot;id&quot;: 356,
     &quot;source_id&quot;: 358,
     &quot;keyword&quot;: &quot;CVSS&quot;,
     &quot;subject&quot;: &quot;정보보안 일반&quot;,
@@ -5235,7 +5207,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;CVE / CVSS&quot;
   },
   {
-    &quot;id&quot;: 359,
+    &quot;id&quot;: 357,
     &quot;source_id&quot;: 359,
     &quot;keyword&quot;: &quot;GDPR 주요 용어&quot;,
     &quot;subject&quot;: &quot;정보보안 관리·법규&quot;,
@@ -5249,7 +5221,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;GDPR / 개인정보보호법&quot;
   },
   {
-    &quot;id&quot;: 360,
+    &quot;id&quot;: 358,
     &quot;source_id&quot;: 360,
     &quot;keyword&quot;: &quot;재해복구 사이트&quot;,
     &quot;subject&quot;: &quot;정보보안 관리·법규&quot;,
@@ -5263,7 +5235,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;Hot / Warm / Cold / Mirror Site&quot;
   },
   {
-    &quot;id&quot;: 361,
+    &quot;id&quot;: 359,
     &quot;source_id&quot;: 361,
     &quot;keyword&quot;: &quot;ISMS 심사 유형&quot;,
     &quot;subject&quot;: &quot;정보보안 관리·법규&quot;,
@@ -5277,7 +5249,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;ISMS / ISMS-P&quot;
   },
   {
-    &quot;id&quot;: 362,
+    &quot;id&quot;: 360,
     &quot;source_id&quot;: 362,
     &quot;keyword&quot;: &quot;개인정보와 Privacy&quot;,
     &quot;subject&quot;: &quot;정보보안 관리·법규&quot;,
@@ -5291,7 +5263,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;Personal Data / Privacy&quot;
   },
   {
-    &quot;id&quot;: 363,
+    &quot;id&quot;: 361,
     &quot;source_id&quot;: 363,
     &quot;keyword&quot;: &quot;개인정보처리자와 개인정보취급자&quot;,
     &quot;subject&quot;: &quot;정보보안 관리·법규&quot;,
@@ -5305,7 +5277,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;개인정보처리자 / 취급자&quot;
   },
   {
-    &quot;id&quot;: 364,
+    &quot;id&quot;: 362,
     &quot;source_id&quot;: 364,
     &quot;keyword&quot;: &quot;OCSP 구성요소&quot;,
     &quot;subject&quot;: &quot;정보보안 일반&quot;,
@@ -5319,7 +5291,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;OCSP / CA / CRL&quot;
   },
   {
-    &quot;id&quot;: 365,
+    &quot;id&quot;: 363,
     &quot;source_id&quot;: 365,
     &quot;keyword&quot;: &quot;Nikto&quot;,
     &quot;subject&quot;: &quot;애플리케이션 보안&quot;,
@@ -5333,7 +5305,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;Nikto / Nessus&quot;
   },
   {
-    &quot;id&quot;: 366,
+    &quot;id&quot;: 364,
     &quot;source_id&quot;: 366,
     &quot;keyword&quot;: &quot;전자서명 유형&quot;,
     &quot;subject&quot;: &quot;정보보안 일반&quot;,
@@ -5347,7 +5319,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;Dual / Blind / Proxy / Multi Signature&quot;
   },
   {
-    &quot;id&quot;: 367,
+    &quot;id&quot;: 365,
     &quot;source_id&quot;: 367,
     &quot;keyword&quot;: &quot;개인정보 파기방법&quot;,
     &quot;subject&quot;: &quot;정보보안 관리·법규&quot;,
@@ -5361,7 +5333,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;Deletion / Degaussing / Destruction&quot;
   },
   {
-    &quot;id&quot;: 368,
+    &quot;id&quot;: 366,
     &quot;source_id&quot;: 368,
     &quot;keyword&quot;: &quot;블록암호 차분분석&quot;,
     &quot;subject&quot;: &quot;정보보안 일반&quot;,
@@ -5375,7 +5347,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;Differential / Linear Cryptanalysis&quot;
   },
   {
-    &quot;id&quot;: 369,
+    &quot;id&quot;: 367,
     &quot;source_id&quot;: 369,
     &quot;keyword&quot;: &quot;공개키 암호 단점&quot;,
     &quot;subject&quot;: &quot;정보보안 일반&quot;,
@@ -5389,7 +5361,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;Public Key / Symmetric Key&quot;
   },
   {
-    &quot;id&quot;: 370,
+    &quot;id&quot;: 368,
     &quot;source_id&quot;: 370,
     &quot;keyword&quot;: &quot;ECC와 RSA 비교&quot;,
     &quot;subject&quot;: &quot;정보보안 일반&quot;,
@@ -5403,7 +5375,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;ECC / RSA&quot;
   },
   {
-    &quot;id&quot;: 371,
+    &quot;id&quot;: 369,
     &quot;source_id&quot;: 371,
     &quot;keyword&quot;: &quot;사용자 인증 수단&quot;,
     &quot;subject&quot;: &quot;정보보안 일반&quot;,
@@ -5417,7 +5389,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;Identification / Authentication&quot;
   },
   {
-    &quot;id&quot;: 372,
+    &quot;id&quot;: 370,
     &quot;source_id&quot;: 372,
     &quot;keyword&quot;: &quot;WAF와 네트워크 방화벽&quot;,
     &quot;subject&quot;: &quot;애플리케이션 보안&quot;,
@@ -5431,7 +5403,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;Firewall / WAF&quot;
   },
   {
-    &quot;id&quot;: 373,
+    &quot;id&quot;: 371,
     &quot;source_id&quot;: 373,
     &quot;keyword&quot;: &quot;IP 단편화 필드&quot;,
     &quot;subject&quot;: &quot;네트워크 보안&quot;,
@@ -5445,7 +5417,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;IPv4 Fragmentation&quot;
   },
   {
-    &quot;id&quot;: 374,
+    &quot;id&quot;: 372,
     &quot;source_id&quot;: 374,
     &quot;keyword&quot;: &quot;MySQL 파일 읽기 취약점&quot;,
     &quot;subject&quot;: &quot;애플리케이션 보안&quot;,
@@ -5459,7 +5431,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;MySQL / FILE privilege&quot;
   },
   {
-    &quot;id&quot;: 375,
+    &quot;id&quot;: 373,
     &quot;source_id&quot;: 375,
     &quot;keyword&quot;: &quot;Ext3&quot;,
     &quot;subject&quot;: &quot;시스템 보안&quot;,
@@ -5473,7 +5445,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;ext3 / ext4 / NTFS&quot;
   },
   {
-    &quot;id&quot;: 376,
+    &quot;id&quot;: 374,
     &quot;source_id&quot;: 376,
     &quot;keyword&quot;: &quot;ACL &#x27;+&#x27; 표시&quot;,
     &quot;subject&quot;: &quot;시스템 보안&quot;,
@@ -5487,7 +5459,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;POSIX ACL / getfacl&quot;
   },
   {
-    &quot;id&quot;: 377,
+    &quot;id&quot;: 375,
     &quot;source_id&quot;: 377,
     &quot;keyword&quot;: &quot;WAP 구성요소&quot;,
     &quot;subject&quot;: &quot;네트워크 보안&quot;,
@@ -5501,7 +5473,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;WAP / WTLS / WEP&quot;
   },
   {
-    &quot;id&quot;: 378,
+    &quot;id&quot;: 376,
     &quot;source_id&quot;: 378,
     &quot;keyword&quot;: &quot;Slow HTTP Read&quot;,
     &quot;subject&quot;: &quot;애플리케이션 보안&quot;,
@@ -5515,7 +5487,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;Slowloris / Slow HTTP Read&quot;
   },
   {
-    &quot;id&quot;: 379,
+    &quot;id&quot;: 377,
     &quot;source_id&quot;: 379,
     &quot;keyword&quot;: &quot;Anomaly Detection&quot;,
     &quot;subject&quot;: &quot;네트워크 보안&quot;,
@@ -5529,7 +5501,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;Anomaly / Misuse Detection&quot;
   },
   {
-    &quot;id&quot;: 380,
+    &quot;id&quot;: 378,
     &quot;source_id&quot;: 380,
     &quot;keyword&quot;: &quot;Command Injection&quot;,
     &quot;subject&quot;: &quot;애플리케이션 보안&quot;,
@@ -5543,7 +5515,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;OS Command Injection / SQLi&quot;
   },
   {
-    &quot;id&quot;: 381,
+    &quot;id&quot;: 379,
     &quot;source_id&quot;: 381,
     &quot;keyword&quot;: &quot;Directory Traversal&quot;,
     &quot;subject&quot;: &quot;애플리케이션 보안&quot;,
@@ -5557,7 +5529,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;Directory Listing / Path Traversal&quot;
   },
   {
-    &quot;id&quot;: 382,
+    &quot;id&quot;: 380,
     &quot;source_id&quot;: 382,
     &quot;keyword&quot;: &quot;Secure SDLC&quot;,
     &quot;subject&quot;: &quot;애플리케이션 보안&quot;,
@@ -5571,11 +5543,11 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;SSDLC / Secure Coding&quot;
   },
   {
-    &quot;id&quot;: 383,
+    &quot;id&quot;: 381,
     &quot;source_id&quot;: 383,
     &quot;keyword&quot;: &quot;Aggregation&quot;,
     &quot;subject&quot;: &quot;애플리케이션 보안&quot;,
-    &quot;frequency&quot;: 1,
+    &quot;frequency&quot;: 2,
     &quot;priority&quot;: 1,
     &quot;question&quot;: &quot;Aggregation란?&quot;,
     &quot;answer&quot;: &quot;개별적으로 민감하지 않은 여러 데이터 조각을 결합해 민감한 정보를 도출할 수 있는 데이터베이스 보안 문제다.&quot;,
@@ -5585,21 +5557,21 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;Aggregation / Inference&quot;
   },
   {
-    &quot;id&quot;: 384,
+    &quot;id&quot;: 382,
     &quot;source_id&quot;: 384,
     &quot;keyword&quot;: &quot;가명정보&quot;,
     &quot;subject&quot;: &quot;정보보안 관리·법규&quot;,
-    &quot;frequency&quot;: 1,
+    &quot;frequency&quot;: 2,
     &quot;priority&quot;: 1,
     &quot;question&quot;: &quot;가명정보란?&quot;,
     &quot;answer&quot;: &quot;추가정보 없이는 특정 개인을 알아볼 수 없도록 처리한 개인정보를 가명정보라고 한다.&quot;,
     &quot;definition&quot;: &quot;추가정보 없이는 특정 개인을 알아볼 수 없도록 처리한 개인정보를 가명정보라고 한다.&quot;,
-    &quot;memory&quot;: &quot;가명정보도 개인정보 범주에서 별도 규율 대상.&quot;,
-    &quot;trap&quot;: &quot;완전 익명정보와 동일하지 않다.&quot;,
+    &quot;memory&quot;: &quot;가명정보도 개인정보 범주에서 별도 규율 대상. 가명처리는 직접 식별자를 삭제·대체하고 필요 시 추가정보를 별도로 안전하게 관리해 재식별 위험을 낮추는 과정과 연결된다.&quot;,
+    &quot;trap&quot;: &quot;완전 익명정보와 동일하지 않다. 가명처리했다고 해서 개인정보 규율에서 완전히 벗어나는 익명정보가 되는 것은 아니다.&quot;,
     &quot;compare&quot;: &quot;가명정보 / 익명정보&quot;
   },
   {
-    &quot;id&quot;: 385,
+    &quot;id&quot;: 383,
     &quot;source_id&quot;: 385,
     &quot;keyword&quot;: &quot;개인정보 영향평가&quot;,
     &quot;subject&quot;: &quot;정보보안 관리·법규&quot;,
@@ -5613,7 +5585,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;PIA / 개인정보보호법&quot;
   },
   {
-    &quot;id&quot;: 386,
+    &quot;id&quot;: 384,
     &quot;source_id&quot;: 386,
     &quot;keyword&quot;: &quot;능동공격과 수동공격&quot;,
     &quot;subject&quot;: &quot;정보보안 일반&quot;,
@@ -5627,7 +5599,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;Sniffing / DoS / Replay&quot;
   },
   {
-    &quot;id&quot;: 387,
+    &quot;id&quot;: 385,
     &quot;source_id&quot;: 387,
     &quot;keyword&quot;: &quot;ECC 점 연산&quot;,
     &quot;subject&quot;: &quot;정보보안 일반&quot;,
@@ -5641,7 +5613,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;ECC / Finite Field&quot;
   },
   {
-    &quot;id&quot;: 388,
+    &quot;id&quot;: 386,
     &quot;source_id&quot;: 388,
     &quot;keyword&quot;: &quot;KDC 공격 관점&quot;,
     &quot;subject&quot;: &quot;정보보안 일반&quot;,
@@ -5655,11 +5627,11 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;Kerberos / Ticket / Replay&quot;
   },
   {
-    &quot;id&quot;: 389,
+    &quot;id&quot;: 387,
     &quot;source_id&quot;: 389,
     &quot;keyword&quot;: &quot;시나리오 기법&quot;,
     &quot;subject&quot;: &quot;정보보안 관리·법규&quot;,
-    &quot;frequency&quot;: 1,
+    &quot;frequency&quot;: 2,
     &quot;priority&quot;: 1,
     &quot;question&quot;: &quot;시나리오 기법란?&quot;,
     &quot;answer&quot;: &quot;가상의 사고·위협 시나리오를 구성해 발생 가능성과 영향을 분석하는 정성적 위험분석 기법이다.&quot;,
@@ -5669,7 +5641,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;Scenario Analysis / Delphi&quot;
   },
   {
-    &quot;id&quot;: 390,
+    &quot;id&quot;: 388,
     &quot;source_id&quot;: 390,
     &quot;keyword&quot;: &quot;ARP Reply&quot;,
     &quot;subject&quot;: &quot;네트워크 보안&quot;,
@@ -5683,21 +5655,21 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;ARP Request / Reply&quot;
   },
   {
-    &quot;id&quot;: 391,
+    &quot;id&quot;: 389,
     &quot;source_id&quot;: 391,
     &quot;keyword&quot;: &quot;Nmap 주요 옵션&quot;,
     &quot;subject&quot;: &quot;네트워크 보안&quot;,
-    &quot;frequency&quot;: 1,
+    &quot;frequency&quot;: 2,
     &quot;priority&quot;: 1,
     &quot;question&quot;: &quot;Nmap 주요 옵션란?&quot;,
     &quot;answer&quot;: &quot;Nmap은 -sS(SYN), -sT(TCP Connect), -sU(UDP), -sX(Xmas), -O(OS Detection), -sV(Service Version) 등의 옵션을 제공한다.&quot;,
     &quot;definition&quot;: &quot;Nmap은 -sS(SYN), -sT(TCP Connect), -sU(UDP), -sX(Xmas), -O(OS Detection), -sV(Service Version) 등의 옵션을 제공한다.&quot;,
-    &quot;memory&quot;: &quot;-sX=Xmas.&quot;,
+    &quot;memory&quot;: &quot;-sX=Xmas. -sN=NULL, -sF=FIN, -sX=Xmas, -sS=SYN, -sT=TCP Connect, -sU=UDP.&quot;,
     &quot;trap&quot;: &quot;옵션 의미를 서로 바꿔 놓는 보기에 주의.&quot;,
     &quot;compare&quot;: &quot;Nmap / Port Scan&quot;
   },
   {
-    &quot;id&quot;: 392,
+    &quot;id&quot;: 390,
     &quot;source_id&quot;: 392,
     &quot;keyword&quot;: &quot;OAuth 구성요소&quot;,
     &quot;subject&quot;: &quot;애플리케이션 보안&quot;,
@@ -5711,7 +5683,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;OAuth / OIDC&quot;
   },
   {
-    &quot;id&quot;: 393,
+    &quot;id&quot;: 391,
     &quot;source_id&quot;: 393,
     &quot;keyword&quot;: &quot;NetBEUI&quot;,
     &quot;subject&quot;: &quot;네트워크 보안&quot;,
@@ -5725,7 +5697,7 @@ body.locked{overflow:hidden}
     &quot;compare&quot;: &quot;NetBIOS / TCP-IP&quot;
   },
   {
-    &quot;id&quot;: 394,
+    &quot;id&quot;: 392,
     &quot;source_id&quot;: 394,
     &quot;keyword&quot;: &quot;TFTP 심화&quot;,
     &quot;subject&quot;: &quot;네트워크 보안&quot;,
@@ -5737,6 +5709,580 @@ body.locked{overflow:hidden}
     &quot;memory&quot;: &quot;UDP 69, Trivial.&quot;,
     &quot;trap&quot;: &quot;FTP처럼 별도의 제어연결·데이터연결을 사용하지 않는다.&quot;,
     &quot;compare&quot;: &quot;TFTP / FTP&quot;
+  },
+  {
+    &quot;id&quot;: 393,
+    &quot;source_id&quot;: 395,
+    &quot;keyword&quot;: &quot;랜섬웨어&quot;,
+    &quot;subject&quot;: &quot;시스템 보안&quot;,
+    &quot;frequency&quot;: 1,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;랜섬웨어란?&quot;,
+    &quot;answer&quot;: &quot;파일이나 시스템을 암호화·잠금한 뒤 복구 대가를 요구하는 악성코드 유형이다.&quot;,
+    &quot;definition&quot;: &quot;파일이나 시스템을 암호화·잠금한 뒤 복구 대가를 요구하는 악성코드 유형이다.&quot;,
+    &quot;memory&quot;: &quot;Ransomware = 암호화/잠금 + 금전 요구. 백업·최소권한·패치·메일보안이 중요.&quot;,
+    &quot;trap&quot;: &quot;랜섬웨어가 반드시 파일을 암호화하는 형태만 있는 것은 아니며 화면 잠금형도 존재한다.&quot;,
+    &quot;compare&quot;: &quot;Ransomware / Malware / Backup&quot;
+  },
+  {
+    &quot;id&quot;: 394,
+    &quot;source_id&quot;: 396,
+    &quot;keyword&quot;: &quot;기관별 .kr 도메인&quot;,
+    &quot;subject&quot;: &quot;네트워크 보안&quot;,
+    &quot;frequency&quot;: 1,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;기관별 .kr 도메인란?&quot;,
+    &quot;answer&quot;: &quot;대한민국의 3단계 .kr 도메인은 기관 성격에 따라 ac.kr, go.kr, or.kr, re.kr, es.kr, ms.kr, hs.kr 등으로 구분된다.&quot;,
+    &quot;definition&quot;: &quot;대한민국의 3단계 .kr 도메인은 기관 성격에 따라 ac.kr, go.kr, or.kr, re.kr, es.kr, ms.kr, hs.kr 등으로 구분된다.&quot;,
+    &quot;memory&quot;: &quot;예: es.kr=초등학교, ms.kr=중학교, hs.kr=고등학교, ac.kr=대학·교육기관, go.kr=정부기관, mil.kr=국방기관.&quot;,
+    &quot;trap&quot;: &quot;도메인 종류는 등록정책에 따라 운영되므로 오래된 교재의 분류와 현재 등록정책이 다를 수 있다.&quot;,
+    &quot;compare&quot;: &quot;es.kr / ms.kr / hs.kr / ac.kr / go.kr&quot;
+  },
+  {
+    &quot;id&quot;: 395,
+    &quot;source_id&quot;: 397,
+    &quot;keyword&quot;: &quot;Smurf 공격&quot;,
+    &quot;subject&quot;: &quot;네트워크 보안&quot;,
+    &quot;frequency&quot;: 1,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;Smurf 공격란?&quot;,
+    &quot;answer&quot;: &quot;공격자가 피해자의 IP로 출발지를 위조한 ICMP Echo Request를 브로드캐스트 주소로 보내 다수의 Echo Reply가 피해자에게 집중되게 하는 반사·증폭형 DoS 공격이다.&quot;,
+    &quot;definition&quot;: &quot;공격자가 피해자의 IP로 출발지를 위조한 ICMP Echo Request를 브로드캐스트 주소로 보내 다수의 Echo Reply가 피해자에게 집중되게 하는 반사·증폭형 DoS 공격이다.&quot;,
+    &quot;memory&quot;: &quot;Smurf = ICMP + Source Spoofing + Broadcast Amplification.&quot;,
+    &quot;trap&quot;: &quot;Ping of Death는 비정상 크기/단편화 패킷이고 Smurf는 브로드캐스트 증폭이 핵심이다.&quot;,
+    &quot;compare&quot;: &quot;Smurf / Ping of Death / Fraggle&quot;
+  },
+  {
+    &quot;id&quot;: 396,
+    &quot;source_id&quot;: 398,
+    &quot;keyword&quot;: &quot;C 포맷 지정자&quot;,
+    &quot;subject&quot;: &quot;시스템 보안&quot;,
+    &quot;frequency&quot;: 1,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;C 포맷 지정자란?&quot;,
+    &quot;answer&quot;: &quot;C 계열 printf 함수에서 %d는 정수, %s는 문자열, %x는 16진수, %c는 문자 등을 출력하도록 지정한다.&quot;,
+    &quot;definition&quot;: &quot;C 계열 printf 함수에서 %d는 정수, %s는 문자열, %x는 16진수, %c는 문자 등을 출력하도록 지정한다.&quot;,
+    &quot;memory&quot;: &quot;%d=int, %s=string, %x=hex, %c=char, %n은 지금까지 출력한 문자 수를 메모리에 기록.&quot;,
+    &quot;trap&quot;: &quot;사용자 입력을 포맷 문자열 자체로 사용하면 %n 등을 악용한 Format String 취약점이 발생할 수 있다.&quot;,
+    &quot;compare&quot;: &quot;printf / Format String&quot;
+  },
+  {
+    &quot;id&quot;: 397,
+    &quot;source_id&quot;: 399,
+    &quot;keyword&quot;: &quot;스니핑 공격&quot;,
+    &quot;subject&quot;: &quot;네트워크 보안&quot;,
+    &quot;frequency&quot;: 1,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;스니핑 공격란?&quot;,
+    &quot;answer&quot;: &quot;네트워크를 흐르는 패킷을 가로채어 계정정보·세션정보·통신내용 등을 수집하는 수동적 공격이다.&quot;,
+    &quot;definition&quot;: &quot;네트워크를 흐르는 패킷을 가로채어 계정정보·세션정보·통신내용 등을 수집하는 수동적 공격이다.&quot;,
+    &quot;memory&quot;: &quot;Sniffing = 패킷 도청. Promiscuous Mode, SPAN, ARP Spoofing과 연계 출제.&quot;,
+    &quot;trap&quot;: &quot;스니핑 자체는 패킷 내용을 변조하는 능동공격과 구분한다.&quot;,
+    &quot;compare&quot;: &quot;Sniffing / Spoofing / Promiscuous Mode&quot;
+  },
+  {
+    &quot;id&quot;: 398,
+    &quot;source_id&quot;: 400,
+    &quot;keyword&quot;: &quot;SNMP Community String&quot;,
+    &quot;subject&quot;: &quot;네트워크 보안&quot;,
+    &quot;frequency&quot;: 1,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;SNMP Community String란?&quot;,
+    &quot;answer&quot;: &quot;SNMPv1/v2c에서 관리 시스템과 에이전트가 같은 커뮤니티에 속하는지를 구분하기 위해 사용하는 문자열 기반 접근제어 값이다.&quot;,
+    &quot;definition&quot;: &quot;SNMPv1/v2c에서 관리 시스템과 에이전트가 같은 커뮤니티에 속하는지를 구분하기 위해 사용하는 문자열 기반 접근제어 값이다.&quot;,
+    &quot;memory&quot;: &quot;기본값 public/private 사용은 위험. 가능한 경우 SNMPv3의 인증·암호화 기능 사용.&quot;,
+    &quot;trap&quot;: &quot;Community String은 강력한 사용자 인증수단으로 설계된 것이 아니며 평문 노출 위험이 있다.&quot;,
+    &quot;compare&quot;: &quot;SNMPv1/v2c / SNMPv3&quot;
+  },
+  {
+    &quot;id&quot;: 399,
+    &quot;source_id&quot;: 401,
+    &quot;keyword&quot;: &quot;SNMP 취약점과 공격&quot;,
+    &quot;subject&quot;: &quot;네트워크 보안&quot;,
+    &quot;frequency&quot;: 1,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;SNMP 취약점과 공격란?&quot;,
+    &quot;answer&quot;: &quot;약한 Community String, 불필요한 쓰기 권한, 취약한 SNMP 구현은 정보노출·비인가 설정변경·서비스 장애로 이어질 수 있다.&quot;,
+    &quot;definition&quot;: &quot;약한 Community String, 불필요한 쓰기 권한, 취약한 SNMP 구현은 정보노출·비인가 설정변경·서비스 장애로 이어질 수 있다.&quot;,
+    &quot;memory&quot;: &quot;기본 Community String 제거, Write 권한 제한, 접근 ACL, SNMPv3 사용.&quot;,
+    &quot;trap&quot;: &quot;버퍼오버플로우는 특정 구현의 취약점일 수 있으며 SNMP 프로토콜 자체의 필수 특성은 아니다.&quot;,
+    &quot;compare&quot;: &quot;SNMP / Community String&quot;
+  },
+  {
+    &quot;id&quot;: 400,
+    &quot;source_id&quot;: 402,
+    &quot;keyword&quot;: &quot;FCheck&quot;,
+    &quot;subject&quot;: &quot;시스템 보안&quot;,
+    &quot;frequency&quot;: 1,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;FCheck란?&quot;,
+    &quot;answer&quot;: &quot;FCheck는 파일의 변경 여부를 기준값과 비교해 무결성을 점검하는 파일 무결성 검사 도구다.&quot;,
+    &quot;definition&quot;: &quot;FCheck는 파일의 변경 여부를 기준값과 비교해 무결성을 점검하는 파일 무결성 검사 도구다.&quot;,
+    &quot;memory&quot;: &quot;FCheck = File Integrity Checking.&quot;,
+    &quot;trap&quot;: &quot;Nessus처럼 범용 네트워크 취약점 스캐너라고 보면 틀리다.&quot;,
+    &quot;compare&quot;: &quot;FCheck / Nessus / Tripwire&quot;
+  },
+  {
+    &quot;id&quot;: 401,
+    &quot;source_id&quot;: 403,
+    &quot;keyword&quot;: &quot;PAM 제어 플래그&quot;,
+    &quot;subject&quot;: &quot;시스템 보안&quot;,
+    &quot;frequency&quot;: 1,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;PAM 제어 플래그란?&quot;,
+    &quot;answer&quot;: &quot;PAM의 제어 플래그는 각 모듈의 성공·실패가 전체 인증결과에 어떤 영향을 주는지 결정한다.&quot;,
+    &quot;definition&quot;: &quot;PAM의 제어 플래그는 각 모듈의 성공·실패가 전체 인증결과에 어떤 영향을 주는지 결정한다.&quot;,
+    &quot;memory&quot;: &quot;required=실패해도 스택 계속 후 최종 실패, requisite=실패 즉시 종료, sufficient=성공 시 조건에 따라 조기 성공, optional=보조적.&quot;,
+    &quot;trap&quot;: &quot;required와 requisite의 실패 처리시점을 바꿔 놓는 문제가 자주 나온다.&quot;,
+    &quot;compare&quot;: &quot;required / requisite / sufficient / optional&quot;
+  },
+  {
+    &quot;id&quot;: 402,
+    &quot;source_id&quot;: 404,
+    &quot;keyword&quot;: &quot;메일 필터링 도구&quot;,
+    &quot;subject&quot;: &quot;애플리케이션 보안&quot;,
+    &quot;frequency&quot;: 1,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;메일 필터링 도구란?&quot;,
+    &quot;answer&quot;: &quot;Procmail은 메일 분류·필터링에, Inflex와 Sanitizer 같은 도구는 메일 내용·첨부파일의 보안검사 맥락에서 출제될 수 있다.&quot;,
+    &quot;definition&quot;: &quot;Procmail은 메일 분류·필터링에, Inflex와 Sanitizer 같은 도구는 메일 내용·첨부파일의 보안검사 맥락에서 출제될 수 있다.&quot;,
+    &quot;memory&quot;: &quot;도구명과 역할을 짝지어 암기.&quot;,
+    &quot;trap&quot;: &quot;제품·도구 버전에 따라 기능범위가 다를 수 있으므로 &#x27;무조건 바이러스 백신&#x27;처럼 단정하지 않는다.&quot;,
+    &quot;compare&quot;: &quot;Procmail / Inflex / Sanitizer&quot;
+  },
+  {
+    &quot;id&quot;: 403,
+    &quot;source_id&quot;: 405,
+    &quot;keyword&quot;: &quot;MD·SHA 해시 크기&quot;,
+    &quot;subject&quot;: &quot;정보보안 일반&quot;,
+    &quot;frequency&quot;: 1,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;MD·SHA 해시 크기란?&quot;,
+    &quot;answer&quot;: &quot;대표 해시의 출력 크기는 MD5 128비트, SHA-1 160비트, SHA-256 256비트, SHA-512 512비트다.&quot;,
+    &quot;definition&quot;: &quot;대표 해시의 출력 크기는 MD5 128비트, SHA-1 160비트, SHA-256 256비트, SHA-512 512비트다.&quot;,
+    &quot;memory&quot;: &quot;출력 길이와 내부 블록 크기를 구분. SHA-256은 512비트 메시지 블록을 처리하고 256비트 해시를 출력한다.&quot;,
+    &quot;trap&quot;: &quot;해시 출력 크기와 처리 블록 크기를 같은 값으로 외우지 않기.&quot;,
+    &quot;compare&quot;: &quot;MD5 / SHA-1 / SHA-256 / SHA-512&quot;
+  },
+  {
+    &quot;id&quot;: 404,
+    &quot;source_id&quot;: 408,
+    &quot;keyword&quot;: &quot;영상정보처리기기&quot;,
+    &quot;subject&quot;: &quot;정보보안 관리·법규&quot;,
+    &quot;frequency&quot;: 1,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;영상정보처리기기란?&quot;,
+    &quot;answer&quot;: &quot;고정형 영상정보처리기기는 범죄예방·시설안전 등 법이 허용하는 목적과 요건 아래 설치·운영해야 하며 안내·접근통제·보관관리 등이 필요하다.&quot;,
+    &quot;definition&quot;: &quot;고정형 영상정보처리기기는 범죄예방·시설안전 등 법이 허용하는 목적과 요건 아래 설치·운영해야 하며 안내·접근통제·보관관리 등이 필요하다.&quot;,
+    &quot;memory&quot;: &quot;설치 목적·장소·관리책임·보관 및 파기 기준을 구분.&quot;,
+    &quot;trap&quot;: &quot;교도소·의료시설 등 특정 장소의 허용 여부는 예외와 개별 법령이 있어 문제의 정확한 지문과 최신 법령을 확인해야 한다.&quot;,
+    &quot;compare&quot;: &quot;CCTV / 개인정보보호법&quot;
+  },
+  {
+    &quot;id&quot;: 405,
+    &quot;source_id&quot;: 409,
+    &quot;keyword&quot;: &quot;내부망&quot;,
+    &quot;subject&quot;: &quot;네트워크 보안&quot;,
+    &quot;frequency&quot;: 1,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;내부망란?&quot;,
+    &quot;answer&quot;: &quot;조직 내부의 업무시스템·사용자 단말 등이 연결된 신뢰영역 네트워크로 외부망과 분리·접근통제되는 경우가 많다.&quot;,
+    &quot;definition&quot;: &quot;조직 내부의 업무시스템·사용자 단말 등이 연결된 신뢰영역 네트워크로 외부망과 분리·접근통제되는 경우가 많다.&quot;,
+    &quot;memory&quot;: &quot;망분리, 중앙관리, 접근제어, 호환성과 업무연속성 등을 함께 고려.&quot;,
+    &quot;trap&quot;: &quot;내부망이라고 해서 자동으로 안전한 것은 아니며 내부자·악성코드 위협이 존재한다.&quot;,
+    &quot;compare&quot;: &quot;내부망 / 외부망 / 망분리&quot;
+  },
+  {
+    &quot;id&quot;: 406,
+    &quot;source_id&quot;: 410,
+    &quot;keyword&quot;: &quot;Wireshark&quot;,
+    &quot;subject&quot;: &quot;네트워크 보안&quot;,
+    &quot;frequency&quot;: 1,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;Wireshark란?&quot;,
+    &quot;answer&quot;: &quot;네트워크 인터페이스에서 캡처한 패킷을 프로토콜별로 분석하고 필터링할 수 있는 대표적인 패킷 분석 도구다.&quot;,
+    &quot;definition&quot;: &quot;네트워크 인터페이스에서 캡처한 패킷을 프로토콜별로 분석하고 필터링할 수 있는 대표적인 패킷 분석 도구다.&quot;,
+    &quot;memory&quot;: &quot;Capture Filter와 Display Filter를 구분.&quot;,
+    &quot;trap&quot;: &quot;Wireshark 자체가 취약점을 자동 수정하는 도구는 아니다.&quot;,
+    &quot;compare&quot;: &quot;Wireshark / tcpdump&quot;
+  },
+  {
+    &quot;id&quot;: 407,
+    &quot;source_id&quot;: 412,
+    &quot;keyword&quot;: &quot;위험한 C 문자열 함수&quot;,
+    &quot;subject&quot;: &quot;시스템 보안&quot;,
+    &quot;frequency&quot;: 1,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;위험한 C 문자열 함수란?&quot;,
+    &quot;answer&quot;: &quot;gets는 입력 길이를 제한할 수 없어 매우 위험하며 strcpy·strcat도 목적지 버퍼 크기를 검증하지 않으면 오버플로우가 발생할 수 있다.&quot;,
+    &quot;definition&quot;: &quot;gets는 입력 길이를 제한할 수 없어 매우 위험하며 strcpy·strcat도 목적지 버퍼 크기를 검증하지 않으면 오버플로우가 발생할 수 있다.&quot;,
+    &quot;memory&quot;: &quot;gets 사용 금지 수준으로 기억. 길이 검증과 안전한 대체 API 사용.&quot;,
+    &quot;trap&quot;: &quot;printf는 기본적으로 출력 함수이며 gets와 동일한 입력 함수가 아니다.&quot;,
+    &quot;compare&quot;: &quot;gets / strcpy / strcat / printf&quot;
+  },
+  {
+    &quot;id&quot;: 408,
+    &quot;source_id&quot;: 413,
+    &quot;keyword&quot;: &quot;난독화(Obfuscation)&quot;,
+    &quot;subject&quot;: &quot;애플리케이션 보안&quot;,
+    &quot;frequency&quot;: 1,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;난독화(Obfuscation)란?&quot;,
+    &quot;answer&quot;: &quot;프로그램의 기능은 유지하면서 코드·문자열·제어흐름을 이해하기 어렵게 변환해 분석과 역공학을 어렵게 하는 기법이다.&quot;,
+    &quot;definition&quot;: &quot;프로그램의 기능은 유지하면서 코드·문자열·제어흐름을 이해하기 어렵게 변환해 분석과 역공학을 어렵게 하는 기법이다.&quot;,
+    &quot;memory&quot;: &quot;Obfuscation = 이해하기 어렵게 변환.&quot;,
+    &quot;trap&quot;: &quot;암호화처럼 비밀키로 원문을 복호화하는 보안기법과 동일하지 않다.&quot;,
+    &quot;compare&quot;: &quot;Obfuscation / Packing / Encryption&quot;
+  },
+  {
+    &quot;id&quot;: 409,
+    &quot;source_id&quot;: 414,
+    &quot;keyword&quot;: &quot;Ping과 ICMP&quot;,
+    &quot;subject&quot;: &quot;네트워크 보안&quot;,
+    &quot;frequency&quot;: 1,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;Ping과 ICMP란?&quot;,
+    &quot;answer&quot;: &quot;Ping은 IP 네트워크에서 호스트 도달성과 왕복시간을 확인하기 위해 ICMP Echo Request와 Echo Reply를 사용한다.&quot;,
+    &quot;definition&quot;: &quot;Ping은 IP 네트워크에서 호스트 도달성과 왕복시간을 확인하기 위해 ICMP Echo Request와 Echo Reply를 사용한다.&quot;,
+    &quot;memory&quot;: &quot;Ping = ICMP Echo, TCP/UDP 포트 없음.&quot;,
+    &quot;trap&quot;: &quot;Ping이 TCP 7번 같은 특정 포트를 사용하는 프로토콜이라고 하면 틀리다.&quot;,
+    &quot;compare&quot;: &quot;ICMP / Ping&quot;
+  },
+  {
+    &quot;id&quot;: 410,
+    &quot;source_id&quot;: 415,
+    &quot;keyword&quot;: &quot;SMTP 주요 명령어&quot;,
+    &quot;subject&quot;: &quot;애플리케이션 보안&quot;,
+    &quot;frequency&quot;: 1,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;SMTP 주요 명령어란?&quot;,
+    &quot;answer&quot;: &quot;SMTP는 HELO/EHLO, MAIL FROM, RCPT TO, DATA, RSET, NOOP, VRFY, EXPN, QUIT 등의 명령을 사용한다.&quot;,
+    &quot;definition&quot;: &quot;SMTP는 HELO/EHLO, MAIL FROM, RCPT TO, DATA, RSET, NOOP, VRFY, EXPN, QUIT 등의 명령을 사용한다.&quot;,
+    &quot;memory&quot;: &quot;NOOP=연결 유지·응답 확인, VRFY=사용자 확인, EXPN=메일링리스트 확장 확인.&quot;,
+    &quot;trap&quot;: &quot;VRFY/EXPN은 사용자 정보 노출 때문에 비활성화되기도 한다.&quot;,
+    &quot;compare&quot;: &quot;SMTP / VRFY / EXPN / NOOP&quot;
+  },
+  {
+    &quot;id&quot;: 411,
+    &quot;source_id&quot;: 416,
+    &quot;keyword&quot;: &quot;Promiscuous Mode&quot;,
+    &quot;subject&quot;: &quot;네트워크 보안&quot;,
+    &quot;frequency&quot;: 1,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;Promiscuous Mode란?&quot;,
+    &quot;answer&quot;: &quot;네트워크 인터페이스가 자신에게 직접 목적지 지정되지 않은 프레임까지 운영체제에 전달하도록 설정된 수신 모드다.&quot;,
+    &quot;definition&quot;: &quot;네트워크 인터페이스가 자신에게 직접 목적지 지정되지 않은 프레임까지 운영체제에 전달하도록 설정된 수신 모드다.&quot;,
+    &quot;memory&quot;: &quot;패킷 스니핑·분석에서 사용.&quot;,
+    &quot;trap&quot;: &quot;Promiscuous Mode 자체가 공격은 아니며 정상적인 네트워크 분석에도 사용된다.&quot;,
+    &quot;compare&quot;: &quot;Sniffing / Wireshark&quot;
+  },
+  {
+    &quot;id&quot;: 412,
+    &quot;source_id&quot;: 417,
+    &quot;keyword&quot;: &quot;TCP Backlog Queue&quot;,
+    &quot;subject&quot;: &quot;네트워크 보안&quot;,
+    &quot;frequency&quot;: 1,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;TCP Backlog Queue란?&quot;,
+    &quot;answer&quot;: &quot;서버가 수신한 연결 요청을 처리하기 전에 대기시키는 큐로 TCP 연결 수립 과정의 자원관리와 관련된다.&quot;,
+    &quot;definition&quot;: &quot;서버가 수신한 연결 요청을 처리하기 전에 대기시키는 큐로 TCP 연결 수립 과정의 자원관리와 관련된다.&quot;,
+    &quot;memory&quot;: &quot;SYN Flooding은 반쯤 열린 연결 상태와 큐 자원을 소진시키는 방식으로 악용 가능.&quot;,
+    &quot;trap&quot;: &quot;운영체제마다 SYN queue와 accept queue의 세부 구현이 다를 수 있다.&quot;,
+    &quot;compare&quot;: &quot;SYN Flooding / SYN Cookie&quot;
+  },
+  {
+    &quot;id&quot;: 413,
+    &quot;source_id&quot;: 418,
+    &quot;keyword&quot;: &quot;Switch Jamming&quot;,
+    &quot;subject&quot;: &quot;네트워크 보안&quot;,
+    &quot;frequency&quot;: 1,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;Switch Jamming란?&quot;,
+    &quot;answer&quot;: &quot;대량의 위조 MAC 주소를 스위치에 학습시켜 CAM 테이블을 가득 채우고 일부 스위치가 트래픽을 플러딩하도록 유도하는 공격이다.&quot;,
+    &quot;definition&quot;: &quot;대량의 위조 MAC 주소를 스위치에 학습시켜 CAM 테이블을 가득 채우고 일부 스위치가 트래픽을 플러딩하도록 유도하는 공격이다.&quot;,
+    &quot;memory&quot;: &quot;CAM Table Overflow = MAC Flooding.&quot;,
+    &quot;trap&quot;: &quot;ARP Spoofing과 공격 대상 테이블이 다르다.&quot;,
+    &quot;compare&quot;: &quot;MAC Flooding / ARP Spoofing&quot;
+  },
+  {
+    &quot;id&quot;: 414,
+    &quot;source_id&quot;: 419,
+    &quot;keyword&quot;: &quot;RDP&quot;,
+    &quot;subject&quot;: &quot;네트워크 보안&quot;,
+    &quot;frequency&quot;: 1,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;RDP란?&quot;,
+    &quot;answer&quot;: &quot;Remote Desktop Protocol. 원격 Windows 데스크톱 화면과 입력을 네트워크로 전달하는 Microsoft 프로토콜이다.&quot;,
+    &quot;definition&quot;: &quot;Remote Desktop Protocol. 원격 Windows 데스크톱 화면과 입력을 네트워크로 전달하는 Microsoft 프로토콜이다.&quot;,
+    &quot;memory&quot;: &quot;기본 TCP/UDP 3389와 연계해 출제.&quot;,
+    &quot;trap&quot;: &quot;Telnet처럼 기본적으로 단순 평문 터미널 프로토콜은 아니다.&quot;,
+    &quot;compare&quot;: &quot;RDP / SSH / Telnet&quot;
+  },
+  {
+    &quot;id&quot;: 415,
+    &quot;source_id&quot;: 420,
+    &quot;keyword&quot;: &quot;FTP Bounce 공격&quot;,
+    &quot;subject&quot;: &quot;네트워크 보안&quot;,
+    &quot;frequency&quot;: 1,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;FTP Bounce 공격란?&quot;,
+    &quot;answer&quot;: &quot;FTP의 Active Mode PORT 명령 특성을 악용해 FTP 서버가 공격자가 지정한 제3의 호스트·포트로 연결하도록 만드는 공격이다.&quot;,
+    &quot;definition&quot;: &quot;FTP의 Active Mode PORT 명령 특성을 악용해 FTP 서버가 공격자가 지정한 제3의 호스트·포트로 연결하도록 만드는 공격이다.&quot;,
+    &quot;memory&quot;: &quot;FTP 서버를 중계지처럼 사용해 포트 스캔·접근을 시도.&quot;,
+    &quot;trap&quot;: &quot;Passive Mode의 데이터 포트 동작과 혼동하지 않는다.&quot;,
+    &quot;compare&quot;: &quot;FTP / Active Mode / PORT&quot;
+  },
+  {
+    &quot;id&quot;: 416,
+    &quot;source_id&quot;: 421,
+    &quot;keyword&quot;: &quot;HTTPS&quot;,
+    &quot;subject&quot;: &quot;애플리케이션 보안&quot;,
+    &quot;frequency&quot;: 1,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;HTTPS란?&quot;,
+    &quot;answer&quot;: &quot;HTTP 통신을 TLS로 보호해 서버 인증, 기밀성, 무결성을 제공하는 웹 통신 방식이다.&quot;,
+    &quot;definition&quot;: &quot;HTTP 통신을 TLS로 보호해 서버 인증, 기밀성, 무결성을 제공하는 웹 통신 방식이다.&quot;,
+    &quot;memory&quot;: &quot;HTTPS = HTTP over TLS, 기본 포트 443.&quot;,
+    &quot;trap&quot;: &quot;HTTPS가 웹 애플리케이션의 SQLi·XSS 같은 논리 취약점까지 자동으로 제거하는 것은 아니다.&quot;,
+    &quot;compare&quot;: &quot;HTTP / TLS / HTTPS&quot;
+  },
+  {
+    &quot;id&quot;: 417,
+    &quot;source_id&quot;: 422,
+    &quot;keyword&quot;: &quot;WTLS Handshake&quot;,
+    &quot;subject&quot;: &quot;네트워크 보안&quot;,
+    &quot;frequency&quot;: 1,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;WTLS Handshake란?&quot;,
+    &quot;answer&quot;: &quot;WTLS 연결 시작 시 보안 매개변수 협상, 인증·키 설정 등을 위한 핸드셰이크 절차가 수행된다.&quot;,
+    &quot;definition&quot;: &quot;WTLS 연결 시작 시 보안 매개변수 협상, 인증·키 설정 등을 위한 핸드셰이크 절차가 수행된다.&quot;,
+    &quot;memory&quot;: &quot;목적은 TLS Handshake와 유사하게 세션 보호를 위한 알고리즘·키·인증 설정.&quot;,
+    &quot;trap&quot;: &quot;현대 일반 웹 TLS와 WAP용 WTLS를 동일 프로토콜로 보지 않는다.&quot;,
+    &quot;compare&quot;: &quot;WTLS / WAP / TLS&quot;
+  },
+  {
+    &quot;id&quot;: 418,
+    &quot;source_id&quot;: 423,
+    &quot;keyword&quot;: &quot;Log4j&quot;,
+    &quot;subject&quot;: &quot;애플리케이션 보안&quot;,
+    &quot;frequency&quot;: 1,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;Log4j란?&quot;,
+    &quot;answer&quot;: &quot;Apache Log4j는 Java 애플리케이션에서 로그를 기록하기 위한 널리 사용되는 로깅 라이브러리다.&quot;,
+    &quot;definition&quot;: &quot;Apache Log4j는 Java 애플리케이션에서 로그를 기록하기 위한 널리 사용되는 로깅 라이브러리다.&quot;,
+    &quot;memory&quot;: &quot;Java Logging Library.&quot;,
+    &quot;trap&quot;: &quot;Log4Shell은 특정 Log4j 버전의 JNDI 관련 취약점이며 Log4j 자체의 일반 정의와 구분.&quot;,
+    &quot;compare&quot;: &quot;Log4j / Log4Shell&quot;
+  },
+  {
+    &quot;id&quot;: 419,
+    &quot;source_id&quot;: 424,
+    &quot;keyword&quot;: &quot;SQL 특수문자와 입력처리&quot;,
+    &quot;subject&quot;: &quot;애플리케이션 보안&quot;,
+    &quot;frequency&quot;: 1,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;SQL 특수문자와 입력처리란?&quot;,
+    &quot;answer&quot;: &quot;따옴표, 주석기호, 세미콜론 같은 문자가 사용자 입력을 통해 SQL 구조에 영향을 주면 SQL Injection으로 이어질 수 있다.&quot;,
+    &quot;definition&quot;: &quot;따옴표, 주석기호, 세미콜론 같은 문자가 사용자 입력을 통해 SQL 구조에 영향을 주면 SQL Injection으로 이어질 수 있다.&quot;,
+    &quot;memory&quot;: &quot;문자 필터링만보다 Prepared Statement를 우선적으로 사용.&quot;,
+    &quot;trap&quot;: &quot;특수문자를 전부 제거하는 방식은 정상 입력을 훼손할 수 있고 우회도 가능하다.&quot;,
+    &quot;compare&quot;: &quot;SQL Injection / Prepared Statement&quot;
+  },
+  {
+    &quot;id&quot;: 420,
+    &quot;source_id&quot;: 425,
+    &quot;keyword&quot;: &quot;DNS NS 레코드&quot;,
+    &quot;subject&quot;: &quot;네트워크 보안&quot;,
+    &quot;frequency&quot;: 1,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;DNS NS 레코드란?&quot;,
+    &quot;answer&quot;: &quot;NS 레코드는 특정 DNS 존에 권한이 있는 네임서버의 호스트명을 지정한다.&quot;,
+    &quot;definition&quot;: &quot;NS 레코드는 특정 DNS 존에 권한이 있는 네임서버의 호스트명을 지정한다.&quot;,
+    &quot;memory&quot;: &quot;NS=Name Server, MX=Mail Exchanger.&quot;,
+    &quot;trap&quot;: &quot;도메인의 메일서버 우선순위를 지정하는 것은 MX 레코드다.&quot;,
+    &quot;compare&quot;: &quot;NS / MX / A / CNAME&quot;
+  },
+  {
+    &quot;id&quot;: 421,
+    &quot;source_id&quot;: 426,
+    &quot;keyword&quot;: &quot;DB 암호화 Plug-in 방식&quot;,
+    &quot;subject&quot;: &quot;애플리케이션 보안&quot;,
+    &quot;frequency&quot;: 1,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;DB 암호화 Plug-in 방식란?&quot;,
+    &quot;answer&quot;: &quot;DB 서버에 암호화 모듈을 플러그인 형태로 설치해 DB 내부 처리과정에서 암·복호화를 수행하는 방식이다.&quot;,
+    &quot;definition&quot;: &quot;DB 서버에 암호화 모듈을 플러그인 형태로 설치해 DB 내부 처리과정에서 암·복호화를 수행하는 방식이다.&quot;,
+    &quot;memory&quot;: &quot;응용프로그램 수정이 API 방식보다 적을 수 있는 것이 장점.&quot;,
+    &quot;trap&quot;: &quot;모든 제품에서 애플리케이션 수정이 완전히 0이라고 단정하지 말고 구현구조를 확인.&quot;,
+    &quot;compare&quot;: &quot;DB Plug-in / API 방식 / TDE&quot;
+  },
+  {
+    &quot;id&quot;: 422,
+    &quot;source_id&quot;: 427,
+    &quot;keyword&quot;: &quot;Payment Gateway&quot;,
+    &quot;subject&quot;: &quot;애플리케이션 보안&quot;,
+    &quot;frequency&quot;: 1,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;Payment Gateway란?&quot;,
+    &quot;answer&quot;: &quot;전자결제에서 가맹점과 결제기관 사이의 승인·결제 메시지를 중계하고 보안처리를 지원하는 게이트웨이다.&quot;,
+    &quot;definition&quot;: &quot;전자결제에서 가맹점과 결제기관 사이의 승인·결제 메시지를 중계하고 보안처리를 지원하는 게이트웨이다.&quot;,
+    &quot;memory&quot;: &quot;Merchant ↔ Payment Gateway ↔ 금융/결제 네트워크.&quot;,
+    &quot;trap&quot;: &quot;가맹점 자체나 카드 발급은행 그 자체와 동일한 주체가 아니다.&quot;,
+    &quot;compare&quot;: &quot;SET / Payment Gateway&quot;
+  },
+  {
+    &quot;id&quot;: 423,
+    &quot;source_id&quot;: 428,
+    &quot;keyword&quot;: &quot;Baseline 위험분석&quot;,
+    &quot;subject&quot;: &quot;정보보안 관리·법규&quot;,
+    &quot;frequency&quot;: 1,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;Baseline 위험분석란?&quot;,
+    &quot;answer&quot;: &quot;Baseline Approach는 조직의 모든 시스템에 일정 수준의 표준 보안통제를 기본적으로 적용하는 위험관리 접근법이다.&quot;,
+    &quot;definition&quot;: &quot;Baseline Approach는 조직의 모든 시스템에 일정 수준의 표준 보안통제를 기본적으로 적용하는 위험관리 접근법이다.&quot;,
+    &quot;memory&quot;: &quot;기본 통제수준을 빠르게 적용, 비용·시간 절약.&quot;,
+    &quot;trap&quot;: &quot;개별 자산의 위험을 정밀하게 계산하는 상세 정량분석과는 다르다.&quot;,
+    &quot;compare&quot;: &quot;Baseline / Detailed Risk Analysis&quot;
+  },
+  {
+    &quot;id&quot;: 424,
+    &quot;source_id&quot;: 429,
+    &quot;keyword&quot;: &quot;정량적·정성적 위험분석&quot;,
+    &quot;subject&quot;: &quot;정보보안 관리·법규&quot;,
+    &quot;frequency&quot;: 1,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;정량적·정성적 위험분석란?&quot;,
+    &quot;answer&quot;: &quot;정량분석은 금액·확률 같은 수치로 위험을 표현하고 정성분석은 등급·전문가 판단·시나리오 등 비수치 평가를 사용한다.&quot;,
+    &quot;definition&quot;: &quot;정량분석은 금액·확률 같은 수치로 위험을 표현하고 정성분석은 등급·전문가 판단·시나리오 등 비수치 평가를 사용한다.&quot;,
+    &quot;memory&quot;: &quot;정량=SLE/ALE/ARO, 정성=델파이/시나리오/등급.&quot;,
+    &quot;trap&quot;: &quot;델파이를 정량분석으로 분류하면 틀리다.&quot;,
+    &quot;compare&quot;: &quot;Quantitative / Qualitative Risk Analysis&quot;
+  },
+  {
+    &quot;id&quot;: 425,
+    &quot;source_id&quot;: 430,
+    &quot;keyword&quot;: &quot;위험 정량분석 공식&quot;,
+    &quot;subject&quot;: &quot;정보보안 관리·법규&quot;,
+    &quot;frequency&quot;: 1,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;위험 정량분석 공식란?&quot;,
+    &quot;answer&quot;: &quot;대표 공식은 SLE=AV×EF, ALE=SLE×ARO이다.&quot;,
+    &quot;definition&quot;: &quot;대표 공식은 SLE=AV×EF, ALE=SLE×ARO이다.&quot;,
+    &quot;memory&quot;: &quot;AV=Asset Value, EF=Exposure Factor, ARO=Annualized Rate of Occurrence.&quot;,
+    &quot;trap&quot;: &quot;ALE와 SLE를 서로 바꾸거나 ARO를 금액으로 해석하지 않는다.&quot;,
+    &quot;compare&quot;: &quot;SLE / ALE / ARO&quot;
+  },
+  {
+    &quot;id&quot;: 426,
+    &quot;source_id&quot;: 431,
+    &quot;keyword&quot;: &quot;ElGamal&quot;,
+    &quot;subject&quot;: &quot;정보보안 일반&quot;,
+    &quot;frequency&quot;: 1,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;ElGamal란?&quot;,
+    &quot;answer&quot;: &quot;이산대수 문제의 어려움에 기반한 공개키 암호 방식으로 암호화와 전자서명 계열에 활용된다.&quot;,
+    &quot;definition&quot;: &quot;이산대수 문제의 어려움에 기반한 공개키 암호 방식으로 암호화와 전자서명 계열에 활용된다.&quot;,
+    &quot;memory&quot;: &quot;ElGamal = Discrete Log 기반.&quot;,
+    &quot;trap&quot;: &quot;RSA는 소인수분해 기반이며 수학적 기반이 다르다.&quot;,
+    &quot;compare&quot;: &quot;ElGamal / DH / RSA&quot;
+  },
+  {
+    &quot;id&quot;: 427,
+    &quot;source_id&quot;: 432,
+    &quot;keyword&quot;: &quot;공개키 위조·대체 위험&quot;,
+    &quot;subject&quot;: &quot;정보보안 일반&quot;,
+    &quot;frequency&quot;: 1,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;공개키 위조·대체 위험란?&quot;,
+    &quot;answer&quot;: &quot;공개키 자체는 공개되어도 되지만 그 키가 누구의 것인지 인증되지 않으면 공격자가 자신의 공개키로 바꿔치기하는 키 대체 공격이 가능하다.&quot;,
+    &quot;definition&quot;: &quot;공개키 자체는 공개되어도 되지만 그 키가 누구의 것인지 인증되지 않으면 공격자가 자신의 공개키로 바꿔치기하는 키 대체 공격이 가능하다.&quot;,
+    &quot;memory&quot;: &quot;공개키의 비밀성보다 진정성(Authenticity)이 중요.&quot;,
+    &quot;trap&quot;: &quot;‘공개키가 공개되면 암호가 깨진다’가 아니라 공개키의 소유자 검증이 핵심.&quot;,
+    &quot;compare&quot;: &quot;PKI / Certificate / MITM&quot;
+  },
+  {
+    &quot;id&quot;: 428,
+    &quot;source_id&quot;: 433,
+    &quot;keyword&quot;: &quot;CBC-MAC&quot;,
+    &quot;subject&quot;: &quot;정보보안 일반&quot;,
+    &quot;frequency&quot;: 1,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;CBC-MAC란?&quot;,
+    &quot;answer&quot;: &quot;블록암호의 CBC 연산을 이용해 메시지 인증코드를 만드는 방식으로 메시지 무결성과 인증에 활용된다.&quot;,
+    &quot;definition&quot;: &quot;블록암호의 CBC 연산을 이용해 메시지 인증코드를 만드는 방식으로 메시지 무결성과 인증에 활용된다.&quot;,
+    &quot;memory&quot;: &quot;CBC-MAC은 고정 길이 메시지 등 안전한 사용조건이 중요.&quot;,
+    &quot;trap&quot;: &quot;일반 CBC 암호화 모드와 CBC-MAC을 동일 기능으로 보지 않는다.&quot;,
+    &quot;compare&quot;: &quot;CBC / MAC / CMAC&quot;
+  },
+  {
+    &quot;id&quot;: 429,
+    &quot;source_id&quot;: 434,
+    &quot;keyword&quot;: &quot;Root CA 침해&quot;,
+    &quot;subject&quot;: &quot;정보보안 일반&quot;,
+    &quot;frequency&quot;: 1,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;Root CA 침해란?&quot;,
+    &quot;answer&quot;: &quot;신뢰사슬의 최상위 Root CA 개인키가 침해되면 그 Root를 신뢰기점으로 하는 하위 인증서 체계 전체의 신뢰에 심각한 영향을 줄 수 있다.&quot;,
+    &quot;definition&quot;: &quot;신뢰사슬의 최상위 Root CA 개인키가 침해되면 그 Root를 신뢰기점으로 하는 하위 인증서 체계 전체의 신뢰에 심각한 영향을 줄 수 있다.&quot;,
+    &quot;memory&quot;: &quot;Root CA = Trust Anchor. 침해 시 광범위한 인증서 재발급·신뢰철회가 필요할 수 있음.&quot;,
+    &quot;trap&quot;: &quot;Root 인증서 파일이 공개되는 것과 Root CA의 개인키 침해는 전혀 다르다.&quot;,
+    &quot;compare&quot;: &quot;Root CA / Intermediate CA / PKI&quot;
+  },
+  {
+    &quot;id&quot;: 430,
+    &quot;source_id&quot;: 435,
+    &quot;keyword&quot;: &quot;MAC(Mandatory Access Control)&quot;,
+    &quot;subject&quot;: &quot;정보보안 일반&quot;,
+    &quot;frequency&quot;: 1,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;MAC(Mandatory Access Control)란?&quot;,
+    &quot;answer&quot;: &quot;보안등급·분류와 중앙 정책에 따라 시스템이 강제로 접근권한을 결정하는 접근통제 방식이다.&quot;,
+    &quot;definition&quot;: &quot;보안등급·분류와 중앙 정책에 따라 시스템이 강제로 접근권한을 결정하는 접근통제 방식이다.&quot;,
+    &quot;memory&quot;: &quot;MAC=정책/등급 중심, DAC=소유자 재량, RBAC=역할.&quot;,
+    &quot;trap&quot;: &quot;Message Authentication Code의 MAC과 약어가 같다.&quot;,
+    &quot;compare&quot;: &quot;DAC / RBAC / BLP&quot;
+  },
+  {
+    &quot;id&quot;: 431,
+    &quot;source_id&quot;: 436,
+    &quot;keyword&quot;: &quot;Finger 서비스&quot;,
+    &quot;subject&quot;: &quot;시스템 보안&quot;,
+    &quot;frequency&quot;: 1,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;Finger 서비스란?&quot;,
+    &quot;answer&quot;: &quot;Finger는 원격 사용자의 로그인·계정 정보를 조회하는 서비스로 정보노출 위험 때문에 일반적으로 비활성화가 권장된다.&quot;,
+    &quot;definition&quot;: &quot;Finger는 원격 사용자의 로그인·계정 정보를 조회하는 서비스로 정보노출 위험 때문에 일반적으로 비활성화가 권장된다.&quot;,
+    &quot;memory&quot;: &quot;Finger = 사용자 정보 조회 서비스 → 불필요하면 비활성화.&quot;,
+    &quot;trap&quot;: &quot;설정파일 경로는 시스템 구성에 따라 다를 수 있으므로 서비스의 보안 의미를 중심으로 암기.&quot;,
+    &quot;compare&quot;: &quot;Finger / xinetd&quot;
+  },
+  {
+    &quot;id&quot;: 432,
+    &quot;source_id&quot;: 437,
+    &quot;keyword&quot;: &quot;HTTP HEAD·PUT&quot;,
+    &quot;subject&quot;: &quot;애플리케이션 보안&quot;,
+    &quot;frequency&quot;: 1,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;HTTP HEAD·PUT란?&quot;,
+    &quot;answer&quot;: &quot;HEAD는 GET과 유사한 응답 헤더만 요청하고 본문은 받지 않으며, PUT은 지정 URI에 리소스를 저장·갱신하도록 요청하는 메서드다.&quot;,
+    &quot;definition&quot;: &quot;HEAD는 GET과 유사한 응답 헤더만 요청하고 본문은 받지 않으며, PUT은 지정 URI에 리소스를 저장·갱신하도록 요청하는 메서드다.&quot;,
+    &quot;memory&quot;: &quot;HEAD=Header only, PUT=리소스 업로드/갱신.&quot;,
+    &quot;trap&quot;: &quot;불필요한 PUT 허용은 파일 업로드·변조 위험으로 이어질 수 있다.&quot;,
+    &quot;compare&quot;: &quot;GET / HEAD / PUT&quot;
+  },
+  {
+    &quot;id&quot;: 433,
+    &quot;source_id&quot;: 438,
+    &quot;keyword&quot;: &quot;Windows 레지스트리 루트 키&quot;,
+    &quot;subject&quot;: &quot;시스템 보안&quot;,
+    &quot;frequency&quot;: 1,
+    &quot;priority&quot;: 1,
+    &quot;question&quot;: &quot;Windows 레지스트리 루트 키란?&quot;,
+    &quot;answer&quot;: &quot;Windows 레지스트리는 HKCR, HKCU, HKLM, HKU, HKCC 등의 대표 루트 키로 구성된다.&quot;,
+    &quot;definition&quot;: &quot;Windows 레지스트리는 HKCR, HKCU, HKLM, HKU, HKCC 등의 대표 루트 키로 구성된다.&quot;,
+    &quot;memory&quot;: &quot;HKCU=현재 사용자, HKLM=로컬 컴퓨터 전체, HKCC=현재 하드웨어 프로파일.&quot;,
+    &quot;trap&quot;: &quot;루트 키 역할을 서로 바꿔 놓는 보기에 주의.&quot;,
+    &quot;compare&quot;: &quot;HKCR / HKCU / HKLM / HKU / HKCC&quot;
   }
 ]
 </script>
